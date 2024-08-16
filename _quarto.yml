@@ -15,8 +15,6 @@ book:
     - modules/05_LLMs.ipynb
     - modules/post-activity.qmd
 
-bibliography: modules/references.bib
-
 format:
   html:
     theme: cosmo
