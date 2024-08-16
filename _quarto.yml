@@ -1,0 +1,27 @@
+project:
+  type: book
+
+book:
+  title: "DSI ML workshop"
+  author: "Prajeet Bajpai and Varada Kolhatkar"
+  date: "2024-08-15"
+  chapters:
+    - index.qmd
+    - modules/pre-activity.qmd
+    - modules/01_supervised-ml-intro.ipynb
+    - modules/02_supervised-ml-models-pipeline.ipynb
+    - modules/03_deep-leaning-intro.ipynb
+    - modules/04_unsupervised-learning-intro.ipynb
+    - modules/05_LLM-intro.ipynb
+    - modules/post-activity.qmd
+
+bibliography: modules/references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
