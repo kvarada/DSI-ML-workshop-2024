@@ -8,11 +8,11 @@ book:
   chapters:
     - index.qmd
     - modules/pre-activity.qmd
-    - modules/01_supervised-ml-intro.ipynb
-    - modules/02_supervised-ml-models-pipeline.ipynb
-    - modules/03_deep-leaning-intro.ipynb
-    - modules/04_unsupervised-learning-intro.ipynb
-    - modules/05_LLM-intro.ipynb
+    - modules/01_supervised-learning.ipynb
+    - modules/02_more-supervised-learning.ipynb
+    - modules/03_deep-leaning.ipynb
+    - modules/04_unsupervised-learning.ipynb
+    - modules/05_LLMs.ipynb
     - modules/post-activity.qmd
 
 bibliography: modules/references.bib
