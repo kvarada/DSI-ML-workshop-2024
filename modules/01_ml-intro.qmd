@@ -24,6 +24,13 @@ Write one (or several) problems in your research field where you think Machine L
 
 One of the learning objectives of the workshop will be to determine whether your goal is best addressed using supervised machine learning, inferential statistics, unsupervised learning, deep learning, generative AI, or a non-ML solution.
 
+## Classification vs. Regression
+\
+
+* For *classification* tasks, the target variable is categorical-- each example in the data belongs to one of a small number of categories. The goal is to get our model to correctly predict the category of an example based on its features.
+
+* For *regression* tasks, the target variable is continuous. The model is required to predict the target with some degree of accuracy, so we minimize the numerical error in its predictions across the different examples.
+
 
 ## Inference vs. Prediction
 \
