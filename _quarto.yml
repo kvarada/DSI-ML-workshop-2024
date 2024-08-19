@@ -8,9 +8,9 @@ book:
   chapters:
     - index.qmd
     - modules/pre-activity.qmd
-    - modules/01_supervised-learning.ipynb
+    - modules/01_ml-intro.qmd
     - modules/02_more-supervised-learning.ipynb
-    - modules/03_deep-leaning.ipynb
+    - modules/03_deep-learning.qmd
     - modules/04_unsupervised-learning.ipynb
     - modules/05_LLMs.ipynb
     - modules/post-activity.qmd

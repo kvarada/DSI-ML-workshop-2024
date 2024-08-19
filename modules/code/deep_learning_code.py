@@ -11,7 +11,7 @@ from torchvision import transforms, models, datasets
 from PIL import Image
 from sklearn.linear_model import LogisticRegression
 from torchvision import datasets, models, transforms, utils
-from sklearn.pipeline import Pipeline, make_pipeline
+from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 import torch
 from PIL import Image
@@ -88,3 +88,50 @@ def read_data(data_dir):
         )
     
     return image_datasets, dataloaders
+
+def get_features(model, train_loader, valid_loader):
+    """Extract output of squeezenet model"""
+    with torch.no_grad():  # turn off computational graph stuff
+        Z_train = torch.empty((0, 1024))  # Initialize empty tensors
+        y_train = torch.empty((0))
+        Z_valid = torch.empty((0, 1024))
+        y_valid = torch.empty((0))
+        for X, y in train_loader:
+            Z_train = torch.cat((Z_train, model(X)), dim=0)
+            y_train = torch.cat((y_train, y))
+        for X, y in valid_loader:
+            Z_valid = torch.cat((Z_valid, model(X)), dim=0)
+            y_valid = torch.cat((y_valid, y))
+    return Z_train.detach(), y_train.detach(), Z_valid.detach(), y_valid.detach()
+
+
+def show_predictions(pipe, Z_valid, y_valid, dataloader, class_names, num_images=20):
+    """Display images from the validation set and their predicted labels."""
+    images_so_far = 0
+    fig = plt.figure(figsize=(15, 25))  # Adjust the figure size for better visualization
+
+    # Convert the features and labels to numpy arrays
+    Z_valid = Z_valid.numpy()
+    y_valid = y_valid.numpy()
+
+    # Make predictions using the trained logistic regression model
+    preds = pipe.predict(Z_valid)
+
+    with torch.no_grad():
+        for idx, (inputs, labels) in enumerate(dataloader):
+            inputs = inputs.cpu()
+            for j in range(inputs.size()[0]):
+                if images_so_far >= num_images:
+                    return
+                ax = plt.subplot(num_images // 5, 5, images_so_far + 1)  # 5 images per row
+                ax.axis('off')
+                ax.set_title(f'Predicted: {class_names[int(preds[images_so_far])]}'
+                             f'\nTrue: {class_names[int(y_valid[images_so_far])]}')
+                inp = inputs.data[j].numpy().transpose((1, 2, 0))
+                mean = np.array([0.5, 0.5, 0.5])
+                std = np.array([0.5, 0.5, 0.5])
+                inp = std * inp + mean
+                inp = np.clip(inp, 0, 1)
+                ax.imshow(inp)
+                #imshow(inputs.data[j])
+                images_so_far += 1
