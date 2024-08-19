@@ -24,6 +24,7 @@ from sklearn.linear_model import LogisticRegression
 from torchvision import datasets, models, transforms, utils
 from sklearn.pipeline import Pipeline, make_pipeline
 from sklearn.preprocessing import StandardScaler
+import matplotlib.image as mpimg
 %matplotlib inline
 ```
 
