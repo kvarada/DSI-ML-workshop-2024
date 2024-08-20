@@ -428,10 +428,28 @@ results = model(img)
 results.print()  # prints results to console
 
 # Show results
-results.show()  # displays image with bounding boxes
+# results.show()  # displays image with bounding boxes
 
 # Save results
 # results.save()  # save image with detections to 'runs/detect/exp'
+
+# Load the images
+img1 = mpimg.imread(img)
+img2 = mpimg.imread('runs/detect/exp/3356700488_183566145b.jpg')
+
+# Create a figure with two subplots
+fig, axs = plt.subplots(1, 2, figsize=(10, 5))
+
+# Display the first image
+axs[0].imshow(img1)
+axs[0].axis('off')  # Hide the axis
+
+# Display the second image
+axs[1].imshow(img2)
+axs[1].axis('off')  # Hide the axis
+
+# Display the images
+plt.show()
 ```
 
 
