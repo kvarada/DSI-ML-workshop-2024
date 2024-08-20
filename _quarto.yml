@@ -1,25 +1,23 @@
 project:
-  type: book
+  type: composite
 
-book:
-  title: "DSI ML workshop"
-  author: "Prajeet Bajpai and Varada Kolhatkar"
-  date: "2024-08-15"
-  chapters:
-    - index.qmd
-    - modules/pre-activity.qmd
-    - modules/01_ml-intro.qmd
-    - modules/02_more-supervised-learning.ipynb
-    - modules/03_deep-learning.qmd
-    - modules/04_unsupervised-learning.ipynb
-    - modules/05_LLMs.ipynb
-    - modules/post-activity.qmd
+outputs:
+  book:
+    type: book
+    output-dir: "docs"
+    title: "DSI ML workshop"
+    author: "Prajeet Bajpai and Varada Kolhatkar"
+    date: "2024-08-24"    
+    chapters:
+      - index.qmd
+      - modules/03_deep-learning.qmd
+      - modules/04_unsupervised-learning.qmd
+  slides:
+    type: revealjs
+    output-dir: "slides"
+    input-files:
+      - slides/index.qmd
+      - slides/03_deep-learning.qmd
+      - slides/04_unsupervised-learning.qmd      
 
-format:
-  html:
-    theme: cosmo
-  pdf:
-    documentclass: scrreprt
-
-
-
+      
