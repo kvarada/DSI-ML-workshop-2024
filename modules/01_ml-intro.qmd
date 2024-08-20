@@ -11,7 +11,12 @@ jupyter: python3
 \
 Machine Learning uses computer programs to digest and accurately model data. After *training* on the data, a program can be used to extract hidden patterns, make predictions in new situations or generate novel content.
 
-The program learns based on the *features* present in the data, which represent the information we have about each example. If we are trying to predict the sale price of an apartment (for example), we might have a dataset with features (or variables) including square footage, number of bedrooms, and whether or not the apartment has an ocean view.
+The program learns based on the *features* present in the data, which represent the information we have about each example.
+
+## Introduction to Machine Learning
+\ 
+
+![](img/sup-ML-terminology.png)
 
 
 ## Activity 1
@@ -27,9 +32,14 @@ One of the learning objectives of the workshop will be to determine whether your
 ## Classification vs. Regression
 \
 
-* For *classification* tasks, the target variable is categorical-- each example in the data belongs to one of a small number of categories. The goal is to get our model to correctly predict the category of an example based on its features.
+![](img/classification-vs-regression.png)
 
-* For *regression* tasks, the target variable is continuous. The model is required to predict the target with some degree of accuracy, so we minimize the numerical error in its predictions across the different examples.
+## Measuring Performance
+\
+
+* Performance on classification tasks can be measured based on the *accuracy* of the model's predictions.
+
+* Performance on a regression task can be measured based on *error*. Mean squared error is one choice, but there are many others!
 
 
 ## Inference vs. Prediction
@@ -73,7 +83,7 @@ Examples could include spam filtering, face recognition or weather forecasting.
 
 ## Unsupervised Learning
 \
-In unsupervised learning, there are no targets. The goal is instead to uncover patterns in the data. These can be used to provide a concise summary of the data, or group similar data together.
+In unsupervised learning, there are no targets. The goal is instead to uncover underlying patterns. These can be used to provide a concise summary of the data, or group similar examples together.
 
 Examples could include customer segmentation, anomaly detection or online recommendation systems (think Netflix).
 
@@ -86,6 +96,7 @@ Self-supervised algorithms automatically learn to generate labels and transform 
 Reinforcement Leaning trains an agent using a system of rewards and penalties. The agent learns strategies to maximize reward. AlphaGo is a reinforcement learning agent that taught itself to play Go, and was able to beat the strongest human Go players.
 
 ## Activity 2
+\ 
 
 Return to the problems you identified in Activity 1. Try to decide if they involve performing inference or prediction.
 
@@ -93,11 +104,20 @@ Also suggest whether you think they are best approached with supervised or unsup
 
 ## A Simple Supervised Learning Model
 \
-We will use a simple machine learning model-- a decision tree-- to demonstrate some fundamental concepts in machine learning. Suppose we have the following dataset:
+We will use a simple machine learning model-- a decision tree-- to demonstrate some fundamental concepts in machine learning. Suppose we have the following dataset:\
 
-![](img/quiz2-grade-toy.png){fig-align="center"}
+```{python}
+from sklearn import tree
+import pandas as pd
 
-How would you go about predicting Quiz 2 grades from the given data?
+classification_df = pd.read_csv("data/quiz2-grade-toy-classification.csv")
+X = classification_df.drop(columns=["quiz2"])
+y = classification_df["quiz2"]
+
+(pd.concat([X,y], axis=1)).head()
+```
+\ 
+How would you go about predicting the Quiz 2 grade?
 
 ## Decision Trees
 \
@@ -105,16 +125,72 @@ A decision tree iteratively splits the data by asking questions about feature va
 
 The algorithm tries to ask questions that best separate one class from another. It's like a game of twenty questions!
 
-## A Sample Decision Tree
+## A Decision Stump
 \
-![](img/dec-tree.png)
+
+```{python}
+
+#Binarize the data
+#X_binary = X.copy()
+columns = ["lab1", "lab2", "lab3", "lab4", "quiz1"]
+#for col in columns:
+#    X_binary[col] = X_binary[col].apply(lambda x: 1 if x >= 90 else 0)
+
+#Fit a decision stump
+model = tree.DecisionTreeClassifier(max_depth=1) # Create a decision tree
+model.fit(X, y); # Fit a decision tree
+
+tree.plot_tree(model, filled=True, feature_names = ['ml_exp','attendance']+columns, impurity = False, fontsize=16);
+```
+
+We could start by splitting the data based on the students' Lab 3 grades.
+
+## Iterating the procedure
+\ 
+
+```{python}
+#Fit tree of depth 2
+model = tree.DecisionTreeClassifier(max_depth=2) # Create a decision tree
+model.fit(X, y); # Fit a decision tree
+
+tree.plot_tree(model, filled=True, feature_names = ['ml_exp','attendance']+columns, impurity = False, fontsize=10);
+```
+
+Then we further split each of the resulting nodes, again asking questions involving features in the dataset.
+
+## Building a Decision Tree
+\ 
+
+```{python}
+
+#Fit a deeper decision tree
+model = tree.DecisionTreeClassifier() # Create a decision tree
+model.fit(X, y); # Fit a decision tree
+
+tree.plot_tree(model, filled=True, feature_names = ['ml_exp','attendance']+columns, impurity = False, fontsize = 6);
+
+```
+
+
+## Decision Boundary
+\
+The first two questions in our tree involved Lab 3 and Quiz 1 grades. We can make a plot involving these two features to better understand our tree.
+
+![](img/dbound.png)
+
+
+
+## Model Parameters
+\
+
+During training, the model decides which feature to use to split at each node. It also decides which value of the feature to split at. This is the 'learning' phase, where the algorithm is trying different options and selecting the 'best' feature and value for splitting.
+
 
 ## Hyperparameters
 \
 The maximum depth of a decision tree (at most how many questions it asks) is a *hyper-parameter* of the model. We can build different trees to test which choice of hyper-parameter gives the best result.
 
 Some models may have a continuous range of options for a given hyper-parameter. This gives rise to a potentially infinite choice of "models" to test.
-
 
 ## Trying to Recognize Faces
 \
@@ -129,13 +205,12 @@ Each photo is 64x64 pixels in grayscale. The images are represented by a row of 
 ```{python}
 from sklearn.datasets import fetch_olivetti_faces as dataloader
 from sklearn.model_selection import train_test_split
-import pandas as pd
 
 pd.set_option('display.max_rows', 6)
 pd.set_option('display.max_columns', 8)
 
 X,y = dataloader(return_X_y = True)#, as_frame=True)
-X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.20, random_state=42)
+X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.20, random_state=12)
 pd.DataFrame(X)
 ```
 ```{python}
@@ -152,7 +227,6 @@ Let's see how accurate this model gets after training.
 \
 
 ```{python}
-from sklearn import tree
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(X_train,y_train)
 acc = round(10000*sum(clf.predict(X_train) == y_train)/len(y_train))
@@ -174,31 +248,41 @@ print(f"The model acheived an accuracy of {test_acc/100}% on new data")
 \
 ...oops.
 
+## What's going on?
+
+```{python}
+results_dict = {"train_error":[],"test_error":[], "depth":[]}
+
+for depth in range(1,38,3):
+    clf = tree.DecisionTreeClassifier(max_depth = depth)
+    clf = clf.fit(X_train,y_train)
+    acc = sum(clf.predict(X_train) == y_train)/len(y_train)
+
+    test_acc = sum(clf.predict(X_test) == y_test)/len(y_test)
+    results_dict["train_error"].append(1-acc)
+    results_dict["test_error"].append(1-test_acc)
+    results_dict["depth"].append(depth)
+
+df = pd.DataFrame(results_dict)
+df = df.set_index("depth")
+df.plot();
+```
+
 ## Practice makes perfect
 \
-Our deep decision tree likely just memorized the dataset. After all, with a tree of depth 38, we could actually memorize up to 2^38 distinct examples!
+Our deep decision tree likely just memorized the dataset. After all, with a tree of depth 38, we could actually memorize up to 2^38^ distinct examples!
 
 Clearly this does not make for a good model. After all, we want a model that can recognize faces, even when they appear in new images.
 
-## Overfitting-- Why we need a test set
+## Overfitting
 \
 *Overfitting* refers to a situation where the model learns noise from the training data, leading to a poor performance when deployed on new data.
 
-Complex models are prone to overfitting-- we cannot just rely on training error to measure their performance.
-
-It is necessary to set aside some data that is not shown to the model during training. This *test set* of data can then be used to evaluate whether the model predicts accurately on unseen data.
-
-## The fundamental tradeoff in ML
-\
-The difference between training error and test error is called *generalization gap*. We want to minimize this gap, so that we can limit overfitting and ensure our model is learning reliable patterns in the data.
-
-Simple models typically have a low generalization gap, so training error accurately approximates test error. But both training and test error will be high.
-
-As we increase model complexity  we can usually reduce the training error and we hope this also reduces the test error. This may be true, however we will typically introduce a larger generalization gap as our model starts to overfit.
+Complex models are prone to overfitting-- we cannot just rely on training error to measure their performance. Simple models typically have similar train and test errors, but both will be high.
 
 ## 
 
-Thus we have the "fundamental tradeoff": as we increase model complexity, the training error will reduce but the gap between training and test error will increase.
+Thus we have our "fundamental tradeoff": as we increase model complexity, the training error will reduce but the gap between training and test error will increase.
 
 ##
 
