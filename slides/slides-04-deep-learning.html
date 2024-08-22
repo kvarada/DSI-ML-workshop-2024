@@ -602,7 +602,7 @@ From this module, you will be able to</p>
 <ul>
 <li>Here are some example classes.</li>
 </ul>
-<div id="f6df5505" class="cell" data-execution_count="5">
+<div id="53e65e5d" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data/imagenet_classes.txt"</span>) <span class="im">as</span> f:</span>
 <span id="cb1-2"><a></a>    classes <span class="op">=</span> [line.strip() <span class="cf">for</span> line <span class="kw">in</span> f.readlines()]</span>
 <span id="cb1-3"><a></a>classes[<span class="dv">100</span>:<span class="dv">110</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -664,7 +664,7 @@ From this module, you will be able to</p>
 <li>Let’s predict labels with associated probabilities for unseen images</li>
 </ul>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="566c4f0c" class="cell" data-execution_count="6">
+<div id="c38e59ec" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -751,7 +751,7 @@ Walker hound, Walker foxhound              0.580
 <li>It’s not doing very well here because ImageNet doesn’t have proper classes for these images.</li>
 </ul>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="6ae6d5b7" class="cell" data-execution_count="7">
+<div id="62fb57a7" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -934,7 +934,7 @@ lakeside, lakeshore              0.097
 </p>
 <p>Let’s look at some sample images in the dataset.</p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="1032ec0e" class="cell" data-execution_count="8">
+<div id="7cd7ff5b" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -950,7 +950,7 @@ lakeside, lakeshore              0.097
 <p><br>
 </p>
 <p>Here is the stat of our toy dataset.</p>
-<div id="ce344492" class="cell" data-execution_count="9">
+<div id="83ae6de1" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>Classes: ['beet_salad', 'chocolate_cake', 'edamame', 'french_fries', 'pizza', 'spring_rolls', 'sushi']
 Class count: 40, 38, 40
@@ -974,7 +974,7 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <ul>
 <li>Now we have extracted feature vectors for all examples. What’s the shape of these features?</li>
 </ul>
-<div id="3e266b4f" class="cell" data-execution_count="11">
+<div id="4cbac4ed" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>torch.Size([283, 1024])</code></pre>
 </div>
@@ -991,7 +991,7 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <ul>
 <li>Let’s examine the feature vectors.</li>
 </ul>
-<div id="81bd511e" class="cell" data-execution_count="12">
+<div id="05add642" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display" data-execution_count="12">
 <div>
 <style scoped="">
@@ -1049,13 +1049,13 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <td>0.019033</td>
 <td>0.000411</td>
 <td>...</td>
-<td>2.017399</td>
-<td>0.265347</td>
-<td>4.620860</td>
+<td>2.017400</td>
+<td>0.265346</td>
+<td>4.620863</td>
 <td>0.285282</td>
-<td>0.526914</td>
-<td>0.428760</td>
-<td>2.960556</td>
+<td>0.526915</td>
+<td>0.428759</td>
+<td>2.960554</td>
 <td>1.577721</td>
 <td>2.150136</td>
 <td>0.735927</td>
@@ -1073,13 +1073,13 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <td>0.181858</td>
 <td>0.000249</td>
 <td>...</td>
-<td>0.158791</td>
+<td>0.158792</td>
 <td>0.380575</td>
-<td>1.309546</td>
+<td>1.309545</td>
 <td>0.009790</td>
 <td>0.007745</td>
 <td>1.773695</td>
-<td>0.298152</td>
+<td>0.298153</td>
 <td>0.697784</td>
 <td>0.462329</td>
 <td>1.448314</td>
@@ -1097,15 +1097,15 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <td>0.386037</td>
 <td>0.000179</td>
 <td>...</td>
-<td>1.730926</td>
-<td>0.139264</td>
+<td>1.730925</td>
+<td>0.139263</td>
 <td>0.384295</td>
-<td>1.754405</td>
+<td>1.754404</td>
 <td>0.267863</td>
-<td>0.480650</td>
-<td>0.591290</td>
-<td>3.880835</td>
-<td>1.436777</td>
+<td>0.480649</td>
+<td>0.591291</td>
+<td>3.880836</td>
+<td>1.436774</td>
 <td>0.856637</td>
 </tr>
 <tr class="even">
@@ -1123,14 +1123,14 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <td>...</td>
 <td>0.866084</td>
 <td>0.118614</td>
-<td>0.404704</td>
+<td>0.404703</td>
 <td>0.139143</td>
 <td>0.588674</td>
 <td>0.326834</td>
 <td>0.277743</td>
-<td>2.369123</td>
-<td>0.295956</td>
-<td>0.206887</td>
+<td>2.369125</td>
+<td>0.295955</td>
+<td>0.206888</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
@@ -1146,14 +1146,14 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <td>0.000554</td>
 <td>...</td>
 <td>0.010685</td>
-<td>1.147244</td>
-<td>1.892542</td>
+<td>1.147245</td>
+<td>1.892539</td>
 <td>1.929401</td>
 <td>0.694761</td>
-<td>0.744421</td>
-<td>1.705219</td>
+<td>0.744420</td>
+<td>1.705220</td>
 <td>1.241349</td>
-<td>2.351263</td>
+<td>2.351264</td>
 <td>0.054507</td>
 </tr>
 </tbody>
@@ -1174,12 +1174,12 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <ul>
 <li>Let’s try out logistic regression on these extracted features.</li>
 </ul>
-<div id="07416790" class="cell" data-execution_count="13">
+<div id="b0f1152d" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-stdout">
 <pre><code>Training score:  1.0</code></pre>
 </div>
 </div>
-<div id="cd3b75d8" class="cell" data-execution_count="14">
+<div id="c46b5ff0" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-stdout">
 <pre><code>Validation score:  0.8507462686567164</code></pre>
 </div>
@@ -1194,7 +1194,7 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 </p>
 <p>Let’s examine some sample predictions on the validation set.</p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="00aa9af3" class="cell" data-execution_count="15">
+<div id="5aba03a9" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1213,7 +1213,27 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <li>Another useful task and tool to know is object detection using YOLO model.</li>
 <li>Let’s identify objects in a sample image using a pretrained model called YOLO5</li>
 </ul>
-</section>
+<div id="09ecccd5" class="cell" data-execution_count="16">
+<div class="cell-output cell-output-stdout">
+<pre><code>requirements: Ultralytics requirements ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0'] not found, attempting AutoUpdate...
+Requirement already satisfied: gitpython&gt;=3.1.30 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (3.1.43)
+Requirement already satisfied: pillow&gt;=10.3.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (10.4.0)
+Requirement already satisfied: requests&gt;=2.32.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (2.32.3)
+Requirement already satisfied: setuptools&gt;=70.0.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (72.2.0)
+Requirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitpython&gt;=3.1.30) (4.0.7)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (1.26.6)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2021.5.30)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2.0.4)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (3.2)
+Requirement already satisfied: smmap&lt;5,&gt;=3.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;gitpython&gt;=3.1.30) (4.0.0)
+
+requirements: AutoUpdate success ✅ 3.7s, installed 4 packages: ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0']
+requirements: ⚠️ Restart runtime or rerun command for updates to take effect
+</code></pre>
+</div>
+
+</div>
+<img data-src="slides-04-deep-learning_files/figure-revealjs/cell-17-output-2.png" class="r-stretch"></section>
 <section id="summary" class="slide level2 center">
 <h2>Summary</h2>
 <p><br>
