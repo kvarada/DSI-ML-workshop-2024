@@ -2,8 +2,8 @@
 title: Machine Learning Fundamentals 
 description: Introduction to Machine Learning Fundamentals 
 description-short: ML fundamentals 
-duration: 30 min
-time: 9:15 - 10:00
+duration: 50 min
+time: 9:10 - 10:00
 
 editor: { render-on-save: true }
 ---

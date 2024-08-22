@@ -32,11 +32,18 @@ website:
   sidebar:
     - id: workshop
       contents:
-        - workshop.qmd        
+        - workshop.qmd
+        - text: '<div class="sidebar-divider font-monospace">Morning 1</div>'
         - workshop-01.qmd
         - workshop-02.qmd
-        - workshop-04.qmd
-        
+        - workshop-03.qmd
+        - workshop-04-break.qmd
+        - workshop-05.qmd
+        - workshop-06-break.qmd
+        - workshop-07.qmd
+        - workshop-08-lunch.qmd        
+        - text: '<div class="sidebar-divider font-monospace">Afternoon 1</div>'        
+        - workshop-09.qmd        
 format:
   html:
     theme: [zephyr]
