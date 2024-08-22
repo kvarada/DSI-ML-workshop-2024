@@ -1,5 +1,5 @@
 ---
-title: "Our teaching team"
+title: "Our team"
 
 sidebar: false
 repo-actions: false
@@ -16,10 +16,24 @@ listing:
       instructor: true
       role: "Teaching Postdoctoral Fellow"
       image: prajeet.jpg
+    - name: Raymond Ng
+      organizer: true
+      role: "Scientific Director, Data Science Institute" 
+      image: raymond.jpg
+    - name: Jie Le
+      organizer: true
+      role: "Research Administrator"
+      image: jie_le.jpg
+    - name: Michele Ng
+      organizer: true
+      role: "Special Projects Coordinator"
+      image: michele.jpeg
     - name: Yulia Egorova
       image: yulia.png
+      assistant: true
     - name: Tony Shum
       image: tony.jpeg
+      assistant: true
 
 ---
 
