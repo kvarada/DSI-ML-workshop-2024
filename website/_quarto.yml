@@ -41,7 +41,8 @@ website:
         - workshop-06-break.qmd
         - workshop-07.qmd
         - workshop-08-lunch.qmd
-        - workshop-09.qmd        
+        - workshop-09.qmd 
+        - workshop-10.qmd
 format:
   html:
     theme: [zephyr]
