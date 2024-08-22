@@ -1,9 +1,0 @@
-# Pre-workshop activity {.unnumbered}
-
-We will begin with an activity. It seems you’re here because you have a specific project in mind and are curious to find out if machine learning is the right tool for it. Let’s start by focusing on the objectives of your project:
-
-- **Define your goal**: What is the ultimate objective of the solution you are interested in developing? What are you trying to accomplish?
-- **Current approach**: How is this problem currently solved by humans? Describe the existing process.
-- **Data availability**: What kind of data do you have access to, or could potentially gather? What are some key features of this data?
-
-One of our main objectives today is to help you determine if your project goals are best met using supervised machine learning, inferential statistics, unsupervised learning, deep learning, generative AI, or perhaps a non-machine learning solution and to explore preliminary steps to approach your problem.
