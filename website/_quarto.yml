@@ -22,7 +22,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: Workshop.qmd
+      - href: workshop.qmd
         text: Workshop
       - href: about/index.qmd
         text: Team
@@ -34,11 +34,17 @@ website:
       contents:
         - workshop.qmd        
         - workshop-01.qmd
+        - workshop-02.qmd
+        - workshop-04.qmd
+        
 format:
   html:
     theme: [zephyr]
-    toc: true
+    toc: false
     lightbox: true
           
 editor:
   render-on-save: true
+
+execute:
+  freeze: auto
