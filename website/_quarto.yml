@@ -48,3 +48,9 @@ editor:
 
 execute:
   freeze: auto
+
+publish:
+  gh-pages:
+    name: "gh-pages"
+    branch: main # Or "master" or whatever branch you use
+    path: website
