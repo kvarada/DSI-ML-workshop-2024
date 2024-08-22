@@ -1,5 +1,5 @@
 ---
-title: "Our Team"
+title: "Our teaching team"
 
 sidebar: false
 repo-actions: false
@@ -16,6 +16,11 @@ listing:
       instructor: true
       role: "Teaching Postdoctoral Fellow"
       image: prajeet.jpg
+    - name: Yulia Egorova
+      image: yulia.png
+    - name: Tony Shum
+      image: tony.jpeg
+
 ---
 
 ::: column-body
