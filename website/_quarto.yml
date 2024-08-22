@@ -33,7 +33,6 @@ website:
     - id: workshop
       contents:
         - workshop.qmd
-        - text: '<div class="sidebar-divider font-monospace">Morning 1</div>'
         - workshop-01.qmd
         - workshop-02.qmd
         - workshop-03.qmd
@@ -41,8 +40,7 @@ website:
         - workshop-05.qmd
         - workshop-06-break.qmd
         - workshop-07.qmd
-        - workshop-08-lunch.qmd        
-        - text: '<div class="sidebar-divider font-monospace">Afternoon 1</div>'        
+        - workshop-08-lunch.qmd
         - workshop-09.qmd        
 format:
   html:
