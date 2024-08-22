@@ -124,31 +124,7 @@ mglearn.discrete_scatter(X[:, 0], X[:, 1]);
 
 ![](img/k-means-iterative.png)
 
-## DBSCAN (**D**ensity-**B**ased **S**patial **C**lustering of **A**pplications with **N**oise)
-\ 
-
-- DBSCAN is a density-based clustering algorithm. 
-- Intuitively, it's based on the idea that clusters form dense regions in the data and so it works by identifying "crowded" regions in the feature space. 
-- It can address some of the limitations of K-Means we saw above. 
-    - It does not require the user to specify the number of clusters in advance. 
-    - It can identify points that are not part of any clusters. 
-    - It can capture clusters of complex shapes. 
-
-## DBSCAN idea
-\ 
-
-- Iterative algorithm.  
-- Based on the idea that clusters form dense regions in the data. 
-
-![](img/DBSCAN_search.gif)
-
-[Source](https://dashee87.github.io/data%20science/general/Clustering-with-Scikit-with-GIFs/)
-
-
-## Hierarchical clustering 
-\
-
-
+K-Means is the simplest clustering algorithm. There is a variety of clustering algorithms available out there. 
 
 ## Let's cluster images!! 
 \
@@ -278,9 +254,114 @@ for cluster in range(k):
 
 - Representation plays a crucial role when you do machine learning. 
 - How could we create meaningful representations? 
+    - Dimensionality reduction is a popular approach! 
+- Suppose you’re shown the picture below and you are told that this is Eva.
+- Do you have to remember every pixel in the image to recognize other pictures of Eva?
+
+![](img/eva-coffee.png)
+
+
+
+## Motivation 
+\
+
+- For example, if you are asked which one is Eva in the following pictures, it'll be fairly easy for you to identify her just based on some high-level features.
+- Just remembering important features such as shape of eyes, nose, mouth, shape and colour of hair etc. suffice to tell her apart from other people.
+
+![](img/hello-bmjs.png)
+
+## Dimensionality reduction activity
+\
+
+- Goal Capture the essence of the classroom through photography.
+- We need two volunteers with cell phones to take photos of the classroom.
+- Volunteers will take pictures from various angles to ensure a comprehensive view of the classroom. Suggested angles include:
+    - An overhead view (from above)
+    - Views from each corner of the classroom
+    - A central perspective (from the center of the room)
+    - A low angle view (close to the floor)
+-  Among the photos taken, select and post the one that best captures the majority of objects and the overall atmosphere of the classroom in [this Google doc](https://docs.google.com/document/d/1TdmH5LKLC0Y9IWySC4FgsYX0dsNtkX_dBcc7FSSrQg0/edit#heading=h.trc35ybo6zyf)
+- Discuss: Why certain angles might be better than other for capturing more information?
+
+
+## Principal component analysis (PCA)
+\
+
+- PCA is a popular technique for dimensionality reduction. 
+- When going from higher dimensional space to lower dimensional space, it tries to capture the topology of the points in high dimensional space, making sure that we are not losing some of the important properties of the data.
+
+
+## PCA example
+\
+
+- We'll work through a simpler dataset with grayscale images. 
+- Let's look at some sample images from the dataset. 
+
+```{python}
+import pickle
+animals = pickle.load(open("data/animal_faces.pkl", "rb"))
+
+mpl.rcParams.update(mpl.rcParamsDefault)
+plt.rcParams["image.cmap"] = "gray"
+fig, axes = plt.subplots(2, 5, figsize=(12, 5), subplot_kw={"xticks": (), "yticks": ()})
+for image, ax in zip(animals, axes.ravel()):
+    ax.imshow(image)
+plt.show()
+X_anims = animals.reshape(len(animals), -1)
+print("The shape of the dataset is: ", X_anims.shape) 
+image_shape = (100, 100)
+```
+
+## Applying PCA
+
+```{python}
+#| echo : true
+n_components = 300 
+pca = PCA(n_components=n_components, random_state=42)
+pca.fit(X_anims);
+```
+
+## PCA components
+
+```{python}
+fig, axes = plt.subplots(3, 5, figsize=(10, 6), subplot_kw={"xticks": (), "yticks": ()})
+for i, (component, ax) in enumerate(zip(pca.components_, axes.ravel())):
+    ax.imshow(component.reshape(image_shape))
+    ax.set_title("{}. component".format((i)))
+plt.show()
+```
+
+## PCA components
+\
+
+- We can express a data point (a cat image in this case) as a linear combination of principal components.  
+![](img/PCA-batcat-rep.png)
+
+## Reconstruction with varying number of components
+\
+
+- When we extract components, we lose some information. To what extent can we reconstruct the original data point using a given number of components?
+
+::: {.scroll-container style="overflow-y: scroll; height: 400px;"}
+```{python}
+#| echo: true
+n_components = [10, 100, 200, 300, 500, 800]
+plot_pca_animals(X_anims, (100,100), n_components=n_components, index=30)
+```
+:::
+
+## Comments
+\
+
+It's possible to capture the essence of the dataset using far fewer features!
 
 
 ## Word embeddings
+
+- This is not limited to images. 
+- We can create useful representations for any type of data. 
+- For example, 
+
 
 ## Recommender systems 
 
