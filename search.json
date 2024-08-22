@@ -207,7 +207,7 @@
     "href": "slides/slides-04-deep-learning.html#a-feature-vector-given-by-densenet",
     "title": "Deep Learning",
     "section": "A feature vector given by densenet",
-    "text": "A feature vector given by densenet\n \n\nLet’s examine the feature vectors.\n\n\n\n\n\n\n\n\n\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n...\n1014\n1015\n1016\n1017\n1018\n1019\n1020\n1021\n1022\n1023\n\n\n\n\n0\n0.000397\n0.006987\n0.002080\n0.001633\n0.164544\n1.284627\n0.000326\n0.003747\n0.019033\n0.000411\n...\n2.017400\n0.265346\n4.620863\n0.285282\n0.526915\n0.428759\n2.960554\n1.577721\n2.150136\n0.735927\n\n\n1\n0.000639\n0.004926\n0.000985\n0.001324\n0.145076\n0.558028\n0.000775\n0.002603\n0.181858\n0.000249\n...\n0.158792\n0.380575\n1.309545\n0.009790\n0.007745\n1.773695\n0.298153\n0.697784\n0.462329\n1.448314\n\n\n2\n0.000109\n0.006808\n0.003910\n0.002917\n0.137208\n0.702670\n0.000546\n0.003634\n0.386037\n0.000179\n...\n1.730925\n0.139263\n0.384295\n1.754404\n0.267863\n0.480649\n0.591291\n3.880836\n1.436774\n0.856637\n\n\n3\n0.000350\n0.002965\n0.001391\n0.000091\n0.119358\n0.032185\n0.000413\n0.004407\n0.000000\n0.000120\n...\n0.866084\n0.118614\n0.404703\n0.139143\n0.588674\n0.326834\n0.277743\n2.369125\n0.295955\n0.206888\n\n\n4\n0.000350\n0.003532\n0.002254\n0.002841\n0.102675\n0.382482\n0.000436\n0.004212\n0.816037\n0.000554\n...\n0.010685\n1.147245\n1.892539\n1.929401\n0.694761\n0.744420\n1.705220\n1.241349\n2.351264\n0.054507\n\n\n\n\n5 rows × 1024 columns\n\n\n\n\nThe features are hard to interpret but they have some important information about the images which can be useful for classification."
+    "text": "A feature vector given by densenet\n \n\nLet’s examine the feature vectors.\n\n\n\n\n\n\n\n\n\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n...\n1014\n1015\n1016\n1017\n1018\n1019\n1020\n1021\n1022\n1023\n\n\n\n\n0\n0.000397\n0.006987\n0.002080\n0.001633\n0.164544\n1.284627\n0.000326\n0.003747\n0.019033\n0.000411\n...\n2.017399\n0.265347\n4.620860\n0.285282\n0.526914\n0.428760\n2.960556\n1.577721\n2.150136\n0.735927\n\n\n1\n0.000639\n0.004926\n0.000985\n0.001324\n0.145076\n0.558028\n0.000775\n0.002603\n0.181858\n0.000249\n...\n0.158791\n0.380575\n1.309546\n0.009790\n0.007745\n1.773695\n0.298152\n0.697784\n0.462329\n1.448314\n\n\n2\n0.000109\n0.006808\n0.003910\n0.002917\n0.137208\n0.702670\n0.000546\n0.003634\n0.386037\n0.000179\n...\n1.730926\n0.139264\n0.384295\n1.754405\n0.267863\n0.480650\n0.591290\n3.880835\n1.436777\n0.856637\n\n\n3\n0.000350\n0.002965\n0.001391\n0.000091\n0.119358\n0.032185\n0.000413\n0.004407\n0.000000\n0.000120\n...\n0.866084\n0.118614\n0.404704\n0.139143\n0.588674\n0.326834\n0.277743\n2.369123\n0.295956\n0.206887\n\n\n4\n0.000350\n0.003532\n0.002254\n0.002841\n0.102675\n0.382482\n0.000436\n0.004212\n0.816037\n0.000554\n...\n0.010685\n1.147244\n1.892542\n1.929401\n0.694761\n0.744421\n1.705219\n1.241349\n2.351263\n0.054507\n\n\n\n\n5 rows × 1024 columns\n\n\n\n\nThe features are hard to interpret but they have some important information about the images which can be useful for classification."
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#logistic-regression-with-the-extracted-features",
@@ -228,7 +228,7 @@
     "href": "slides/slides-04-deep-learning.html#object-detection-using-yolo",
     "title": "Deep Learning",
     "section": "Object detection using YOLO",
-    "text": "Object detection using YOLO\n\n\n\nAnother useful task and tool to know is object detection using YOLO model.\nLet’s identify objects in a sample image using a pretrained model called YOLO5\n\n\n\nrequirements: Ultralytics requirements ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0'] not found, attempting AutoUpdate...\nRequirement already satisfied: gitpython&gt;=3.1.30 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (3.1.43)\nRequirement already satisfied: pillow&gt;=10.3.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (10.4.0)\nRequirement already satisfied: requests&gt;=2.32.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (2.32.3)\nRequirement already satisfied: setuptools&gt;=70.0.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (72.2.0)\nRequirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitpython&gt;=3.1.30) (4.0.7)\nRequirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (1.26.6)\nRequirement already satisfied: certifi&gt;=2017.4.17 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2021.5.30)\nRequirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2.0.4)\nRequirement already satisfied: idna&lt;4,&gt;=2.5 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (3.2)\nRequirement already satisfied: smmap&lt;5,&gt;=3.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;gitpython&gt;=3.1.30) (4.0.0)\n\nrequirements: AutoUpdate success ✅ 3.7s, installed 4 packages: ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0']\nrequirements: ⚠️ Restart runtime or rerun command for updates to take effect"
+    "text": "Object detection using YOLO\n\n\n\nAnother useful task and tool to know is object detection using YOLO model.\nLet’s identify objects in a sample image using a pretrained model called YOLO5"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#summary",
@@ -294,34 +294,34 @@
   {
     "objectID": "workshop-03.html",
     "href": "workshop-03.html",
-    "title": "Machine Learning Models",
+    "title": "ML Models",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Machine Learning Models"
+      "ML Models"
     ]
   },
   {
     "objectID": "workshop-03.html#slides",
     "href": "workshop-03.html#slides",
-    "title": "Machine Learning Models",
+    "title": "ML Models",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Machine Learning Models"
+      "ML Models"
     ]
   },
   {
     "objectID": "workshop-03.html#outline",
     "href": "workshop-03.html#outline",
-    "title": "Machine Learning Models",
+    "title": "ML Models",
     "section": "Outline",
     "text": "Outline\n\nMachine learning terminology\nMachine learning fundamentals\nDecision trees",
     "crumbs": [
       "Workshop",
-      "Machine Learning Models"
+      "ML Models"
     ]
   },
   {
@@ -397,7 +397,7 @@
     "href": "workshop.html",
     "title": "Overview",
     "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nMachine Learning Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nMachine Learning Models\n\n\n10:00 - 10:30\n\n\nML models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nDeep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nDeep Learning\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nLLMs\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLLMs\n\n\n13:30 - 14:00\n\n\nIntroduction to Language models Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Workshop",
       "Overview"
@@ -408,7 +408,7 @@
     "href": "workshop.html#schedule",
     "title": "Overview",
     "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nMachine Learning Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nMachine Learning Models\n\n\n10:00 - 10:30\n\n\nML models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nDeep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nDeep Learning\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nLLMs\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLLMs\n\n\n13:30 - 14:00\n\n\nIntroduction to Language models Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Workshop",
       "Overview"
@@ -438,34 +438,34 @@
   {
     "objectID": "workshop-02.html",
     "href": "workshop-02.html",
-    "title": "Machine Learning Fundamentals",
+    "title": "ML Fundamentals",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Machine Learning Fundamentals"
+      "ML Fundamentals"
     ]
   },
   {
     "objectID": "workshop-02.html#slides",
     "href": "workshop-02.html#slides",
-    "title": "Machine Learning Fundamentals",
+    "title": "ML Fundamentals",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Machine Learning Fundamentals"
+      "ML Fundamentals"
     ]
   },
   {
     "objectID": "workshop-02.html#outline",
     "href": "workshop-02.html#outline",
-    "title": "Machine Learning Fundamentals",
+    "title": "ML Fundamentals",
     "section": "Outline",
     "text": "Outline\n\nMachine learning terminology\nMachine learning fundamentals\nDecision trees",
     "crumbs": [
       "Workshop",
-      "Machine Learning Fundamentals"
+      "ML Fundamentals"
     ]
   },
   {
@@ -504,34 +504,34 @@
   {
     "objectID": "workshop-09.html",
     "href": "workshop-09.html",
-    "title": "Large Language Models",
+    "title": "LLMs",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Large Language Models"
+      "LLMs"
     ]
   },
   {
     "objectID": "workshop-09.html#slides",
     "href": "workshop-09.html#slides",
-    "title": "Large Language Models",
+    "title": "LLMs",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Large Language Models"
+      "LLMs"
     ]
   },
   {
     "objectID": "workshop-09.html#outline",
     "href": "workshop-09.html#outline",
-    "title": "Large Language Models",
+    "title": "LLMs",
     "section": "Outline",
     "text": "Outline\n\nClustering\nDimensionality Reduction\nRecommendation systems",
     "crumbs": [
       "Workshop",
-      "Large Language Models"
+      "LLMs"
     ]
   },
   {
@@ -693,7 +693,7 @@
     "href": "slides/slides-02-ml-intro.html#a-look-at-the-data",
     "title": "Introduction to Machine Learning",
     "section": "A Look at the Data",
-    "text": "A Look at the Data\n\nEach photo is 64x64 pixels in grayscale. The images are represented by a row of pixel intensities showing how dark each individual pixel should be.\n\n\n\n\n\n\n\n\n\n0\n1\n2\n3\n...\n4092\n4093\n4094\n4095\n\n\n\n\n0\n0.309917\n0.367769\n0.417355\n0.442149\n...\n0.148760\n0.152893\n0.161157\n0.157025\n\n\n1\n0.454545\n0.471074\n0.512397\n0.557851\n...\n0.152893\n0.152893\n0.152893\n0.152893\n\n\n2\n0.318182\n0.400826\n0.491736\n0.528926\n...\n0.144628\n0.140496\n0.148760\n0.152893\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n397\n0.500000\n0.533058\n0.607438\n0.628099\n...\n0.157025\n0.177686\n0.148760\n0.190083\n\n\n398\n0.214876\n0.219008\n0.219008\n0.223140\n...\n0.545455\n0.574380\n0.590909\n0.603306\n\n\n399\n0.516529\n0.462810\n0.280992\n0.252066\n...\n0.322314\n0.359504\n0.355372\n0.384298\n\n\n\n\n400 rows × 4096 columns\n\n\n\n\n\nThe dataset has 4096 features."
+    "text": "A Look at the Data\n\nEach photo is 64x64 pixels in grayscale. The images are represented by a row of pixel intensities showing how dark each individual pixel should be.\n\n\ndownloading Olivetti faces from https://ndownloader.figshare.com/files/5976027 to /Users/kvarada/scikit_learn_data\n\n\n\n\n\n\n\n\n\n0\n1\n2\n3\n...\n4092\n4093\n4094\n4095\n\n\n\n\n0\n0.309917\n0.367769\n0.417355\n0.442149\n...\n0.148760\n0.152893\n0.161157\n0.157025\n\n\n1\n0.454545\n0.471074\n0.512397\n0.557851\n...\n0.152893\n0.152893\n0.152893\n0.152893\n\n\n2\n0.318182\n0.400826\n0.491736\n0.528926\n...\n0.144628\n0.140496\n0.148760\n0.152893\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n397\n0.500000\n0.533058\n0.607438\n0.628099\n...\n0.157025\n0.177686\n0.148760\n0.190083\n\n\n398\n0.214876\n0.219008\n0.219008\n0.223140\n...\n0.545455\n0.574380\n0.590909\n0.603306\n\n\n399\n0.516529\n0.462810\n0.280992\n0.252066\n...\n0.322314\n0.359504\n0.355372\n0.384298\n\n\n\n\n400 rows × 4096 columns\n\n\n\n\n\nThe dataset has 4096 features."
   },
   {
     "objectID": "slides/slides-02-ml-intro.html#a-decision-tree-classifier",
@@ -707,7 +707,7 @@
     "href": "slides/slides-02-ml-intro.html#a-decision-tree-classifier-1",
     "title": "Introduction to Machine Learning",
     "section": "A Decision Tree Classifier",
-    "text": "A Decision Tree Classifier\n\n\n\n\nThe model classified 100.0% of training examples correctly by \n building a decision tree of depth 38\n\n\n\nThat’s very accurate indeed! Maybe decision trees are a really good way to detect and classify faces.\nRemember, we only trained on 80% of the data. Let’s see how our model performs on the remaining 20%"
+    "text": "A Decision Tree Classifier\n\n\n\n\nThe model classified 100.0% of training examples correctly by \n building a decision tree of depth 42\n\n\n\nThat’s very accurate indeed! Maybe decision trees are a really good way to detect and classify faces.\nRemember, we only trained on 80% of the data. Let’s see how our model performs on the remaining 20%"
   },
   {
     "objectID": "slides/slides-02-ml-intro.html#did-we-build-a-good-model",
