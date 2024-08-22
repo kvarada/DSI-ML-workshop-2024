@@ -1,7 +1,7 @@
 ---
 title: Unsupervised Learning
 description: Clustering, Dimensionality Reduction, Recommendation Systems 
-description-short: Deep Learning
+description-short: Clustering, Dimensionality Reduction, Recommendation Systems 
 duration: 40 min
 time: 11:30 - 12:10
 
