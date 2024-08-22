@@ -390,14 +390,14 @@
     "href": "index.html",
     "title": "Welcome",
     "section": "",
-    "text": "Welcome\nWelcome everyone to the workshop, “Is Machine Learning Suitable for Your Projects?”"
+    "text": "Welcome\nWelcome everyone to the workshop, “Is Machine Learning Suitable for Your Projects?” This workshop is a collaboration between the Data Science Institute, the Master of Data Science, Vancouver program and the Department of Computer Science at UBC.\n\nWhen 🕘 9 am to 3:30 pm on August 24th, 2024\nWhere? 📍 P.A. Woodward Instructional Resources Centre (IRC) - 4, 2194 Health Sciences Mall, Vancouver BC, V6T 1Z3\n\n\n\nIn this workshop, you will discover how machine learning can improve your research projects. The workshop is tailored for non-STEM students and researchers. We will demystify the fundamentals of machine learning and clarify what it can and cannot do for your research. By the end of the workshop, you will be familiar with the fundamentals of machine learning and different types of machine learning."
   },
   {
     "objectID": "workshop.html",
     "href": "workshop.html",
     "title": "Overview",
     "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nMachine Learning Fundamentals\n\n\n9:10 - 10:00\n\n\nML fundamentals\n\n\n\n\nMachine Learning Models\n\n\n10:00 - 10:30\n\n\nML models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nDeep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nDeep Learning\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nLLMs\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nMachine Learning Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nMachine Learning Models\n\n\n10:00 - 10:30\n\n\nML models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nDeep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nDeep Learning\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nLLMs\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Workshop",
       "Overview"
@@ -408,7 +408,7 @@
     "href": "workshop.html#schedule",
     "title": "Overview",
     "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nMachine Learning Fundamentals\n\n\n9:10 - 10:00\n\n\nML fundamentals\n\n\n\n\nMachine Learning Models\n\n\n10:00 - 10:30\n\n\nML models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nDeep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nDeep Learning\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nLLMs\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nMachine Learning Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nMachine Learning Models\n\n\n10:00 - 10:30\n\n\nML models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nDeep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nDeep Learning\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nLLMs\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Workshop",
       "Overview"
