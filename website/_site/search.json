@@ -1,0 +1,87 @@
+[
+  {
+    "objectID": "slides/slides-01-intro.html#welcome-to-the-workshop",
+    "href": "slides/slides-01-intro.html#welcome-to-the-workshop",
+    "title": "Welcome!",
+    "section": "Welcome to the workshop!",
+    "text": "Welcome to the workshop!\n\nFind a seat where you can see the screen!\nYou will be discussing concepts with your neighbours."
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#meet-us",
+    "href": "slides/slides-01-intro.html#meet-us",
+    "title": "Welcome!",
+    "section": "Meet us",
+    "text": "Meet us\n\nVarada\nPrajeet\nYulia\nTony"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
+    "href": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
+    "title": "Welcome!",
+    "section": "Learning goals of the workshop",
+    "text": "Learning goals of the workshop\n\nThe primary learning goal of the workshop is to familiarize yourself with the fundamentals of machine learning and its various types. This knowledge will help you determine which type of machine learning, or whether a non-machine learning approach, would be most appropriate for your problem."
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Our Team",
+    "section": "",
+    "text": "Varada Kolhatkar\n        Assistant Professor of Teaching, Computer Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Prajeet Bajpai\n        Teaching Postdoctoral Fellow\n        \n            Instructor\n        \n        \n    \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome\nWelcome everyone to the workshop, “Is Machine Learning Suitable for Your Projects?”"
+  },
+  {
+    "objectID": "workshop.html",
+    "href": "workshop.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:15\n\n\nHello and welcome to the workshop!\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "workshop.html#schedule",
+    "href": "workshop.html#schedule",
+    "title": "Overview",
+    "section": "",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:15\n\n\nHello and welcome to the workshop!\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html",
+    "href": "workshop-01.html",
+    "title": "Welcome and getting started",
+    "section": "",
+    "text": "{{&lt; revealjs \"slides/slides-01-intro.html\" \"600px\" \"ratio ratio-16x9\" &gt;}}",
+    "crumbs": [
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html#slides",
+    "href": "workshop-01.html#slides",
+    "title": "Welcome and getting started",
+    "section": "",
+    "text": "{{&lt; revealjs \"slides/slides-01-intro.html\" \"600px\" \"ratio ratio-16x9\" &gt;}}",
+    "crumbs": [
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html#outline",
+    "href": "workshop-01.html#outline",
+    "title": "Welcome and getting started",
+    "section": "Outline",
+    "text": "Outline\n\nWelcome to the workshop!\nIntroductions and meet your neighbors\nAbout the learning objective of the workshop",
+    "crumbs": [
+      "Welcome and getting started"
+    ]
+  }
+]
