@@ -1,0 +1,20 @@
+---
+title: "Unsupervised Learning"
+format: 
+    revealjs:
+      smaller: true
+      center: true
+jupyter: 
+  kernelspec:
+    display_name: '571'
+    language: python
+    name: '571'
+---
+
+## Learning outcomes 
+\
+From this module, you will be able to 
+
+
+## Introduction to unsupervised learning
+\

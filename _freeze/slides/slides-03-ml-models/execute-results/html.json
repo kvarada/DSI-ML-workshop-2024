@@ -1,0 +1,12 @@
+{
+  "hash": "216e067a892a0a8178c5ed5d9ec42f37",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Supervised Machine Learning Models\"\nformat: \n    revealjs:\n      smaller: true\n      center: true\njupyter: \n  kernelspec:\n    display_name: '571'\n    language: python\n    name: '571'\n---\n\n\n## Learning outcomes \n\\\nFrom this module, you will be able to \n\n\n## Introduction to Large Language Models\n\\\n\n",
+    "supporting": [
+      "slides-03-ml-models_files/figure-revealjs"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

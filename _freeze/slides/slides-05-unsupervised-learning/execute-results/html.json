@@ -1,0 +1,12 @@
+{
+  "hash": "f464f0547186a6d702ac6112e092ff01",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Unsupervised Learning\"\nformat: \n    revealjs:\n      smaller: true\n      center: true\njupyter: \n  kernelspec:\n    display_name: '571'\n    language: python\n    name: '571'\n---\n\n\n## Learning outcomes \n\\\nFrom this module, you will be able to \n\n\n## Introduction to unsupervised learning\n\\\n\n",
+    "supporting": [
+      "slides-05-unsupervised-learning_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
