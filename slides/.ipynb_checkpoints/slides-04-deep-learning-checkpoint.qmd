@@ -408,35 +408,63 @@ show_predictions(pipe, Z_valid, y_valid, dataloaders['valid'], class_names, num_
 :::
 
 
-## Object detection using [YOLO](https://docs.ultralytics.com/)
+## Object detection 
 \
 
 - Another useful task and tool to know is object detection using YOLO model. 
 - Let's identify objects in a sample image using a pretrained model called YOLO5
+- List the objects present in this image.
+
+![](data/yolo_test/3356700488_183566145b.jpg)
+
+## Object detection using [YOLO](https://docs.ultralytics.com/)
+\
+
+Let's try this out using a pre-trained model. 
+
 
 ```{python}
-import torch
-import cv2
-from matplotlib import pyplot as plt
+#| echo: true
+from ultralytics import YOLO
+model = YOLO("yolov8n.pt")  # pretrained YOLOv8n model
 
-# Load YOLOv5 model
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
-
-# Load image
-img = 'data/yolo_test/3356700488_183566145b.jpg'
-
-# Perform inference
-results = model(img)
-
-# Print results
-results.print()  # prints results to console
-
-# Save results
-# results.save()  # save image with detections to 'runs/detect/exp'
-
-# Show results
-results.show()  # displays image with bounding boxes
+yolo_input = "data/yolo_test/3356700488_183566145b.jpg"
+yolo_result = "data/yolo_result.jpg"
+# Run batched inference on a list of images
+result = model(yolo_input)  # return a list of Results objects
+result[0].save(filename=yolo_result)
 ```
+
+## Object detection output 
+\
+
+::: {.scroll-container style="overflow-y: scroll; height: 400px;"}
+```{python}
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+# Load the images
+input_img = mpimg.imread(yolo_input)
+result_img = mpimg.imread(yolo_result)
+
+# Create a figure to display the images side by side
+fig, axes = plt.subplots(1, 2, figsize=(10, 5))
+
+# Display the first image
+axes[0].imshow(input_img)
+axes[0].axis('off')  # Hide the axes
+axes[0].set_title('Original Image')
+
+# Display the second image
+axes[1].imshow(result_img)
+axes[1].axis('off')  # Hide the axes
+axes[1].set_title('Result Image')
+
+# Show the images
+plt.tight_layout()
+plt.show()
+```
+:::
 
 
 ## Summary 

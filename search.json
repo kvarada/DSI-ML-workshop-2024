@@ -231,256 +231,158 @@
     "text": "Take-home message\n\nA lot of data out there is unlabeled but we can still do many interesting things with it."
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#introduction-to-machine-learning",
-    "href": "slides/slides-02-ml-intro.html#introduction-to-machine-learning",
-    "title": "Introduction to Machine Learning",
-    "section": "Introduction to Machine Learning",
-    "text": "Introduction to Machine Learning\n\nMachine Learning uses computer programs to digest and accurately model data. After training on the data, a program can be used to extract hidden patterns, make predictions in new situations or generate novel content.\nThe program learns based on the features present in the data, which represent the information we have about each example."
+    "objectID": "slides/slides-06-llms.html#learning-outcomes",
+    "href": "slides/slides-06-llms.html#learning-outcomes",
+    "title": "Large Language Models",
+    "section": "Learning outcomes",
+    "text": "Learning outcomes\n\nFrom this module, you will be able to"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#introduction-to-machine-learning-1",
-    "href": "slides/slides-02-ml-intro.html#introduction-to-machine-learning-1",
-    "title": "Introduction to Machine Learning",
-    "section": "Introduction to Machine Learning",
-    "text": "Introduction to Machine Learning"
+    "objectID": "slides/slides-06-llms.html#language-models-activity",
+    "href": "slides/slides-06-llms.html#language-models-activity",
+    "title": "Large Language Models",
+    "section": "Language models activity",
+    "text": "Language models activity\n\n\nEach of you will receive a sticky note with a word on it. Here’s what you’ll do:\n\nCarefully remove the sticky note to see the word. This word is for your eyes only —- no peeking, neighbours!\nThink quickly: what word would logically follow the word on the sticky note? Write this next word on a new sticky note.\nYou have about 20 seconds for this step, so trust your instincts!\nPass your predicted word to the person next to you. Do not pass the word you received from your neighbour forward. Keep the chain going!\nStop after the last person in your row has finished.\nFinally, one person from your row will enter the collective sentence into our Google Doc."
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#activity-1",
-    "href": "slides/slides-02-ml-intro.html#activity-1",
-    "title": "Introduction to Machine Learning",
-    "section": "Activity 1",
-    "text": "Activity 1\n\nWrite one (or several) problems in your research field where you think Machine Learning could be applied. Try to address the following questions:\n\nWhat goal are you trying to accomplish? What would an ideal solution to your problem look like?\nHow would a human solve this problem? What approaches are presently available and utilized?\nWhat kind of data is available to you, or might be collected? What features are present in the data?\n\nOne of the learning objectives of the workshop will be to determine whether your goal is best addressed using supervised machine learning, inferential statistics, unsupervised learning, deep learning, generative AI, or a non-ML solution."
+    "objectID": "slides/slides-06-llms.html#markov-model-of-language",
+    "href": "slides/slides-06-llms.html#markov-model-of-language",
+    "title": "Large Language Models",
+    "section": "Markov model of language",
+    "text": "Markov model of language\n\n\n\nYou’ve just created a simple Markov model of language!\nIn predicting the next word from a minimal context, you likely used your linguistic intuition and familiarity with common two-word phrases or collocations.\nYou could create more coherent sentences by taking into account more context e.g., previous two words or four words or 100 words.\nThis idea was first used by Shannon for characters in The Shannon’s game. See this video by Jordan Boyd-Graber for more information on this."
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#classification-vs.-regression",
-    "href": "slides/slides-02-ml-intro.html#classification-vs.-regression",
-    "title": "Introduction to Machine Learning",
-    "section": "Classification vs. Regression",
-    "text": "Classification vs. Regression"
+    "objectID": "slides/slides-06-llms.html#applications-of-predicting-next-word",
+    "href": "slides/slides-06-llms.html#applications-of-predicting-next-word",
+    "title": "Large Language Models",
+    "section": "Applications of predicting next word",
+    "text": "Applications of predicting next word\n\n\nOne of the most common applications for predicting the next word is the ‘smart compose’ feature in your emails, text messages, and search engines."
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#measuring-performance",
-    "href": "slides/slides-02-ml-intro.html#measuring-performance",
-    "title": "Introduction to Machine Learning",
-    "section": "Measuring Performance",
-    "text": "Measuring Performance\n\n\n\nPerformance on classification tasks can be measured based on the accuracy of the model’s predictions.\nPerformance on a regression task can be measured based on error. Mean squared error is one choice, but there are many others!"
+    "objectID": "slides/slides-06-llms.html#language-model",
+    "href": "slides/slides-06-llms.html#language-model",
+    "title": "Large Language Models",
+    "section": "Language model",
+    "text": "Language model\n\n\nA language model computes the probability distribution over sequences (of words or characters). Intuitively, this probability tells us how “good” or plausible a sequence of words is.\n\n\nCheck out this recent BMO ad."
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#inference-vs.-prediction",
-    "href": "slides/slides-02-ml-intro.html#inference-vs.-prediction",
-    "title": "Introduction to Machine Learning",
-    "section": "Inference vs. Prediction",
-    "text": "Inference vs. Prediction\n\n\n\nInference is the use of a model to infer a relationship between features (independent variables) and targets (independent variables).\nPrediction is the use of a model to predict the target value for a new example not seen in training."
+    "objectID": "slides/slides-06-llms.html#a-simple-model-of-language",
+    "href": "slides/slides-06-llms.html#a-simple-model-of-language",
+    "title": "Large Language Models",
+    "section": "A simple model of language",
+    "text": "A simple model of language\n\n\n\nCalculate the co-occurrence frequencies and probabilities based on these frequencies\nPredict the next word based on these probabilities"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#what-outcome-do-we-care-about",
-    "href": "slides/slides-02-ml-intro.html#what-outcome-do-we-care-about",
-    "title": "Introduction to Machine Learning",
-    "section": "What outcome do we care about?",
-    "text": "What outcome do we care about?\n\n\n\nA researcher studying the impact of pollution on cancer risk is performing inference. They may not make perfect predictions (since the dataset is likely to be noisy) but good statistical inference could be extremely valuable.\nGmail’s spam filtering algorithm is performing prediction. We are not really trying to improve human understanding of what makes a message spam (often it is obvious), we just want a model that makes good predictions.\nOf course, these goals are related, so in many situations we may be interested in both."
+    "objectID": "slides/slides-06-llms.html#long-distance-dependencies",
+    "href": "slides/slides-06-llms.html#long-distance-dependencies",
+    "title": "Large Language Models",
+    "section": "Long-distance dependencies",
+    "text": "Long-distance dependencies\n\n\nWhat are some reasonable predictions for the next word in the sequence?\n\nI am studying law at the University of British Columbia Point Grey campus in Vancouver because I want to work as a ___\n\nMarkov model is unable to capture such long-distance dependencies in language."
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#example-linear-regression",
-    "href": "slides/slides-02-ml-intro.html#example-linear-regression",
-    "title": "Introduction to Machine Learning",
-    "section": "Example: Linear Regression",
-    "text": "Example: Linear Regression\n\n\nIs this inference or prediction?"
+    "objectID": "slides/slides-06-llms.html#transformer-models",
+    "href": "slides/slides-06-llms.html#transformer-models",
+    "title": "Large Language Models",
+    "section": "Transformer models",
+    "text": "Transformer models\n\n\nEnter attention and transformer models! Transformer models are at the core of all state-of-the-art Generative AI models (e.g., BERT, GPT3, GPT4, Gemini, DALL-E, Llama, Github Copilot)?\n\nSource"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#types-of-machine-learning",
-    "href": "slides/slides-02-ml-intro.html#types-of-machine-learning",
-    "title": "Introduction to Machine Learning",
-    "section": "Types of Machine Learning",
-    "text": "Types of Machine Learning\n\nToday we will see two main types of machine learning, namely\n\nSupervised Learning, and\nUnsupervised Learning.\n\nWe will also discuss which problems each type might be best suited for."
+    "objectID": "slides/slides-06-llms.html#transformer-models-1",
+    "href": "slides/slides-06-llms.html#transformer-models-1",
+    "title": "Large Language Models",
+    "section": "Transformer models",
+    "text": "Transformer models\n\n\n\nSource: GPT-4 Technical Report"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#supervised-learning",
-    "href": "slides/slides-02-ml-intro.html#supervised-learning",
-    "title": "Introduction to Machine Learning",
-    "section": "Supervised Learning",
-    "text": "Supervised Learning\n\nHere the training data is comprised of a set of features, and each example comes with a corresponding target. The goal is to get a machine learning model to accurately predict the target based on the feature values.\nExamples could include spam filtering, face recognition or weather forecasting."
+    "objectID": "slides/slides-06-llms.html#self-attention",
+    "href": "slides/slides-06-llms.html#self-attention",
+    "title": "Large Language Models",
+    "section": "Self-attention",
+    "text": "Self-attention\n\n\n\nAn important innovation which makes these models work so well is self-attention.\nCount how many times the players wearing the white pass the basketball?"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#unsupervised-learning",
-    "href": "slides/slides-02-ml-intro.html#unsupervised-learning",
-    "title": "Introduction to Machine Learning",
-    "section": "Unsupervised Learning",
-    "text": "Unsupervised Learning\n\nIn unsupervised learning, there are no targets. The goal is instead to uncover underlying patterns. These can be used to provide a concise summary of the data, or group similar examples together.\nExamples could include customer segmentation, anomaly detection or online recommendation systems (think Netflix)."
+    "objectID": "slides/slides-06-llms.html#self-attention-1",
+    "href": "slides/slides-06-llms.html#self-attention-1",
+    "title": "Large Language Models",
+    "section": "Self-attention",
+    "text": "Self-attention\n\n\nWhen we process information, we often selectively focus on specific parts of the input, giving more attention to relevant information and less attention to irrelevant information. This is the core idea of attention.\nConsider the examples below:\n\nExample 1: She left a brief note on the kitchen table, reminding him to pick up groceries.\nExample 2: The diplomat’s speech struck a positive note in the peace negotiations.\nExample 3: She plucked the guitar strings, ending with a melancholic note.\n\nThe word note in these examples serves quite distinct meanings, each tied to different contexts. To capture varying word meanings across different contexts, we need a mechanism that considers the wider context to compute each word’s contextual representation.\n\nSelf-attention is just that mechanism!"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#other-ml-types",
-    "href": "slides/slides-02-ml-intro.html#other-ml-types",
-    "title": "Introduction to Machine Learning",
-    "section": "Other ML types",
-    "text": "Other ML types\n\nSome other types of Machine Learning include self-supervised learning and reinforcement learning.\nSelf-supervised algorithms automatically learn to generate labels and transform unsupervised problems to supervised ones.\nReinforcement Leaning trains an agent using a system of rewards and penalties. The agent learns strategies to maximize reward. AlphaGo is a reinforcement learning agent that taught itself to play Go, and was able to beat the strongest human Go players."
+    "objectID": "slides/slides-06-llms.html#using-llms-in-your-applications",
+    "href": "slides/slides-06-llms.html#using-llms-in-your-applications",
+    "title": "Large Language Models",
+    "section": "Using LLMs in your applications",
+    "text": "Using LLMs in your applications\n\n\n\nThere are several Python libraries available which allow us to use pre-trained LLMs in our applications.\n\n🤗 Transformers library\nOpenAI GPT\nHaystack\nLangChain\nspacy-transformers\n…"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#activity-2",
-    "href": "slides/slides-02-ml-intro.html#activity-2",
-    "title": "Introduction to Machine Learning",
-    "section": "Activity 2",
-    "text": "Activity 2\n \nReturn to the problems you identified in Activity 1. Try to decide if they involve performing inference or prediction.\nAlso suggest whether you think they are best approached with supervised or unsupervised learning. What aspects of the problem particularly suggest one approach over another?"
+    "objectID": "slides/slides-06-llms.html#types-of-llms",
+    "href": "slides/slides-06-llms.html#types-of-llms",
+    "title": "Large Language Models",
+    "section": "Types of LLMs",
+    "text": "Types of LLMs\nIf you want to use pre-trained LLMs, it’s useful to know that there are three main types of LLMs.\n\n\n\n\n\n\n\n\n\nFeature\nDecoder-only (e.g., GPT-3)\nEncoder-only (e.g., BERT, RoBERTa)\nEncoder decoder (e.g., T5, BARD)\n\n\n\n\nOutput Computation is based on\nInformation earlier in the context\nEntire context (bidirectional)\nEncoded input context\n\n\nText Generation\nCan naturally generate text completion\nCannot directly generate text\nCan generate outputs naturally\n\n\nExample\nDSI ML workshop audience is ___\nDSI ML workshop audience is the best! → positive\nInput: Translate to Mandarin: Long but productive day! Output: 漫长而富有成效的一天！"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#a-simple-supervised-learning-model",
-    "href": "slides/slides-02-ml-intro.html#a-simple-supervised-learning-model",
-    "title": "Introduction to Machine Learning",
-    "section": "A Simple Supervised Learning Model",
-    "text": "A Simple Supervised Learning Model\n\nWe will use a simple machine learning model– a decision tree– to demonstrate some fundamental concepts in machine learning. Suppose we have the following dataset:\n\n\n\n\n\n\n\n\n\n\nml_experience\nclass_attendance\nlab1\nlab2\nlab3\nlab4\nquiz1\nquiz2\n\n\n\n\n0\n1\n1\n92\n93\n84\n91\n92\nA+\n\n\n1\n1\n0\n94\n90\n80\n83\n91\nnot A+\n\n\n2\n0\n0\n78\n85\n83\n80\n80\nnot A+\n\n\n3\n0\n1\n91\n94\n92\n91\n89\nA+\n\n\n4\n0\n1\n77\n83\n90\n92\n85\nA+\n\n\n\n\n\n\n\n  How would you go about predicting the Quiz 2 grade?"
+    "objectID": "slides/slides-06-llms.html#nlp-pipelines-before-llms",
+    "href": "slides/slides-06-llms.html#nlp-pipelines-before-llms",
+    "title": "Large Language Models",
+    "section": "NLP pipelines before LLMs",
+    "text": "NLP pipelines before LLMs\n\n\n\nText preprocessing: Tokenization, stopword removal, stemming/lemmatization.\nFeature extraction: Techniques Bag of Words or word embeddings (e.g., Word2Vec, GloVe).\nModeling: A relatively simple model such as logistic regression or support vector machines (SVM)\nTraining: Supervised learning on a labeled dataset (e.g., with positive, negative, and neutral sentiment categories for sentiment analysis).\nEvaluation: Performance typically measured using accuracy, F1-score, etc.\nMain challenges:\n\nExtensive feature engineering required for good performance.\nDifficulty in capturing the nuances and context of sentiment, especially in complex sentences."
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#decision-trees",
-    "href": "slides/slides-02-ml-intro.html#decision-trees",
-    "title": "Introduction to Machine Learning",
-    "section": "Decision Trees",
-    "text": "Decision Trees\n\nA decision tree iteratively splits the data by asking questions about feature values.\nThe algorithm tries to ask questions that best separate one class from another. It’s like a game of twenty questions!"
+    "objectID": "slides/slides-06-llms.html#nlp-pipelines-after-llms",
+    "href": "slides/slides-06-llms.html#nlp-pipelines-after-llms",
+    "title": "Large Language Models",
+    "section": "NLP pipelines after LLMs",
+    "text": "NLP pipelines after LLMs\n \n\nfrom transformers import pipeline, AutoModelForTokenClassification, AutoTokenizer\n# Sentiment analysis pipeline\nanalyzer = pipeline(\"sentiment-analysis\", model='distilbert-base-uncased-finetuned-sst-2-english')\nanalyzer([\"I asked my model to predict my future, and it said '404: Life not found.'\",\n          '''Machine learning is just like cooking—sometimes you follow the recipe, \n            and other times you just hope for the best!.'''])\n\n[{'label': 'NEGATIVE', 'score': 0.995707631111145},\n {'label': 'POSITIVE', 'score': 0.9994770884513855}]"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#a-decision-stump",
-    "href": "slides/slides-02-ml-intro.html#a-decision-stump",
-    "title": "Introduction to Machine Learning",
-    "section": "A Decision Stump",
-    "text": "A Decision Stump\n\n\n\n\n\n\n\n\n\n\n\nWe could start by splitting the data based on the students’ Lab 3 grades."
+    "objectID": "slides/slides-06-llms.html#zero-shot-learning",
+    "href": "slides/slides-06-llms.html#zero-shot-learning",
+    "title": "Large Language Models",
+    "section": "Zero-shot learning",
+    "text": "Zero-shot learning\n\n\n\n\n\n['im feeling rather rotten so im not very ambitious right now',\n 'im updating my blog because i feel shitty',\n 'i never make her separate from me because i don t ever want her to feel like i m ashamed with her',\n 'i left with my bouquet of red and yellow tulips under my arm feeling slightly more optimistic than when i arrived',\n 'i was feeling a little vain when i did this one',\n 'i cant walk into a shop anywhere where i do not feel uncomfortable',\n 'i felt anger when at the end of a telephone call',\n 'i explain why i clung to a relationship with a boy who was in many ways immature and uncommitted despite the excitement i should have been feeling for getting accepted into the masters program at the university of virginia',\n 'i like to have the same breathless feeling as a reader eager to see what will happen next',\n 'i jest i feel grumpy tired and pre menstrual which i probably am but then again its only been a week and im about as fit as a walrus on vacation for the summer']"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#iterating-the-procedure",
-    "href": "slides/slides-02-ml-intro.html#iterating-the-procedure",
-    "title": "Introduction to Machine Learning",
-    "section": "Iterating the procedure",
-    "text": "Iterating the procedure\n \n\n\n\n\n\n\n\n\n\nThen we further split each of the resulting nodes, again asking questions involving features in the dataset."
+    "objectID": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection",
+    "href": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection",
+    "title": "Large Language Models",
+    "section": "Zero-shot learning for emotion detection",
+    "text": "Zero-shot learning for emotion detection\n\n\n\nfrom transformers import AutoTokenizer\nfrom transformers import pipeline \nimport torch\n\n#Load the pretrained model\nmodel_name = \"facebook/bart-large-mnli\"\nclassifier = pipeline('zero-shot-classification', model=model_name)\nexs = dataset[\"test\"][\"text\"][:10]\ncandidate_labels = [\"sadness\", \"joy\", \"love\",\"anger\", \"fear\", \"surprise\"]\noutputs = classifier(exs, candidate_labels)"
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#building-a-decision-tree",
-    "href": "slides/slides-02-ml-intro.html#building-a-decision-tree",
-    "title": "Introduction to Machine Learning",
-    "section": "Building a Decision Tree",
-    "text": "Building a Decision Tree"
+    "objectID": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection-1",
+    "href": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection-1",
+    "title": "Large Language Models",
+    "section": "Zero-shot learning for emotion detection",
+    "text": "Zero-shot learning for emotion detection\n\n\n\n\n\n\n\n\n\n\n\n\nsequence\nlabels\nscores\n\n\n\n\n0\nim feeling rather rotten so im not very ambiti...\n[sadness, anger, surprise, fear, joy, love]\n[0.7367967367172241, 0.10041747242212296, 0.09...\n\n\n1\nim updating my blog because i feel shitty\n[sadness, surprise, anger, fear, joy, love]\n[0.7429749369621277, 0.13775970041751862, 0.05...\n\n\n2\ni never make her separate from me because i do...\n[love, sadness, surprise, fear, anger, joy]\n[0.31536391377449036, 0.2249031811952591, 0.19...\n\n\n3\ni left with my bouquet of red and yellow tulip...\n[surprise, joy, love, sadness, fear, anger]\n[0.4218207895755768, 0.33366963267326355, 0.21...\n\n\n4\ni was feeling a little vain when i did this one\n[surprise, anger, fear, love, joy, sadness]\n[0.5639424920082092, 0.170002281665802, 0.0864...\n\n\n5\ni cant walk into a shop anywhere where i do no...\n[surprise, fear, sadness, anger, joy, love]\n[0.3703337609767914, 0.36559417843818665, 0.14...\n\n\n6\ni felt anger when at the end of a telephone call\n[anger, surprise, fear, sadness, joy, love]\n[0.9760519862174988, 0.012534384615719318, 0.0...\n\n\n7\ni explain why i clung to a relationship with a...\n[surprise, joy, love, sadness, fear, anger]\n[0.4382023811340332, 0.2322317510843277, 0.129...\n\n\n8\ni like to have the same breathless feeling as ...\n[surprise, joy, love, fear, anger, sadness]\n[0.7675781846046448, 0.13846896588802338, 0.03...\n\n\n9\ni jest i feel grumpy tired and pre menstrual w...\n[surprise, sadness, anger, fear, joy, love]\n[0.7340189814567566, 0.11860307306051254, 0.07..."
   },
   {
-    "objectID": "slides/slides-02-ml-intro.html#decision-boundary",
-    "href": "slides/slides-02-ml-intro.html#decision-boundary",
-    "title": "Introduction to Machine Learning",
-    "section": "Decision Boundary",
-    "text": "Decision Boundary\n\nThe first two questions in our tree involved Lab 3 and Quiz 1 grades. We can make a plot involving these two features to better understand our tree."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#model-parameters",
-    "href": "slides/slides-02-ml-intro.html#model-parameters",
-    "title": "Introduction to Machine Learning",
-    "section": "Model Parameters",
-    "text": "Model Parameters\n\n\nDuring training, the model decides which feature to use to split at each node. It also decides which value of the feature to split at. This is the ‘learning’ phase, where the algorithm is trying different options and selecting the ‘best’ feature and value for splitting."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#hyperparameters",
-    "href": "slides/slides-02-ml-intro.html#hyperparameters",
-    "title": "Introduction to Machine Learning",
-    "section": "Hyperparameters",
-    "text": "Hyperparameters\n\nThe maximum depth of a decision tree (at most how many questions it asks) is a hyper-parameter of the model. We can build different trees to test which choice of hyper-parameter gives the best result.\nSome models may have a continuous range of options for a given hyper-parameter. This gives rise to a potentially infinite choice of “models” to test."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#trying-to-recognize-faces",
-    "href": "slides/slides-02-ml-intro.html#trying-to-recognize-faces",
-    "title": "Introduction to Machine Learning",
-    "section": "Trying to Recognize Faces",
-    "text": "Trying to Recognize Faces\n\nTo demonstrate some fundamental concepts in machine learning, we will attempt to biuld a decision tree that can recognize faces. Our data will be taken from the Olivetti Faces dataset, which is a collection of 400 images of faces.\nThe labels correspond to the forty individuals that are pictured, and the dataset contains 10 photos per individual. We will try to use a decision tree to correctly predict the individual for each photo."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#a-look-at-the-data",
-    "href": "slides/slides-02-ml-intro.html#a-look-at-the-data",
-    "title": "Introduction to Machine Learning",
-    "section": "A Look at the Data",
-    "text": "A Look at the Data\n\nEach photo is 64x64 pixels in grayscale. The images are represented by a row of pixel intensities showing how dark each individual pixel should be.\n\n\n\n\n\n\n\n\n\n0\n1\n2\n3\n...\n4092\n4093\n4094\n4095\n\n\n\n\n0\n0.309917\n0.367769\n0.417355\n0.442149\n...\n0.148760\n0.152893\n0.161157\n0.157025\n\n\n1\n0.454545\n0.471074\n0.512397\n0.557851\n...\n0.152893\n0.152893\n0.152893\n0.152893\n\n\n2\n0.318182\n0.400826\n0.491736\n0.528926\n...\n0.144628\n0.140496\n0.148760\n0.152893\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n397\n0.500000\n0.533058\n0.607438\n0.628099\n...\n0.157025\n0.177686\n0.148760\n0.190083\n\n\n398\n0.214876\n0.219008\n0.219008\n0.223140\n...\n0.545455\n0.574380\n0.590909\n0.603306\n\n\n399\n0.516529\n0.462810\n0.280992\n0.252066\n...\n0.322314\n0.359504\n0.355372\n0.384298\n\n\n\n\n400 rows × 4096 columns\n\n\n\n\n\nThe dataset has 4096 features."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#a-decision-tree-classifier",
-    "href": "slides/slides-02-ml-intro.html#a-decision-tree-classifier",
-    "title": "Introduction to Machine Learning",
-    "section": "A Decision Tree Classifier",
-    "text": "A Decision Tree Classifier\n\nWe can build a decision tree classifier on the dataset of faces and see how it performs. For now we will train on a random subset of the data that contains 80% of the images (we’ll explain why later)\nLet’s see how accurate this model gets after training."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#a-decision-tree-classifier-1",
-    "href": "slides/slides-02-ml-intro.html#a-decision-tree-classifier-1",
-    "title": "Introduction to Machine Learning",
-    "section": "A Decision Tree Classifier",
-    "text": "A Decision Tree Classifier\n\n\n\n\nThe model classified 100.0% of training examples correctly by \n building a decision tree of depth 39\n\n\n\nThat’s very accurate indeed! Maybe decision trees are a really good way to detect and classify faces.\nRemember, we only trained on 80% of the data. Let’s see how our model performs on the remaining 20%"
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#did-we-build-a-good-model",
-    "href": "slides/slides-02-ml-intro.html#did-we-build-a-good-model",
-    "title": "Introduction to Machine Learning",
-    "section": "Did we build a good model?",
-    "text": "Did we build a good model?\n\n\n\n\nThe model acheived an accuracy of 53.75% on new data\n\n\n\n…oops."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#whats-going-on",
-    "href": "slides/slides-02-ml-intro.html#whats-going-on",
-    "title": "Introduction to Machine Learning",
-    "section": "What’s going on?",
-    "text": "What’s going on?"
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#practice-makes-perfect",
-    "href": "slides/slides-02-ml-intro.html#practice-makes-perfect",
-    "title": "Introduction to Machine Learning",
-    "section": "Practice makes perfect",
-    "text": "Practice makes perfect\n\nOur deep decision tree likely just memorized the dataset. After all, with a tree of depth 38, we could actually memorize up to 238 distinct examples!\nClearly this does not make for a good model. After all, we want a model that can recognize faces, even when they appear in new images."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#overfitting",
-    "href": "slides/slides-02-ml-intro.html#overfitting",
-    "title": "Introduction to Machine Learning",
-    "section": "Overfitting",
-    "text": "Overfitting\n\nOverfitting refers to a situation where the model learns noise from the training data, leading to a poor performance when deployed on new data.\nComplex models are prone to overfitting– we cannot just rely on training error to measure their performance. Simple models typically have similar train and test errors, but both will be high."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#section",
-    "href": "slides/slides-02-ml-intro.html#section",
-    "title": "Introduction to Machine Learning",
-    "section": "",
-    "text": "Thus we have our “fundamental tradeoff”: as we increase model complexity, the training error will reduce but the gap between training and test error will increase."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#scenario-1",
-    "href": "slides/slides-02-ml-intro.html#scenario-1",
-    "title": "Introduction to Machine Learning",
-    "section": "Scenario 1",
-    "text": "Scenario 1\n\nYour colleague is trying to build a machine learning model to detect cancers in medical imaging. They know about overfitting, so they separate their data into a training set and a test set.\nThey use 10 different types of machine learning models, and try 1000 different combinations of hyper-parameters for each. In every case, they only use the training set to train their model, and then note how the model performs by measure accuracy on the test set.\nThe best model achieves 99% accuracy on the test set. Your colleague tells you they have found a machine learning model that diagnoses cancer with 99% accuracy.\nDo you believe them?"
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#the-golden-rule-of-machine-learning",
-    "href": "slides/slides-02-ml-intro.html#the-golden-rule-of-machine-learning",
-    "title": "Introduction to Machine Learning",
-    "section": "The Golden Rule of Machine Learning",
-    "text": "The Golden Rule of Machine Learning\n\nBy using the same test set for each of the 10,000 models they tried, your colleague has violated the golden rule of machine learning.\nThe golden rule tells us that test data must not influence the model training in any way.\nEven though your colleague never directly trained on test data, they used test data multiple times to validate model performance. As a result, they are likely to have found good performance purely by accident."
-  },
-  {
-    "objectID": "slides/slides-02-ml-intro.html#scenario-2",
-    "href": "slides/slides-02-ml-intro.html#scenario-2",
-    "title": "Introduction to Machine Learning",
-    "section": "Scenario 2",
-    "text": "Scenario 2\n\nYour colleague now separates their data into a training set, a validation set and a test set.\nThey again use 10 types of models and try 1000 combinations of hyper-parameters for each. They use the training set to train their model, and then note how the model performs by measure accuracy on the validation set.\nThe best model achieves 99% accuracy on the validation set, after which it is used on the test set. It achieves 99% accuracy again.\nDo you trust the outcome now?"
+    "objectID": "slides/slides-06-llms.html#harms-of-large-language-models",
+    "href": "slides/slides-06-llms.html#harms-of-large-language-models",
+    "title": "Large Language Models",
+    "section": "Harms of large language models",
+    "text": "Harms of large language models\nWhile these models are super powerful and useful, be mindful of the harms caused by these models. Some of the harms as summarized here are:\n\nperformance disparties\nsocial biases and stereotypes\ntoxicity\nmisinformation\nsecurity and privacy risks\ncopyright and legal protections\nenvironmental impact\ncentralization of power"
   },
   {
     "objectID": "slides/slides-01-intro.html#welcome-to-the-workshop",
     "href": "slides/slides-01-intro.html#welcome-to-the-workshop",
     "title": "Welcome!",
     "section": "Welcome to the workshop!",
-    "text": "Welcome to the workshop!\n\nFind a seat where you can see the screen!\nYou will be discussing concepts with your neighbours."
+    "text": "Welcome to the workshop!\n\nFind a seat where you can see the screen!\nYou will be discussing concepts with your neighbours. So take 15 seconds to introduce yourself to your neighbour."
   },
   {
-    "objectID": "slides/slides-01-intro.html#meet-us",
-    "href": "slides/slides-01-intro.html#meet-us",
+    "objectID": "slides/slides-01-intro.html#meet-the-teaching-team",
+    "href": "slides/slides-01-intro.html#meet-the-teaching-team",
     "title": "Welcome!",
-    "section": "Meet us",
-    "text": "Meet us\n\nVarada\nPrajeet\nYulia\nTony"
+    "section": "Meet the teaching team",
+    "text": "Meet the teaching team\n\nVarada\nPrajeet\nYulia\nTony"
   },
   {
     "objectID": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
     "href": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
     "title": "Welcome!",
     "section": "Learning goals of the workshop",
-    "text": "Learning goals of the workshop\n\nThe primary learning goal of the workshop is to familiarize yourself with the fundamentals of machine learning and its various types. This knowledge will help you determine which type of machine learning, or whether a non-machine learning approach, would be most appropriate for your problem."
+    "text": "Learning goals of the workshop\nThe primary learning goal of the workshop is to familiarize yourself with the fundamentals of machine learning and its various types. This knowledge will help you determine which type of machine learning, or whether a non-machine learning approach, would be most appropriate for your problem."
   },
   {
     "objectID": "workshop-07.html",
@@ -747,7 +649,7 @@
     "href": "workshop.html",
     "title": "Overview",
     "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLLMs\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Workshop",
       "Overview"
@@ -758,7 +660,7 @@
     "href": "workshop.html#schedule",
     "title": "Overview",
     "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLLMs\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Workshop",
       "Overview"
@@ -840,119 +742,266 @@
   {
     "objectID": "workshop-09.html",
     "href": "workshop-09.html",
-    "title": "LLMs",
+    "title": "Large Language Models",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "LLMs"
+      "Large Language Models"
     ]
   },
   {
     "objectID": "workshop-09.html#slides",
     "href": "workshop-09.html#slides",
-    "title": "LLMs",
+    "title": "Large Language Models",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "LLMs"
+      "Large Language Models"
     ]
   },
   {
     "objectID": "workshop-09.html#outline",
     "href": "workshop-09.html#outline",
-    "title": "LLMs",
+    "title": "Large Language Models",
     "section": "Outline",
     "text": "Outline\n\nClustering\nDimensionality Reduction\nRecommendation systems",
     "crumbs": [
       "Workshop",
-      "LLMs"
+      "Large Language Models"
     ]
   },
   {
-    "objectID": "slides/slides-06-llms.html#learning-outcomes",
-    "href": "slides/slides-06-llms.html#learning-outcomes",
-    "title": "Large Language Models",
-    "section": "Learning outcomes",
-    "text": "Learning outcomes\n\nFrom this module, you will be able to"
+    "objectID": "slides/slides-02-ml-intro.html#introduction-to-machine-learning",
+    "href": "slides/slides-02-ml-intro.html#introduction-to-machine-learning",
+    "title": "Introduction to Machine Learning",
+    "section": "Introduction to Machine Learning",
+    "text": "Introduction to Machine Learning\n\nMachine Learning uses computer programs to digest and accurately model data. After training on the data, a program can be used to extract hidden patterns, make predictions in new situations or generate novel content.\nThe program learns based on the features present in the data, which represent the information we have about each example."
   },
   {
-    "objectID": "slides/slides-06-llms.html#language-models-activity",
-    "href": "slides/slides-06-llms.html#language-models-activity",
-    "title": "Large Language Models",
-    "section": "Language models activity",
-    "text": "Language models activity\n\n\nEach of you will receive a sticky note with a word on it. Here’s what you’ll do:\n\nCarefully remove the sticky note to see the word. This word is for your eyes only —- no peeking, neighbours!\nThink quickly: what word would logically follow the word on the sticky note? Write this next word on a new sticky note.\nYou have about 20 seconds for this step, so trust your instincts!\nPass your predicted word to the person next to you. Do not pass the word you received from your neighbour forward. Keep the chain going!\nStop after the last person in your row has finished.\nFinally, one person from your row will enter the collective sentence into our Google Doc."
+    "objectID": "slides/slides-02-ml-intro.html#introduction-to-machine-learning-1",
+    "href": "slides/slides-02-ml-intro.html#introduction-to-machine-learning-1",
+    "title": "Introduction to Machine Learning",
+    "section": "Introduction to Machine Learning",
+    "text": "Introduction to Machine Learning"
   },
   {
-    "objectID": "slides/slides-06-llms.html#markov-model-of-language",
-    "href": "slides/slides-06-llms.html#markov-model-of-language",
-    "title": "Large Language Models",
-    "section": "Markov model of language",
-    "text": "Markov model of language\n\n\n\nYou’ve just created a simple Markov model of language!\nIn predicting the next word from a minimal context, you likely used your linguistic intuition and familiarity with common two-word phrases or collocations.\nYou could create more coherent sentences by taking into account more context e.g., previous two words or four words or 100 words.\nThis idea was first used by Shannon for characters in The Shannon’s game. See this video by Jordan Boyd-Graber for more information on this."
+    "objectID": "slides/slides-02-ml-intro.html#activity-1",
+    "href": "slides/slides-02-ml-intro.html#activity-1",
+    "title": "Introduction to Machine Learning",
+    "section": "Activity 1",
+    "text": "Activity 1\n\nWrite one (or several) problems in your research field where you think Machine Learning could be applied. Try to address the following questions:\n\nWhat goal are you trying to accomplish? What would an ideal solution to your problem look like?\nHow would a human solve this problem? What approaches are presently available and utilized?\nWhat kind of data is available to you, or might be collected? What features are present in the data?\n\nOne of the learning objectives of the workshop will be to determine whether your goal is best addressed using supervised machine learning, inferential statistics, unsupervised learning, deep learning, generative AI, or a non-ML solution."
   },
   {
-    "objectID": "slides/slides-06-llms.html#applications-of-predicting-next-word",
-    "href": "slides/slides-06-llms.html#applications-of-predicting-next-word",
-    "title": "Large Language Models",
-    "section": "Applications of predicting next word",
-    "text": "Applications of predicting next word\n\n\nOne of the most common applications for predicting the next word is the ‘smart compose’ feature in your emails, text messages, and search engines."
+    "objectID": "slides/slides-02-ml-intro.html#classification-vs.-regression",
+    "href": "slides/slides-02-ml-intro.html#classification-vs.-regression",
+    "title": "Introduction to Machine Learning",
+    "section": "Classification vs. Regression",
+    "text": "Classification vs. Regression"
   },
   {
-    "objectID": "slides/slides-06-llms.html#language-model",
-    "href": "slides/slides-06-llms.html#language-model",
-    "title": "Large Language Models",
-    "section": "Language model",
-    "text": "Language model\n\n\nA language model computes the probability distribution over sequences (of words or characters). Intuitively, this probability tells us how “good” or plausible a sequence of words is.\n\n\nCheck out this recent BMO ad."
+    "objectID": "slides/slides-02-ml-intro.html#measuring-performance",
+    "href": "slides/slides-02-ml-intro.html#measuring-performance",
+    "title": "Introduction to Machine Learning",
+    "section": "Measuring Performance",
+    "text": "Measuring Performance\n\n\n\nPerformance on classification tasks can be measured based on the accuracy of the model’s predictions.\nPerformance on a regression task can be measured based on error. Mean squared error is one choice, but there are many others!"
   },
   {
-    "objectID": "slides/slides-06-llms.html#a-simple-model-of-language",
-    "href": "slides/slides-06-llms.html#a-simple-model-of-language",
-    "title": "Large Language Models",
-    "section": "A simple model of language",
-    "text": "A simple model of language\n\n\n\nCalculate the co-occurrence frequencies and probabilities based on these frequencies\nPredict the next word based on these probabilities"
+    "objectID": "slides/slides-02-ml-intro.html#inference-vs.-prediction",
+    "href": "slides/slides-02-ml-intro.html#inference-vs.-prediction",
+    "title": "Introduction to Machine Learning",
+    "section": "Inference vs. Prediction",
+    "text": "Inference vs. Prediction\n\n\n\nInference is the use of a model to infer a relationship between features (independent variables) and targets (independent variables).\nPrediction is the use of a model to predict the target value for a new example not seen in training."
   },
   {
-    "objectID": "slides/slides-06-llms.html#long-distance-dependencies",
-    "href": "slides/slides-06-llms.html#long-distance-dependencies",
-    "title": "Large Language Models",
-    "section": "Long-distance dependencies",
-    "text": "Long-distance dependencies\n\n\nWhat are some reasonable predictions for the next word in the sequence?\n\nI am studying law at the University of British Columbia Point Grey campus in Vancouver because I want to work as a ___\n\nMarkov model is unable to capture such long-distance dependencies in language."
+    "objectID": "slides/slides-02-ml-intro.html#what-outcome-do-we-care-about",
+    "href": "slides/slides-02-ml-intro.html#what-outcome-do-we-care-about",
+    "title": "Introduction to Machine Learning",
+    "section": "What outcome do we care about?",
+    "text": "What outcome do we care about?\n\n\n\nA researcher studying the impact of pollution on cancer risk is performing inference. They may not make perfect predictions (since the dataset is likely to be noisy) but good statistical inference could be extremely valuable.\nGmail’s spam filtering algorithm is performing prediction. We are not really trying to improve human understanding of what makes a message spam (often it is obvious), we just want a model that makes good predictions.\nOf course, these goals are related, so in many situations we may be interested in both."
   },
   {
-    "objectID": "slides/slides-06-llms.html#transformer-models",
-    "href": "slides/slides-06-llms.html#transformer-models",
-    "title": "Large Language Models",
-    "section": "Transformer models",
-    "text": "Transformer models\n\n\nEnter attention and transformer models! Transformer models are at the core of all state-of-the-art Generative AI models (e.g., BERT, GPT3, GPT4, Gemini, DALL-E, Llama, Github Copilot)?\n\nSource"
+    "objectID": "slides/slides-02-ml-intro.html#example-linear-regression",
+    "href": "slides/slides-02-ml-intro.html#example-linear-regression",
+    "title": "Introduction to Machine Learning",
+    "section": "Example: Linear Regression",
+    "text": "Example: Linear Regression\n\n\nIs this inference or prediction?"
   },
   {
-    "objectID": "slides/slides-06-llms.html#transformer-models-1",
-    "href": "slides/slides-06-llms.html#transformer-models-1",
-    "title": "Large Language Models",
-    "section": "Transformer models",
-    "text": "Transformer models\n\n\n\nSource: GPT-4 Technical Report"
+    "objectID": "slides/slides-02-ml-intro.html#types-of-machine-learning",
+    "href": "slides/slides-02-ml-intro.html#types-of-machine-learning",
+    "title": "Introduction to Machine Learning",
+    "section": "Types of Machine Learning",
+    "text": "Types of Machine Learning\n\nToday we will see two main types of machine learning, namely\n\nSupervised Learning, and\nUnsupervised Learning.\n\nWe will also discuss which problems each type might be best suited for."
   },
   {
-    "objectID": "slides/slides-06-llms.html#self-attention",
-    "href": "slides/slides-06-llms.html#self-attention",
-    "title": "Large Language Models",
-    "section": "Self-attention",
-    "text": "Self-attention\n\n\n\nAn important innovation which makes these models work so well is self-attention.\nCount how many times the players wearing the white pass the basketball?"
+    "objectID": "slides/slides-02-ml-intro.html#supervised-learning",
+    "href": "slides/slides-02-ml-intro.html#supervised-learning",
+    "title": "Introduction to Machine Learning",
+    "section": "Supervised Learning",
+    "text": "Supervised Learning\n\nHere the training data is comprised of a set of features, and each example comes with a corresponding target. The goal is to get a machine learning model to accurately predict the target based on the feature values.\nExamples could include spam filtering, face recognition or weather forecasting."
   },
   {
-    "objectID": "slides/slides-06-llms.html#self-attention-1",
-    "href": "slides/slides-06-llms.html#self-attention-1",
-    "title": "Large Language Models",
-    "section": "Self-attention",
-    "text": "Self-attention\n\n\nWhen we process information, we often selectively focus on specific parts of the input, giving more attention to relevant information and less attention to irrelevant information. This is the core idea of attention.\nConsider the examples below:\n\nExample 1: She left a brief note on the kitchen table, reminding him to pick up groceries.\nExample 2: The diplomat’s speech struck a positive note in the peace negotiations.\nExample 3: She plucked the guitar strings, ending with a melancholic note.\n\nThe word note in these examples serves quite distinct meanings, each tied to different contexts. To capture varying word meanings across different contexts, we need a mechanism that considers the wider context to compute each word’s contextual representation.\n\nSelf-attention is just that mechanism!"
+    "objectID": "slides/slides-02-ml-intro.html#unsupervised-learning",
+    "href": "slides/slides-02-ml-intro.html#unsupervised-learning",
+    "title": "Introduction to Machine Learning",
+    "section": "Unsupervised Learning",
+    "text": "Unsupervised Learning\n\nIn unsupervised learning, there are no targets. The goal is instead to uncover underlying patterns. These can be used to provide a concise summary of the data, or group similar examples together.\nExamples could include customer segmentation, anomaly detection or online recommendation systems (think Netflix)."
   },
   {
-    "objectID": "slides/slides-06-llms.html#nlp-applications-before-and-after-genai",
-    "href": "slides/slides-06-llms.html#nlp-applications-before-and-after-genai",
-    "title": "Large Language Models",
-    "section": "NLP applications before and after GenAI",
-    "text": "NLP applications before and after GenAI\n\n\n\nSentiment analysis\nSummarization\nNamed-entity recognition"
+    "objectID": "slides/slides-02-ml-intro.html#other-ml-types",
+    "href": "slides/slides-02-ml-intro.html#other-ml-types",
+    "title": "Introduction to Machine Learning",
+    "section": "Other ML types",
+    "text": "Other ML types\n\nSome other types of Machine Learning include self-supervised learning and reinforcement learning.\nSelf-supervised algorithms automatically learn to generate labels and transform unsupervised problems to supervised ones.\nReinforcement Leaning trains an agent using a system of rewards and penalties. The agent learns strategies to maximize reward. AlphaGo is a reinforcement learning agent that taught itself to play Go, and was able to beat the strongest human Go players."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#activity-2",
+    "href": "slides/slides-02-ml-intro.html#activity-2",
+    "title": "Introduction to Machine Learning",
+    "section": "Activity 2",
+    "text": "Activity 2\n \nReturn to the problems you identified in Activity 1. Try to decide if they involve performing inference or prediction.\nAlso suggest whether you think they are best approached with supervised or unsupervised learning. What aspects of the problem particularly suggest one approach over another?"
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#a-simple-supervised-learning-model",
+    "href": "slides/slides-02-ml-intro.html#a-simple-supervised-learning-model",
+    "title": "Introduction to Machine Learning",
+    "section": "A Simple Supervised Learning Model",
+    "text": "A Simple Supervised Learning Model\n\nWe will use a simple machine learning model– a decision tree– to demonstrate some fundamental concepts in machine learning. Suppose we have the following dataset:\n\n\n\n\n\n\n\n\n\n\nml_experience\nclass_attendance\nlab1\nlab2\nlab3\nlab4\nquiz1\nquiz2\n\n\n\n\n0\n1\n1\n92\n93\n84\n91\n92\nA+\n\n\n1\n1\n0\n94\n90\n80\n83\n91\nnot A+\n\n\n2\n0\n0\n78\n85\n83\n80\n80\nnot A+\n\n\n3\n0\n1\n91\n94\n92\n91\n89\nA+\n\n\n4\n0\n1\n77\n83\n90\n92\n85\nA+\n\n\n\n\n\n\n\n  How would you go about predicting the Quiz 2 grade?"
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#decision-trees",
+    "href": "slides/slides-02-ml-intro.html#decision-trees",
+    "title": "Introduction to Machine Learning",
+    "section": "Decision Trees",
+    "text": "Decision Trees\n\nA decision tree iteratively splits the data by asking questions about feature values.\nThe algorithm tries to ask questions that best separate one class from another. It’s like a game of twenty questions!"
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#a-decision-stump",
+    "href": "slides/slides-02-ml-intro.html#a-decision-stump",
+    "title": "Introduction to Machine Learning",
+    "section": "A Decision Stump",
+    "text": "A Decision Stump\n\n\n\n\n\n\n\n\n\n\n\nWe could start by splitting the data based on the students’ Lab 3 grades."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#iterating-the-procedure",
+    "href": "slides/slides-02-ml-intro.html#iterating-the-procedure",
+    "title": "Introduction to Machine Learning",
+    "section": "Iterating the procedure",
+    "text": "Iterating the procedure\n \n\n\n\n\n\n\n\n\n\nThen we further split each of the resulting nodes, again asking questions involving features in the dataset."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#building-a-decision-tree",
+    "href": "slides/slides-02-ml-intro.html#building-a-decision-tree",
+    "title": "Introduction to Machine Learning",
+    "section": "Building a Decision Tree",
+    "text": "Building a Decision Tree"
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#decision-boundary",
+    "href": "slides/slides-02-ml-intro.html#decision-boundary",
+    "title": "Introduction to Machine Learning",
+    "section": "Decision Boundary",
+    "text": "Decision Boundary\n\nThe first two questions in our tree involved Lab 3 and Quiz 1 grades. We can make a plot involving these two features to better understand our tree."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#model-parameters",
+    "href": "slides/slides-02-ml-intro.html#model-parameters",
+    "title": "Introduction to Machine Learning",
+    "section": "Model Parameters",
+    "text": "Model Parameters\n\n\nDuring training, the model decides which feature to use to split at each node. It also decides which value of the feature to split at. This is the ‘learning’ phase, where the algorithm is trying different options and selecting the ‘best’ feature and value for splitting."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#hyperparameters",
+    "href": "slides/slides-02-ml-intro.html#hyperparameters",
+    "title": "Introduction to Machine Learning",
+    "section": "Hyperparameters",
+    "text": "Hyperparameters\n\nThe maximum depth of a decision tree (at most how many questions it asks) is a hyper-parameter of the model. We can build different trees to test which choice of hyper-parameter gives the best result.\nSome models may have a continuous range of options for a given hyper-parameter. This gives rise to a potentially infinite choice of “models” to test."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#trying-to-recognize-faces",
+    "href": "slides/slides-02-ml-intro.html#trying-to-recognize-faces",
+    "title": "Introduction to Machine Learning",
+    "section": "Trying to Recognize Faces",
+    "text": "Trying to Recognize Faces\n\nTo demonstrate some fundamental concepts in machine learning, we will attempt to biuld a decision tree that can recognize faces. Our data will be taken from the Olivetti Faces dataset, which is a collection of 400 images of faces.\nThe labels correspond to the forty individuals that are pictured, and the dataset contains 10 photos per individual. We will try to use a decision tree to correctly predict the individual for each photo."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#a-look-at-the-data",
+    "href": "slides/slides-02-ml-intro.html#a-look-at-the-data",
+    "title": "Introduction to Machine Learning",
+    "section": "A Look at the Data",
+    "text": "A Look at the Data\n\nEach photo is 64x64 pixels in grayscale. The images are represented by a row of pixel intensities showing how dark each individual pixel should be.\n\n\n\n\n\n\n\n\n\n0\n1\n2\n3\n...\n4092\n4093\n4094\n4095\n\n\n\n\n0\n0.309917\n0.367769\n0.417355\n0.442149\n...\n0.148760\n0.152893\n0.161157\n0.157025\n\n\n1\n0.454545\n0.471074\n0.512397\n0.557851\n...\n0.152893\n0.152893\n0.152893\n0.152893\n\n\n2\n0.318182\n0.400826\n0.491736\n0.528926\n...\n0.144628\n0.140496\n0.148760\n0.152893\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n397\n0.500000\n0.533058\n0.607438\n0.628099\n...\n0.157025\n0.177686\n0.148760\n0.190083\n\n\n398\n0.214876\n0.219008\n0.219008\n0.223140\n...\n0.545455\n0.574380\n0.590909\n0.603306\n\n\n399\n0.516529\n0.462810\n0.280992\n0.252066\n...\n0.322314\n0.359504\n0.355372\n0.384298\n\n\n\n\n400 rows × 4096 columns\n\n\n\n\n\nThe dataset has 4096 features."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#a-decision-tree-classifier",
+    "href": "slides/slides-02-ml-intro.html#a-decision-tree-classifier",
+    "title": "Introduction to Machine Learning",
+    "section": "A Decision Tree Classifier",
+    "text": "A Decision Tree Classifier\n\nWe can build a decision tree classifier on the dataset of faces and see how it performs. For now we will train on a random subset of the data that contains 80% of the images (we’ll explain why later)\nLet’s see how accurate this model gets after training."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#a-decision-tree-classifier-1",
+    "href": "slides/slides-02-ml-intro.html#a-decision-tree-classifier-1",
+    "title": "Introduction to Machine Learning",
+    "section": "A Decision Tree Classifier",
+    "text": "A Decision Tree Classifier\n\n\n\n\nThe model classified 100.0% of training examples correctly by \n building a decision tree of depth 39\n\n\n\nThat’s very accurate indeed! Maybe decision trees are a really good way to detect and classify faces.\nRemember, we only trained on 80% of the data. Let’s see how our model performs on the remaining 20%"
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#did-we-build-a-good-model",
+    "href": "slides/slides-02-ml-intro.html#did-we-build-a-good-model",
+    "title": "Introduction to Machine Learning",
+    "section": "Did we build a good model?",
+    "text": "Did we build a good model?\n\n\n\n\nThe model acheived an accuracy of 53.75% on new data\n\n\n\n…oops."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#whats-going-on",
+    "href": "slides/slides-02-ml-intro.html#whats-going-on",
+    "title": "Introduction to Machine Learning",
+    "section": "What’s going on?",
+    "text": "What’s going on?"
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#practice-makes-perfect",
+    "href": "slides/slides-02-ml-intro.html#practice-makes-perfect",
+    "title": "Introduction to Machine Learning",
+    "section": "Practice makes perfect",
+    "text": "Practice makes perfect\n\nOur deep decision tree likely just memorized the dataset. After all, with a tree of depth 38, we could actually memorize up to 238 distinct examples!\nClearly this does not make for a good model. After all, we want a model that can recognize faces, even when they appear in new images."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#overfitting",
+    "href": "slides/slides-02-ml-intro.html#overfitting",
+    "title": "Introduction to Machine Learning",
+    "section": "Overfitting",
+    "text": "Overfitting\n\nOverfitting refers to a situation where the model learns noise from the training data, leading to a poor performance when deployed on new data.\nComplex models are prone to overfitting– we cannot just rely on training error to measure their performance. Simple models typically have similar train and test errors, but both will be high."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#section",
+    "href": "slides/slides-02-ml-intro.html#section",
+    "title": "Introduction to Machine Learning",
+    "section": "",
+    "text": "Thus we have our “fundamental tradeoff”: as we increase model complexity, the training error will reduce but the gap between training and test error will increase."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#scenario-1",
+    "href": "slides/slides-02-ml-intro.html#scenario-1",
+    "title": "Introduction to Machine Learning",
+    "section": "Scenario 1",
+    "text": "Scenario 1\n\nYour colleague is trying to build a machine learning model to detect cancers in medical imaging. They know about overfitting, so they separate their data into a training set and a test set.\nThey use 10 different types of machine learning models, and try 1000 different combinations of hyper-parameters for each. In every case, they only use the training set to train their model, and then note how the model performs by measure accuracy on the test set.\nThe best model achieves 99% accuracy on the test set. Your colleague tells you they have found a machine learning model that diagnoses cancer with 99% accuracy.\nDo you believe them?"
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#the-golden-rule-of-machine-learning",
+    "href": "slides/slides-02-ml-intro.html#the-golden-rule-of-machine-learning",
+    "title": "Introduction to Machine Learning",
+    "section": "The Golden Rule of Machine Learning",
+    "text": "The Golden Rule of Machine Learning\n\nBy using the same test set for each of the 10,000 models they tried, your colleague has violated the golden rule of machine learning.\nThe golden rule tells us that test data must not influence the model training in any way.\nEven though your colleague never directly trained on test data, they used test data multiple times to validate model performance. As a result, they are likely to have found good performance purely by accident."
+  },
+  {
+    "objectID": "slides/slides-02-ml-intro.html#scenario-2",
+    "href": "slides/slides-02-ml-intro.html#scenario-2",
+    "title": "Introduction to Machine Learning",
+    "section": "Scenario 2",
+    "text": "Scenario 2\n\nYour colleague now separates their data into a training set, a validation set and a test set.\nThey again use 10 types of models and try 1000 combinations of hyper-parameters for each. They use the training set to train their model, and then note how the model performs by measure accuracy on the validation set.\nThe best model achieves 99% accuracy on the validation set, after which it is used on the test set. It achieves 99% accuracy again.\nDo you trust the outcome now?"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#learning-outcomes",
@@ -1179,11 +1228,25 @@
     "text": "Sample predictions\n\n\nLet’s examine some sample predictions on the validation set."
   },
   {
+    "objectID": "slides/slides-04-deep-learning.html#object-detection",
+    "href": "slides/slides-04-deep-learning.html#object-detection",
+    "title": "Deep Learning",
+    "section": "Object detection",
+    "text": "Object detection\n\n\n\nAnother useful task and tool to know is object detection using YOLO model.\nLet’s identify objects in a sample image using a pretrained model called YOLO5\nList the objects present in this image."
+  },
+  {
     "objectID": "slides/slides-04-deep-learning.html#object-detection-using-yolo",
     "href": "slides/slides-04-deep-learning.html#object-detection-using-yolo",
     "title": "Deep Learning",
     "section": "Object detection using YOLO",
-    "text": "Object detection using YOLO\n\n\n\nAnother useful task and tool to know is object detection using YOLO model.\nLet’s identify objects in a sample image using a pretrained model called YOLO5\n\n\n\nrequirements: Ultralytics requirement ['gitpython&gt;=3.1.30'] not found, attempting AutoUpdate...\nRequirement already satisfied: gitpython&gt;=3.1.30 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (3.1.43)\nRequirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitpython&gt;=3.1.30) (4.0.7)\nRequirement already satisfied: smmap&lt;5,&gt;=3.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;gitpython&gt;=3.1.30) (4.0.0)\n\nrequirements: AutoUpdate success ✅ 3.7s, installed 1 package: ['gitpython&gt;=3.1.30']\nrequirements: ⚠️ Restart runtime or rerun command for updates to take effect"
+    "text": "Object detection using YOLO\n\n\nLet’s try this out using a pre-trained model.\n\nfrom ultralytics import YOLO\nmodel = YOLO(\"yolov8n.pt\")  # pretrained YOLOv8n model\n\nyolo_input = \"data/yolo_test/3356700488_183566145b.jpg\"\nyolo_result = \"data/yolo_result.jpg\"\n# Run batched inference on a list of images\nresult = model(yolo_input)  # return a list of Results objects\nresult[0].save(filename=yolo_result)\n\n\nimage 1/1 /Users/kvarada/EL/workshops/DSI-ML-workshop-2024/website/slides/data/yolo_test/3356700488_183566145b.jpg: 512x640 4 persons, 2 cars, 1 stop sign, 117.8ms\nSpeed: 5.4ms preprocess, 117.8ms inference, 1.1ms postprocess per image at shape (1, 3, 512, 640)\n\n\n'data/yolo_result.jpg'"
+  },
+  {
+    "objectID": "slides/slides-04-deep-learning.html#object-detection-output",
+    "href": "slides/slides-04-deep-learning.html#object-detection-output",
+    "title": "Deep Learning",
+    "section": "Object detection output",
+    "text": "Object detection output"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#summary",
