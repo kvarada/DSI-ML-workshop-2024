@@ -1,7 +1,7 @@
 ---
 title: LLMs
-description: Introduction to Language models Large Language Models 
-description-short: Introduction to Language models Large Language Models  
+description: Introduction to Large Language Models 
+description-short: Introduction to Large Language Models 
 duration: 1 hour
 time: 13:30 - 14:00
 

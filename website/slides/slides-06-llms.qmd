@@ -1,5 +1,5 @@
 ---
-title: "LLMs"
+title: "Large Language Models"
 format: 
     revealjs:
       smaller: true
@@ -15,17 +15,25 @@ jupyter:
 \
 From this module, you will be able to 
 
+```{python}
+import os
+import random
+import sys
+import IPython
+from IPython.display import HTML, display
+```
 
-## Language model activity 
+## Language models activity 
 \
 
 Each of you will receive a sticky note with a word on it. Here's what you'll do:
-- Carefully **remove the sticky note to see the word**. This word is for your eyes only — no peeking, neighbours!
+
+- Carefully **remove the sticky note to see the word**. This word is for your eyes only —- no peeking, neighbours!
 - Think quickly: what word would logically follow the word on the sticky note? **Write this next word on a new sticky note**.
 - You have about 20 seconds for this step, so trust your instincts!
 - **Pass your predicted word to the person next to you**. Do not pass the word you **received** from your neighbour forward. Keep the chain going!
 - Stop after the last person in your row has finished. 
-- Finally, one person from your row will enter the collective sentence into [our Google Doc](https://docs.google.com/document/d/1TdmH5LKLC0Y9IWySC4FgsYX0dsNtkX_dBcc7FSSrQg0/edit?usp=sharing).
+- Finally, one person from your row will enter the collective sentence into [our Google Doc](https://docs.google.com/document/d/1TdmH5LKLC0Y9IWySC4FgsYX0dsNtkX_dBcc7FSSrQg0/edit#heading=h.h4gszne09tpb).
 
 <br><br><br><br>
 
@@ -43,7 +51,7 @@ Each of you will receive a sticky note with a word on it. Here's what you'll do:
 One of the most common applications for predicting the next word is the 'smart compose' feature in your emails, text messages, and search engines.
 
 ```{python}
-url = "https://ai.googleblog.com/2018/05/smart-compose-using-neural-networks-to.html"
+url = "https://2.bp.blogspot.com/-KlBuhzV_oFw/WvxP_OAkJ1I/AAAAAAAACu0/T0F6lFZl-2QpS0O7VBMhf8wkUPvnRaPIACLcBGAs/s1600/image2.gif"
 
 IPython.display.IFrame(url, width=500, height=500)
 ```
