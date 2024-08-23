@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
-  <title>DSI Machine Learning Workshop – LLMs</title>
+  <title>DSI Machine Learning Workshop – Large Language Models</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -319,13 +319,16 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+  
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">LLMs</h1>
+  <h1 class="title">Large Language Models</h1>
 
 <div class="quarto-title-authors">
 </div>
@@ -336,10 +339,130 @@
 <p><br>
 From this module, you will be able to</p>
 </section>
-<section id="introduction-to-large-language-models" class="slide level2 center">
-<h2>Introduction to Large Language Models</h2>
+<section id="language-models-activity" class="slide level2 center">
+<h2>Language models activity</h2>
 <p><br>
 </p>
+<p>Each of you will receive a sticky note with a word on it. Here’s what you’ll do:</p>
+<ul>
+<li>Carefully <strong>remove the sticky note to see the word</strong>. This word is for your eyes only —- no peeking, neighbours!</li>
+<li>Think quickly: what word would logically follow the word on the sticky note? <strong>Write this next word on a new sticky note</strong>.</li>
+<li>You have about 20 seconds for this step, so trust your instincts!</li>
+<li><strong>Pass your predicted word to the person next to you</strong>. Do not pass the word you <strong>received</strong> from your neighbour forward. Keep the chain going!</li>
+<li>Stop after the last person in your row has finished.</li>
+<li>Finally, one person from your row will enter the collective sentence into <a href="https://docs.google.com/document/d/1TdmH5LKLC0Y9IWySC4FgsYX0dsNtkX_dBcc7FSSrQg0/edit#heading=h.h4gszne09tpb">our Google Doc</a>.</li>
+</ul>
+<p><br><br><br><br></p>
+</section>
+<section id="markov-model-of-language" class="slide level2 center">
+<h2>Markov model of language</h2>
+<p><br>
+</p>
+<ul>
+<li>You’ve just created a simple Markov model of language!</li>
+<li>In predicting the next word from a minimal context, you likely used your linguistic intuition and familiarity with common two-word phrases or collocations.</li>
+<li>You could create more coherent sentences by taking into account more context e.g., previous two words or four words or 100 words.</li>
+<li>This idea was first used by Shannon for characters in The Shannon’s game. See this video by <a href="https://www.youtube.com/watch?v=0shft1gokac">Jordan Boyd-Graber</a> for more information on this.</li>
+</ul>
+</section>
+<section id="applications-of-predicting-next-word" class="slide level2 center">
+<h2>Applications of predicting next word</h2>
+<p><br>
+</p>
+<p>One of the most common applications for predicting the next word is the ‘smart compose’ feature in your emails, text messages, and search engines.</p>
+<div id="34c6a96f" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="2">
+
+        <iframe width="500" height="500" src="https://2.bp.blogspot.com/-KlBuhzV_oFw/WvxP_OAkJ1I/AAAAAAAACu0/T0F6lFZl-2QpS0O7VBMhf8wkUPvnRaPIACLcBGAs/s1600/image2.gif" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+</section>
+<section id="language-model" class="slide level2 center">
+<h2>Language model</h2>
+<p><br>
+</p>
+<p>A language model computes the probability distribution over sequences (of words or characters). Intuitively, this probability tells us how “good” or plausible a sequence of words is.</p>
+
+<!-- <img src="img/voice-assistant-ex.png" height="1400" width="1400"> -->
+<img data-src="img/voice-assistant-ex.png" class="r-stretch"><p>Check out this <a href="https://www.youtube.com/watch?v=VzqKtAYeJt4">recent BMO ad</a>.</p>
+</section>
+<section id="a-simple-model-of-language" class="slide level2 center">
+<h2>A simple model of language</h2>
+<p><br>
+</p>
+<ul>
+<li>Calculate the co-occurrence frequencies and probabilities based on these frequencies</li>
+<li>Predict the next word based on these probabilities</li>
+</ul>
+
+<img data-src="img/Markov-bigram-probs.png" class="r-stretch"></section>
+<section id="long-distance-dependencies" class="slide level2 center">
+<h2>Long-distance dependencies</h2>
+<p><br>
+</p>
+<p>What are some reasonable predictions for the next word in the sequence?</p>
+<blockquote>
+<p>I am studying law at the University of British Columbia Point Grey campus in Vancouver because I want to work as a ___</p>
+</blockquote>
+<p>Markov model is unable to capture such long-distance dependencies in language.</p>
+</section>
+<section id="transformer-models" class="slide level2 center">
+<h2>Transformer models</h2>
+<p><br>
+</p>
+<p>Enter attention and transformer models! Transformer models are at the core of all state-of-the-art Generative AI models (e.g., BERT, GPT3, GPT4, Gemini, DALL-E, Llama, Github Copilot)?</p>
+
+<img data-src="img/genai.png" class="r-stretch"><p><a href="https://jalammar.github.io/how-gpt3-works-visualizations-animations/">Source</a></p>
+</section>
+<section id="transformer-models-1" class="slide level2 center">
+<h2>Transformer models</h2>
+<p><br>
+</p>
+
+<img data-src="img/GPT-4-tech-report-abstract.png" class="r-stretch"><p>Source: <a href="https://arxiv.org/pdf/2303.08774.pdf">GPT-4 Technical Report</a></p>
+</section>
+<section id="self-attention" class="slide level2 center">
+<h2>Self-attention</h2>
+<p><br>
+</p>
+<ul>
+<li>An important innovation which makes these models work so well is <strong>self-attention</strong>.</li>
+<li>Count how many times the players wearing the white pass the basketball?</li>
+</ul>
+<div id="23d1f44e" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="3">
+
+        <iframe width="500" height="500" src="https://www.youtube.com/embed/vJG698U2Mvo" frameborder="0" allowfullscreen=""></iframe>
+        
+</div>
+</div>
+</section>
+<section id="self-attention-1" class="slide level2 center">
+<h2>Self-attention</h2>
+<p><br>
+</p>
+<p>When we process information, we often selectively focus on specific parts of the input, giving more attention to relevant information and less attention to irrelevant information. This is the core idea of <strong>attention</strong>.</p>
+<p>Consider the examples below:</p>
+<ul>
+<li><p>Example 1: She left a brief <strong>note</strong> on the kitchen table, reminding him to pick up groceries.</p></li>
+<li><p>Example 2: The diplomat’s speech struck a positive <strong>note</strong> in the peace negotiations.</p></li>
+<li><p>Example 3: She plucked the guitar strings, ending with a melancholic <strong>note</strong>.</p></li>
+</ul>
+<p>The word <strong>note</strong> in these examples serves quite distinct meanings, each tied to different contexts. To capture varying word meanings across different contexts, we need a mechanism that considers the wider context to compute each word’s contextual representation.</p>
+<ul>
+<li><strong>Self-attention</strong> is just that mechanism!</li>
+</ul>
+</section>
+<section id="nlp-applications-before-and-after-genai" class="slide level2 center">
+<h2>NLP applications before and after GenAI</h2>
+<p><br>
+</p>
+<ul>
+<li>Sentiment analysis</li>
+<li>Summarization</li>
+<li>Named-entity recognition</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

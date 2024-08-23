@@ -462,110 +462,124 @@
     "text": "Scenario 2\n\nYour colleague now separates their data into a training set, a validation set and a test set.\nThey again use 10 types of models and try 1000 combinations of hyper-parameters for each. They use the training set to train their model, and then note how the model performs by measure accuracy on the validation set.\nThe best model achieves 99% accuracy on the validation set, after which it is used on the test set. It achieves 99% accuracy again.\nDo you trust the outcome now?"
   },
   {
-    "objectID": "workshop-09.html",
-    "href": "workshop-09.html",
-    "title": "LLMs",
+    "objectID": "slides/slides-01-intro.html#welcome-to-the-workshop",
+    "href": "slides/slides-01-intro.html#welcome-to-the-workshop",
+    "title": "Welcome!",
+    "section": "Welcome to the workshop!",
+    "text": "Welcome to the workshop!\n\nFind a seat where you can see the screen!\nYou will be discussing concepts with your neighbours."
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#meet-us",
+    "href": "slides/slides-01-intro.html#meet-us",
+    "title": "Welcome!",
+    "section": "Meet us",
+    "text": "Meet us\n\nVarada\nPrajeet\nYulia\nTony"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
+    "href": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
+    "title": "Welcome!",
+    "section": "Learning goals of the workshop",
+    "text": "Learning goals of the workshop\n\nThe primary learning goal of the workshop is to familiarize yourself with the fundamentals of machine learning and its various types. This knowledge will help you determine which type of machine learning, or whether a non-machine learning approach, would be most appropriate for your problem."
+  },
+  {
+    "objectID": "workshop-07.html",
+    "href": "workshop-07.html",
+    "title": "Unsupervised Learning",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "LLMs"
+      "Unsupervised Learning"
     ]
   },
   {
-    "objectID": "workshop-09.html#slides",
-    "href": "workshop-09.html#slides",
-    "title": "LLMs",
+    "objectID": "workshop-07.html#slides",
+    "href": "workshop-07.html#slides",
+    "title": "Unsupervised Learning",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "LLMs"
+      "Unsupervised Learning"
     ]
   },
   {
-    "objectID": "workshop-09.html#outline",
-    "href": "workshop-09.html#outline",
-    "title": "LLMs",
+    "objectID": "workshop-07.html#outline",
+    "href": "workshop-07.html#outline",
+    "title": "Unsupervised Learning",
     "section": "Outline",
     "text": "Outline\n\nClustering\nDimensionality Reduction\nRecommendation systems",
     "crumbs": [
       "Workshop",
-      "LLMs"
+      "Unsupervised Learning"
     ]
   },
   {
-    "objectID": "workshop-05.html",
-    "href": "workshop-05.html",
-    "title": "Deep Learning",
+    "objectID": "workshop-03.html",
+    "href": "workshop-03.html",
+    "title": "ML Models",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Deep Learning"
+      "ML Models"
     ]
   },
   {
-    "objectID": "workshop-05.html#slides",
-    "href": "workshop-05.html#slides",
-    "title": "Deep Learning",
+    "objectID": "workshop-03.html#slides",
+    "href": "workshop-03.html#slides",
+    "title": "ML Models",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Deep Learning"
+      "ML Models"
     ]
   },
   {
-    "objectID": "workshop-05.html#outline",
-    "href": "workshop-05.html#outline",
-    "title": "Deep Learning",
-    "section": "Outline",
-    "text": "Outline\n\nNeural Networks\nTransfer learning\nObject detection",
-    "crumbs": [
-      "Workshop",
-      "Deep Learning"
-    ]
-  },
-  {
-    "objectID": "workshop-02.html",
-    "href": "workshop-02.html",
-    "title": "ML Fundamentals",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "ML Fundamentals"
-    ]
-  },
-  {
-    "objectID": "workshop-02.html#slides",
-    "href": "workshop-02.html#slides",
-    "title": "ML Fundamentals",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "ML Fundamentals"
-    ]
-  },
-  {
-    "objectID": "workshop-02.html#outline",
-    "href": "workshop-02.html#outline",
-    "title": "ML Fundamentals",
+    "objectID": "workshop-03.html#outline",
+    "href": "workshop-03.html#outline",
+    "title": "ML Models",
     "section": "Outline",
     "text": "Outline\n\nMachine learning terminology\nMachine learning fundamentals\nDecision trees",
     "crumbs": [
       "Workshop",
-      "ML Fundamentals"
+      "ML Models"
     ]
   },
   {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "Our team",
+    "objectID": "workshop-01.html",
+    "href": "workshop-01.html",
+    "title": "Welcome and getting started",
     "section": "",
-    "text": "Varada Kolhatkar\n        Assistant Professor of Teaching, Computer Science, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Prajeet Bajpai\n        Teaching Postdoctoral Fellow, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Raymond Ng\n        Scientific Director, Data Science Institute; Professor, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Jie Le\n        Research Administrator, Data Science Institute\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Michele Ng\n        Special Projects Coordinator, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Yulia Egorova\n        \n        \n            Assistant\n        \n        \n    \n\n    \n        \n        Tony Shum\n        \n        \n            Assistant\n        \n        \n    \n\n\n\nNo matching items"
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html#slides",
+    "href": "workshop-01.html#slides",
+    "title": "Welcome and getting started",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html#outline",
+    "href": "workshop-01.html#outline",
+    "title": "Welcome and getting started",
+    "section": "Outline",
+    "text": "Outline\n\nWelcome to the workshop!\nIntroductions and meet your neighbors\nAbout the learning objective of the workshop",
+    "crumbs": [
+      "Workshop",
+      "Welcome and getting started"
+    ]
   },
   {
     "objectID": "slides/slides-03-ml-models.html#supervised-learning",
@@ -733,7 +747,7 @@
     "href": "workshop.html",
     "title": "Overview",
     "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLLMs\n\n\n13:30 - 14:00\n\n\nIntroduction to Language models Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLLMs\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Workshop",
       "Overview"
@@ -744,145 +758,201 @@
     "href": "workshop.html#schedule",
     "title": "Overview",
     "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLLMs\n\n\n13:30 - 14:00\n\n\nIntroduction to Language models Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLLMs\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Workshop",
       "Overview"
     ]
   },
   {
-    "objectID": "slides/slides-06-llms.html#learning-outcomes",
-    "href": "slides/slides-06-llms.html#learning-outcomes",
-    "title": "LLMs",
-    "section": "Learning outcomes",
-    "text": "Learning outcomes\n\nFrom this module, you will be able to"
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Our team",
+    "section": "",
+    "text": "Varada Kolhatkar\n        Assistant Professor of Teaching, Computer Science, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Prajeet Bajpai\n        Teaching Postdoctoral Fellow, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Raymond Ng\n        Scientific Director, Data Science Institute; Professor, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Jie Le\n        Research Administrator, Data Science Institute\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Michele Ng\n        Special Projects Coordinator, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Yulia Egorova\n        \n        \n            Assistant\n        \n        \n    \n\n    \n        \n        Tony Shum\n        \n        \n            Assistant\n        \n        \n    \n\n\n\nNo matching items"
   },
   {
-    "objectID": "slides/slides-06-llms.html#introduction-to-large-language-models",
-    "href": "slides/slides-06-llms.html#introduction-to-large-language-models",
-    "title": "LLMs",
-    "section": "Introduction to Large Language Models",
-    "text": "Introduction to Large Language Models"
-  },
-  {
-    "objectID": "workshop-01.html",
-    "href": "workshop-01.html",
-    "title": "Welcome and getting started",
+    "objectID": "workshop-02.html",
+    "href": "workshop-02.html",
+    "title": "ML Fundamentals",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Welcome and getting started"
+      "ML Fundamentals"
     ]
   },
   {
-    "objectID": "workshop-01.html#slides",
-    "href": "workshop-01.html#slides",
-    "title": "Welcome and getting started",
+    "objectID": "workshop-02.html#slides",
+    "href": "workshop-02.html#slides",
+    "title": "ML Fundamentals",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Welcome and getting started"
+      "ML Fundamentals"
     ]
   },
   {
-    "objectID": "workshop-01.html#outline",
-    "href": "workshop-01.html#outline",
-    "title": "Welcome and getting started",
-    "section": "Outline",
-    "text": "Outline\n\nWelcome to the workshop!\nIntroductions and meet your neighbors\nAbout the learning objective of the workshop",
-    "crumbs": [
-      "Workshop",
-      "Welcome and getting started"
-    ]
-  },
-  {
-    "objectID": "workshop-03.html",
-    "href": "workshop-03.html",
-    "title": "ML Models",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "ML Models"
-    ]
-  },
-  {
-    "objectID": "workshop-03.html#slides",
-    "href": "workshop-03.html#slides",
-    "title": "ML Models",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "ML Models"
-    ]
-  },
-  {
-    "objectID": "workshop-03.html#outline",
-    "href": "workshop-03.html#outline",
-    "title": "ML Models",
+    "objectID": "workshop-02.html#outline",
+    "href": "workshop-02.html#outline",
+    "title": "ML Fundamentals",
     "section": "Outline",
     "text": "Outline\n\nMachine learning terminology\nMachine learning fundamentals\nDecision trees",
     "crumbs": [
       "Workshop",
-      "ML Models"
+      "ML Fundamentals"
     ]
   },
   {
-    "objectID": "workshop-07.html",
-    "href": "workshop-07.html",
-    "title": "Unsupervised Learning",
+    "objectID": "workshop-05.html",
+    "href": "workshop-05.html",
+    "title": "Deep Learning",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Unsupervised Learning"
+      "Deep Learning"
     ]
   },
   {
-    "objectID": "workshop-07.html#slides",
-    "href": "workshop-07.html#slides",
-    "title": "Unsupervised Learning",
+    "objectID": "workshop-05.html#slides",
+    "href": "workshop-05.html#slides",
+    "title": "Deep Learning",
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
       "Workshop",
-      "Unsupervised Learning"
+      "Deep Learning"
     ]
   },
   {
-    "objectID": "workshop-07.html#outline",
-    "href": "workshop-07.html#outline",
-    "title": "Unsupervised Learning",
+    "objectID": "workshop-05.html#outline",
+    "href": "workshop-05.html#outline",
+    "title": "Deep Learning",
+    "section": "Outline",
+    "text": "Outline\n\nNeural Networks\nTransfer learning\nObject detection",
+    "crumbs": [
+      "Workshop",
+      "Deep Learning"
+    ]
+  },
+  {
+    "objectID": "workshop-09.html",
+    "href": "workshop-09.html",
+    "title": "LLMs",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "LLMs"
+    ]
+  },
+  {
+    "objectID": "workshop-09.html#slides",
+    "href": "workshop-09.html#slides",
+    "title": "LLMs",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "LLMs"
+    ]
+  },
+  {
+    "objectID": "workshop-09.html#outline",
+    "href": "workshop-09.html#outline",
+    "title": "LLMs",
     "section": "Outline",
     "text": "Outline\n\nClustering\nDimensionality Reduction\nRecommendation systems",
     "crumbs": [
       "Workshop",
-      "Unsupervised Learning"
+      "LLMs"
     ]
   },
   {
-    "objectID": "slides/slides-01-intro.html#welcome-to-the-workshop",
-    "href": "slides/slides-01-intro.html#welcome-to-the-workshop",
-    "title": "Welcome!",
-    "section": "Welcome to the workshop!",
-    "text": "Welcome to the workshop!\n\nFind a seat where you can see the screen!\nYou will be discussing concepts with your neighbours."
+    "objectID": "slides/slides-06-llms.html#learning-outcomes",
+    "href": "slides/slides-06-llms.html#learning-outcomes",
+    "title": "Large Language Models",
+    "section": "Learning outcomes",
+    "text": "Learning outcomes\n\nFrom this module, you will be able to"
   },
   {
-    "objectID": "slides/slides-01-intro.html#meet-us",
-    "href": "slides/slides-01-intro.html#meet-us",
-    "title": "Welcome!",
-    "section": "Meet us",
-    "text": "Meet us\n\nVarada\nPrajeet\nYulia\nTony"
+    "objectID": "slides/slides-06-llms.html#language-models-activity",
+    "href": "slides/slides-06-llms.html#language-models-activity",
+    "title": "Large Language Models",
+    "section": "Language models activity",
+    "text": "Language models activity\n\n\nEach of you will receive a sticky note with a word on it. Here’s what you’ll do:\n\nCarefully remove the sticky note to see the word. This word is for your eyes only —- no peeking, neighbours!\nThink quickly: what word would logically follow the word on the sticky note? Write this next word on a new sticky note.\nYou have about 20 seconds for this step, so trust your instincts!\nPass your predicted word to the person next to you. Do not pass the word you received from your neighbour forward. Keep the chain going!\nStop after the last person in your row has finished.\nFinally, one person from your row will enter the collective sentence into our Google Doc."
   },
   {
-    "objectID": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
-    "href": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
-    "title": "Welcome!",
-    "section": "Learning goals of the workshop",
-    "text": "Learning goals of the workshop\n\nThe primary learning goal of the workshop is to familiarize yourself with the fundamentals of machine learning and its various types. This knowledge will help you determine which type of machine learning, or whether a non-machine learning approach, would be most appropriate for your problem."
+    "objectID": "slides/slides-06-llms.html#markov-model-of-language",
+    "href": "slides/slides-06-llms.html#markov-model-of-language",
+    "title": "Large Language Models",
+    "section": "Markov model of language",
+    "text": "Markov model of language\n\n\n\nYou’ve just created a simple Markov model of language!\nIn predicting the next word from a minimal context, you likely used your linguistic intuition and familiarity with common two-word phrases or collocations.\nYou could create more coherent sentences by taking into account more context e.g., previous two words or four words or 100 words.\nThis idea was first used by Shannon for characters in The Shannon’s game. See this video by Jordan Boyd-Graber for more information on this."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#applications-of-predicting-next-word",
+    "href": "slides/slides-06-llms.html#applications-of-predicting-next-word",
+    "title": "Large Language Models",
+    "section": "Applications of predicting next word",
+    "text": "Applications of predicting next word\n\n\nOne of the most common applications for predicting the next word is the ‘smart compose’ feature in your emails, text messages, and search engines."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#language-model",
+    "href": "slides/slides-06-llms.html#language-model",
+    "title": "Large Language Models",
+    "section": "Language model",
+    "text": "Language model\n\n\nA language model computes the probability distribution over sequences (of words or characters). Intuitively, this probability tells us how “good” or plausible a sequence of words is.\n\n\nCheck out this recent BMO ad."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#a-simple-model-of-language",
+    "href": "slides/slides-06-llms.html#a-simple-model-of-language",
+    "title": "Large Language Models",
+    "section": "A simple model of language",
+    "text": "A simple model of language\n\n\n\nCalculate the co-occurrence frequencies and probabilities based on these frequencies\nPredict the next word based on these probabilities"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#long-distance-dependencies",
+    "href": "slides/slides-06-llms.html#long-distance-dependencies",
+    "title": "Large Language Models",
+    "section": "Long-distance dependencies",
+    "text": "Long-distance dependencies\n\n\nWhat are some reasonable predictions for the next word in the sequence?\n\nI am studying law at the University of British Columbia Point Grey campus in Vancouver because I want to work as a ___\n\nMarkov model is unable to capture such long-distance dependencies in language."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#transformer-models",
+    "href": "slides/slides-06-llms.html#transformer-models",
+    "title": "Large Language Models",
+    "section": "Transformer models",
+    "text": "Transformer models\n\n\nEnter attention and transformer models! Transformer models are at the core of all state-of-the-art Generative AI models (e.g., BERT, GPT3, GPT4, Gemini, DALL-E, Llama, Github Copilot)?\n\nSource"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#transformer-models-1",
+    "href": "slides/slides-06-llms.html#transformer-models-1",
+    "title": "Large Language Models",
+    "section": "Transformer models",
+    "text": "Transformer models\n\n\n\nSource: GPT-4 Technical Report"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#self-attention",
+    "href": "slides/slides-06-llms.html#self-attention",
+    "title": "Large Language Models",
+    "section": "Self-attention",
+    "text": "Self-attention\n\n\n\nAn important innovation which makes these models work so well is self-attention.\nCount how many times the players wearing the white pass the basketball?"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#self-attention-1",
+    "href": "slides/slides-06-llms.html#self-attention-1",
+    "title": "Large Language Models",
+    "section": "Self-attention",
+    "text": "Self-attention\n\n\nWhen we process information, we often selectively focus on specific parts of the input, giving more attention to relevant information and less attention to irrelevant information. This is the core idea of attention.\nConsider the examples below:\n\nExample 1: She left a brief note on the kitchen table, reminding him to pick up groceries.\nExample 2: The diplomat’s speech struck a positive note in the peace negotiations.\nExample 3: She plucked the guitar strings, ending with a melancholic note.\n\nThe word note in these examples serves quite distinct meanings, each tied to different contexts. To capture varying word meanings across different contexts, we need a mechanism that considers the wider context to compute each word’s contextual representation.\n\nSelf-attention is just that mechanism!"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#nlp-applications-before-and-after-genai",
+    "href": "slides/slides-06-llms.html#nlp-applications-before-and-after-genai",
+    "title": "Large Language Models",
+    "section": "NLP applications before and after GenAI",
+    "text": "NLP applications before and after GenAI\n\n\n\nSentiment analysis\nSummarization\nNamed-entity recognition"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#learning-outcomes",
