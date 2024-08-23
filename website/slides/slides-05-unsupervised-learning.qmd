@@ -360,12 +360,20 @@ It's possible to capture the essence of the dataset using far fewer features!
 
 - This is not limited to images. 
 - We can create useful representations for any type of data. 
-- For example, 
+- For example, an algorithm called `word2vec` creates representations for words so that similar words are close together in the vector space.  
+- You can also create [representation of sentences](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2).
+
+![](img/t-SNE_word_embeddings.png)
 
 
-## Recommender systems 
+## Recommender systems (Optional)
 
+- The collaborative filtering approach to recommendation systems is based on a similar idea of identifying meaningful features of users and items.
 
+![](img/toy-movie-pattern.png)
 
+## Take-home message
+
+- A lot of data out there is unlabeled but we can still do many interesting things with it. 
 
 
