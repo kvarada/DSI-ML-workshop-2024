@@ -331,22 +331,188 @@
 </div>
 
 </section>
-<section id="learning-outcomes" class="slide level2 center">
-<h2>Learning outcomes</h2>
-<p><br>
-From this module, you will be able to</p>
-</section>
-<section id="introduction-to-large-language-models" class="slide level2 center">
-<h2>Introduction to Large Language Models</h2>
+<section id="supervised-learning" class="slide level2 center">
+<h2>Supervised Learning</h2>
 <p><br>
 </p>
+<p>In the next section, we will briefly introduce a few types of machine learning models that are often used for supervised learning tasks.</p>
+<p>We will discuss some basic intuition around how they work, and also discuss their relative strengths and shortcomings.</p>
+</section>
+<section>
+<section id="tree-based-models" class="title-slide slide level1 center">
+<h1>Tree-based models</h1>
+
+</section>
+<section id="tree-based-models-1" class="slide level2 center">
+<h2>Tree-based models</h2>
+
+<img data-src="img/actual-tree.jpg" class="r-stretch"><p>We have seen that decision trees are prone to overfitting. There are several models that extend the basic idea of using decision trees.</p>
+</section>
+<section id="random-forest" class="slide level2 center">
+<h2>Random Forest</h2>
+
+<img data-src="img/random-forest.png" class="r-stretch"><p>Train an ensemble of distinct decision trees.</p>
+</section>
+<section id="random-forest-1" class="slide level2 center">
+<h2>Random Forest</h2>
+<p><br>
+</p>
+<p>Each tree trains on a random sample of the data. Some times the features used to split are also randomized at each node.</p>
+<p>Idea: Individual trees still learn noise in the data, but the noise should “average out” over the ensemble.</p>
+</section>
+<section id="gradient-boosted-trees" class="slide level2 center">
+<h2>Gradient Boosted Trees</h2>
+
+<img data-src="img/boost.png" class="r-stretch"><p>Each tree tries to “correct” or improve the previous tree’s prediction.</p>
+</section>
+<section id="tree-based-models-2" class="slide level2 center">
+<h2>Tree-Based Models</h2>
+<p>&nbsp;</p>
+<p>Random Forest, XGBoost, etc are all easily available as “out-of-the box solutions”.</p>
+<p>Pros:</p>
+<ul>
+<li>Perform well on a variety of tasks</li>
+<li>Random forest in particular are easy to train and robust to outliers.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Not always interpretable</li>
+<li>Not good at handling sparse data</li>
+<li>Can also still overfit.</li>
+</ul>
+</section></section>
+<section>
+<section id="analogy-based-models" class="title-slide slide level1 center">
+<h1>Analogy-based models</h1>
+
+</section>
+<section id="analogy-based-models-1" class="slide level2 center">
+<h2>Analogy-based models</h2>
+
+<img data-src="img/us-map.png" class="r-stretch"><p>Can you guess what this dataset is?</p>
+</section>
+<section id="analogy-based-models-2" class="slide level2 center">
+<h2>Analogy-based models</h2>
+
+<img data-src="img/us-map-dot.jpg" class="r-stretch"><p>How would you classify the green dot?</p>
+</section>
+<section id="analogy-based-models-3" class="slide level2 center">
+<h2>Analogy-based models</h2>
+<p><br>
+</p>
+<p>Idea: predict on new data based on “similar” examples in the training data.</p>
+</section>
+<section id="k-nearest-neighbour-classifier" class="slide level2 center">
+<h2><em>K</em>-Nearest-Neighbour Classifier</h2>
+<p><br>
+</p>
+<p>Find the <em>K</em> nearest neighbours of an example, and predict whichever class was most common among them.</p>
+<p>‘<em>K</em>’ is a hyperparameter. Choosing <em>K=1</em> is likely to overfit. If the dataset has <em>N</em> examples, setting <em>K=N</em> just predicts the mode (dummy classifier).</p>
+<p>No training phase, but the model can get arbitrarily large (and take very long to make predictions).</p>
+</section>
+<section id="svm-with-rbf-kernel" class="slide level2 center">
+<h2>SVM with RBF kernel</h2>
+<p>&nbsp;</p>
+<p>Another ‘analogy-based’ classification method.</p>
+<p>The model stores examples with positive and negative weights. Being close to a positive example makes your label more likely to be positive.</p>
+<p>Can lead to “smoother” decision boundaries than K-NNs, and potentially to a smaller trained model.</p>
+</section>
+<section id="knns-and-svms" class="slide level2 center">
+<h2>KNNs and SVMs</h2>
+<p>&nbsp; <img data-src="img/knn-vs-svm.png"></p>
+</section>
+<section id="analogy-based-models-4" class="slide level2 center">
+<h2>Analogy-based Models</h2>
+<p><br>
+</p>
+<p>Pros:</p>
+<ul>
+<li>Do not need to make assumptions about the underlying data</li>
+<li>Given enough data, should pretty much always work.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li><em>Enough</em> data can mean … a lot</li>
+<li>Computing distances is time-consuming for large datasets</li>
+<li>Can’t really interpret the model’s decisions.</li>
+</ul>
+</section></section>
+<section>
+<section id="linear-models" class="title-slide slide level1 center">
+<h1>Linear models</h1>
+
+</section>
+<section id="linear-models-1" class="slide level2 center">
+<h2>Linear models</h2>
+<p><br>
+</p>
+
+<img data-src="img/lse.png" class="r-stretch"><p>Many of you might be familiar with least-squares regression. We find the line of best fit by minimizing the ‘squared error’ of the predictions.</p>
+</section>
+<section id="linear-models-2" class="slide level2 center">
+<h2>Linear Models</h2>
+<p><br>
+</p>
+
+<img data-src="img/quadreg.png" class="r-stretch"><p>We can use the same idea (and some neat tricks) to fit higher degree polynomials, or any chosen basis of functions.</p>
+</section>
+<section id="linear-models-3" class="slide level2 center">
+<h2>Linear Models</h2>
+<p>&nbsp; <img data-src="img/outlierbad.png"></p>
+<p>Squared Error is very sensitive to outliers. Far-away points contribute a very large squared error, and even relatively few points can affect the outcome.</p>
+</section>
+<section id="linear-models-4" class="slide level2 center">
+<h2>Linear Models</h2>
+<p>&nbsp; <img data-src="img/outliergood.png"></p>
+<p>We can use other notions of “best fit”. Using absolute error makes the model more resistant to outliers!</p>
+</section>
+<section id="linear-classifiers" class="slide level2 center">
+<h2>Linear Classifiers</h2>
+<p><br>
+</p>
+<p>We can also build linear models for classification tasks. The idea is to convert the output from an arbitrary number to a number between 0 and 1, and treat it like a “probability”.</p>
+<p>In <em>logistic regression</em>, we squash the output using the sigmoid function and then adjust parameters (in training) to find the choice that makes the data “most likely”.</p>
+</section>
+<section id="linear-classifiers-1" class="slide level2 center">
+<h2>Linear Classifiers</h2>
+
+<img data-src="img/logistic.png" class="r-stretch"><p>Logistic Regression predicts a <em>linear</em> decision boundary.</p>
+</section>
+<section id="linear-classifiers-2" class="slide level2 center">
+<h2>Linear Classifiers</h2>
+<p><br>
+</p>
+<p>Pros:</p>
+<ul>
+<li>Easy to train and to interpret</li>
+<li>Widely applicable despite some strong assumptions</li>
+<li>If you have a regression task, check whether a linear regression is already good enough! If you have a classification task, logistic regression is a go-to first option.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>Strong assumptions</li>
+<li>Linear decision boundaries for classifiers</li>
+<li>Correlated features can cause problems</li>
+</ul>
+</section>
+<section id="a-look-ahead" class="slide level2 center">
+<h2>A Look Ahead</h2>
+<p><br>
+</p>
+<p>Support Vector Machines (SVM) are also linear classifiers.</p>
+<p>The reason we saw a <em>non-linear</em> decision boundary earlier was the use of the <em>RBF</em> kernel, which applies a certain non-linear transformation to the features.</p>
+<p>Even if our data is not linearly separable, there could be a good choice of feature transform out there that <em>makes</em> it linearly separable.</p>
+</section>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<p>Wouldn’t it be nice if we could train a machine learning model to find such a transform?</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

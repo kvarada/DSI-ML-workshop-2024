@@ -568,18 +568,158 @@
     "text": "Varada Kolhatkar\n        Assistant Professor of Teaching, Computer Science, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Prajeet Bajpai\n        Teaching Postdoctoral Fellow, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Raymond Ng\n        Scientific Director, Data Science Institute; Professor, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Jie Le\n        Research Administrator, Data Science Institute\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Michele Ng\n        Special Projects Coordinator, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Yulia Egorova\n        \n        \n            Assistant\n        \n        \n    \n\n    \n        \n        Tony Shum\n        \n        \n            Assistant\n        \n        \n    \n\n\n\nNo matching items"
   },
   {
-    "objectID": "slides/slides-03-ml-models.html#learning-outcomes",
-    "href": "slides/slides-03-ml-models.html#learning-outcomes",
+    "objectID": "slides/slides-03-ml-models.html#supervised-learning",
+    "href": "slides/slides-03-ml-models.html#supervised-learning",
     "title": "Supervised Machine Learning Models",
-    "section": "Learning outcomes",
-    "text": "Learning outcomes\n\nFrom this module, you will be able to"
+    "section": "Supervised Learning",
+    "text": "Supervised Learning\n\n\nIn the next section, we will briefly introduce a few types of machine learning models that are often used for supervised learning tasks.\nWe will discuss some basic intuition around how they work, and also discuss their relative strengths and shortcomings."
   },
   {
-    "objectID": "slides/slides-03-ml-models.html#introduction-to-large-language-models",
-    "href": "slides/slides-03-ml-models.html#introduction-to-large-language-models",
+    "objectID": "slides/slides-03-ml-models.html#tree-based-models-1",
+    "href": "slides/slides-03-ml-models.html#tree-based-models-1",
     "title": "Supervised Machine Learning Models",
-    "section": "Introduction to Large Language Models",
-    "text": "Introduction to Large Language Models"
+    "section": "Tree-based models",
+    "text": "Tree-based models\n\nWe have seen that decision trees are prone to overfitting. There are several models that extend the basic idea of using decision trees."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#random-forest",
+    "href": "slides/slides-03-ml-models.html#random-forest",
+    "title": "Supervised Machine Learning Models",
+    "section": "Random Forest",
+    "text": "Random Forest\n\nTrain an ensemble of distinct decision trees."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#random-forest-1",
+    "href": "slides/slides-03-ml-models.html#random-forest-1",
+    "title": "Supervised Machine Learning Models",
+    "section": "Random Forest",
+    "text": "Random Forest\n\n\nEach tree trains on a random sample of the data. Some times the features used to split are also randomized at each node.\nIdea: Individual trees still learn noise in the data, but the noise should “average out” over the ensemble."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#gradient-boosted-trees",
+    "href": "slides/slides-03-ml-models.html#gradient-boosted-trees",
+    "title": "Supervised Machine Learning Models",
+    "section": "Gradient Boosted Trees",
+    "text": "Gradient Boosted Trees\n\nEach tree tries to “correct” or improve the previous tree’s prediction."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#tree-based-models-2",
+    "href": "slides/slides-03-ml-models.html#tree-based-models-2",
+    "title": "Supervised Machine Learning Models",
+    "section": "Tree-Based Models",
+    "text": "Tree-Based Models\n \nRandom Forest, XGBoost, etc are all easily available as “out-of-the box solutions”.\nPros:\n\nPerform well on a variety of tasks\nRandom forest in particular are easy to train and robust to outliers.\n\nCons:\n\nNot always interpretable\nNot good at handling sparse data\nCan also still overfit."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-1",
+    "href": "slides/slides-03-ml-models.html#analogy-based-models-1",
+    "title": "Supervised Machine Learning Models",
+    "section": "Analogy-based models",
+    "text": "Analogy-based models\n\nCan you guess what this dataset is?"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-2",
+    "href": "slides/slides-03-ml-models.html#analogy-based-models-2",
+    "title": "Supervised Machine Learning Models",
+    "section": "Analogy-based models",
+    "text": "Analogy-based models\n\nHow would you classify the green dot?"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-3",
+    "href": "slides/slides-03-ml-models.html#analogy-based-models-3",
+    "title": "Supervised Machine Learning Models",
+    "section": "Analogy-based models",
+    "text": "Analogy-based models\n\n\nIdea: predict on new data based on “similar” examples in the training data."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#k-nearest-neighbour-classifier",
+    "href": "slides/slides-03-ml-models.html#k-nearest-neighbour-classifier",
+    "title": "Supervised Machine Learning Models",
+    "section": "K-Nearest-Neighbour Classifier",
+    "text": "K-Nearest-Neighbour Classifier\n\n\nFind the K nearest neighbours of an example, and predict whichever class was most common among them.\n‘K’ is a hyperparameter. Choosing K=1 is likely to overfit. If the dataset has N examples, setting K=N just predicts the mode (dummy classifier).\nNo training phase, but the model can get arbitrarily large (and take very long to make predictions)."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#svm-with-rbf-kernel",
+    "href": "slides/slides-03-ml-models.html#svm-with-rbf-kernel",
+    "title": "Supervised Machine Learning Models",
+    "section": "SVM with RBF kernel",
+    "text": "SVM with RBF kernel\n \nAnother ‘analogy-based’ classification method.\nThe model stores examples with positive and negative weights. Being close to a positive example makes your label more likely to be positive.\nCan lead to “smoother” decision boundaries than K-NNs, and potentially to a smaller trained model."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#knns-and-svms",
+    "href": "slides/slides-03-ml-models.html#knns-and-svms",
+    "title": "Supervised Machine Learning Models",
+    "section": "KNNs and SVMs",
+    "text": "KNNs and SVMs"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-4",
+    "href": "slides/slides-03-ml-models.html#analogy-based-models-4",
+    "title": "Supervised Machine Learning Models",
+    "section": "Analogy-based Models",
+    "text": "Analogy-based Models\n\n\nPros:\n\nDo not need to make assumptions about the underlying data\nGiven enough data, should pretty much always work.\n\nCons:\n\nEnough data can mean … a lot\nComputing distances is time-consuming for large datasets\nCan’t really interpret the model’s decisions."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-models-1",
+    "href": "slides/slides-03-ml-models.html#linear-models-1",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear models",
+    "text": "Linear models\n\n\n\nMany of you might be familiar with least-squares regression. We find the line of best fit by minimizing the ‘squared error’ of the predictions."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-models-2",
+    "href": "slides/slides-03-ml-models.html#linear-models-2",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Models",
+    "text": "Linear Models\n\n\n\nWe can use the same idea (and some neat tricks) to fit higher degree polynomials, or any chosen basis of functions."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-models-3",
+    "href": "slides/slides-03-ml-models.html#linear-models-3",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Models",
+    "text": "Linear Models\n  \nSquared Error is very sensitive to outliers. Far-away points contribute a very large squared error, and even relatively few points can affect the outcome."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-models-4",
+    "href": "slides/slides-03-ml-models.html#linear-models-4",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Models",
+    "text": "Linear Models\n  \nWe can use other notions of “best fit”. Using absolute error makes the model more resistant to outliers!"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-classifiers",
+    "href": "slides/slides-03-ml-models.html#linear-classifiers",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Classifiers",
+    "text": "Linear Classifiers\n\n\nWe can also build linear models for classification tasks. The idea is to convert the output from an arbitrary number to a number between 0 and 1, and treat it like a “probability”.\nIn logistic regression, we squash the output using the sigmoid function and then adjust parameters (in training) to find the choice that makes the data “most likely”."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-classifiers-1",
+    "href": "slides/slides-03-ml-models.html#linear-classifiers-1",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Classifiers",
+    "text": "Linear Classifiers\n\nLogistic Regression predicts a linear decision boundary."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-classifiers-2",
+    "href": "slides/slides-03-ml-models.html#linear-classifiers-2",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Classifiers",
+    "text": "Linear Classifiers\n\n\nPros:\n\nEasy to train and to interpret\nWidely applicable despite some strong assumptions\nIf you have a regression task, check whether a linear regression is already good enough! If you have a classification task, logistic regression is a go-to first option.\n\nCons:\n\nStrong assumptions\nLinear decision boundaries for classifiers\nCorrelated features can cause problems"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#a-look-ahead",
+    "href": "slides/slides-03-ml-models.html#a-look-ahead",
+    "title": "Supervised Machine Learning Models",
+    "section": "A Look Ahead",
+    "text": "A Look Ahead\n\n\nSupport Vector Machines (SVM) are also linear classifiers.\nThe reason we saw a non-linear decision boundary earlier was the use of the RBF kernel, which applies a certain non-linear transformation to the features.\nEven if our data is not linearly separable, there could be a good choice of feature transform out there that makes it linearly separable."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#section",
+    "href": "slides/slides-03-ml-models.html#section",
+    "title": "Supervised Machine Learning Models",
+    "section": "",
+    "text": "Wouldn’t it be nice if we could train a machine learning model to find such a transform?"
   },
   {
     "objectID": "index.html",
