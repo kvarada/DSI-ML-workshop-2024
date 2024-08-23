@@ -67,28 +67,7 @@
     "href": "slides/slides-05-unsupervised-learning.html#k-means-demo",
     "title": "Unsupervised Learning",
     "section": "K-Means demo",
-    "text": "K-Means demo"
-  },
-  {
-    "objectID": "slides/slides-05-unsupervised-learning.html#dbscan-density-based-spatial-clustering-of-applications-with-noise",
-    "href": "slides/slides-05-unsupervised-learning.html#dbscan-density-based-spatial-clustering-of-applications-with-noise",
-    "title": "Unsupervised Learning",
-    "section": "DBSCAN (Density-Based Spatial Clustering of Applications with Noise)",
-    "text": "DBSCAN (Density-Based Spatial Clustering of Applications with Noise)\n \n\nDBSCAN is a density-based clustering algorithm.\nIntuitively, it’s based on the idea that clusters form dense regions in the data and so it works by identifying “crowded” regions in the feature space.\nIt can address some of the limitations of K-Means we saw above.\n\nIt does not require the user to specify the number of clusters in advance.\nIt can identify points that are not part of any clusters.\nIt can capture clusters of complex shapes."
-  },
-  {
-    "objectID": "slides/slides-05-unsupervised-learning.html#dbscan-idea",
-    "href": "slides/slides-05-unsupervised-learning.html#dbscan-idea",
-    "title": "Unsupervised Learning",
-    "section": "DBSCAN idea",
-    "text": "DBSCAN idea\n \n\nIterative algorithm.\n\nBased on the idea that clusters form dense regions in the data.\n\n\nSource"
-  },
-  {
-    "objectID": "slides/slides-05-unsupervised-learning.html#hierarchical-clustering",
-    "href": "slides/slides-05-unsupervised-learning.html#hierarchical-clustering",
-    "title": "Unsupervised Learning",
-    "section": "Hierarchical clustering",
-    "text": "Hierarchical clustering"
+    "text": "K-Means demo\n\n\n\nK-Means is the simplest clustering algorithm. There is a variety of clustering algorithms available out there."
   },
   {
     "objectID": "slides/slides-05-unsupervised-learning.html#lets-cluster-images",
@@ -165,21 +144,91 @@
     "href": "slides/slides-05-unsupervised-learning.html#motivation",
     "title": "Unsupervised Learning",
     "section": "Motivation",
-    "text": "Motivation\n\n\n\nRepresentation plays a crucial role when you do machine learning.\nHow could we create meaningful representations?"
+    "text": "Motivation\n\n\n\nRepresentation plays a crucial role when you do machine learning.\nHow could we create meaningful representations?\n\nDimensionality reduction is a popular approach!\n\nSuppose you’re shown the picture below and you are told that this is Eva.\nDo you have to remember every pixel in the image to recognize other pictures of Eva?"
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#motivation-1",
+    "href": "slides/slides-05-unsupervised-learning.html#motivation-1",
+    "title": "Unsupervised Learning",
+    "section": "Motivation",
+    "text": "Motivation\n\n\n\nFor example, if you are asked which one is Eva in the following pictures, it’ll be fairly easy for you to identify her just based on some high-level features.\nJust remembering important features such as shape of eyes, nose, mouth, shape and colour of hair etc. suffice to tell her apart from other people."
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#dimensionality-reduction-activity",
+    "href": "slides/slides-05-unsupervised-learning.html#dimensionality-reduction-activity",
+    "title": "Unsupervised Learning",
+    "section": "Dimensionality reduction activity",
+    "text": "Dimensionality reduction activity\n\n\n\nGoal Capture the essence of the classroom through photography.\nWe need two volunteers with cell phones to take photos of the classroom.\nVolunteers will take pictures from various angles to ensure a comprehensive view of the classroom. Suggested angles include:\n\nAn overhead view (from above)\nViews from each corner of the classroom\nA central perspective (from the center of the room)\nA low angle view (close to the floor)\n\nAmong the photos taken, select and post the one that best captures the majority of objects and the overall atmosphere of the classroom in this Google doc\nDiscuss: Why certain angles might be better than other for capturing more information?"
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#principal-component-analysis-pca",
+    "href": "slides/slides-05-unsupervised-learning.html#principal-component-analysis-pca",
+    "title": "Unsupervised Learning",
+    "section": "Principal component analysis (PCA)",
+    "text": "Principal component analysis (PCA)\n\n\n\nPCA is a popular technique for dimensionality reduction.\nWhen going from higher dimensional space to lower dimensional space, it tries to capture the topology of the points in high dimensional space, making sure that we are not losing some of the important properties of the data."
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#pca-example",
+    "href": "slides/slides-05-unsupervised-learning.html#pca-example",
+    "title": "Unsupervised Learning",
+    "section": "PCA example",
+    "text": "PCA example\n\n\n\nWe’ll work through a simpler dataset with grayscale images.\nLet’s look at some sample images from the dataset.\n\n\n\n\n\n\n\n\n\n\nThe shape of the dataset is:  (1500, 10000)"
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#applying-pca",
+    "href": "slides/slides-05-unsupervised-learning.html#applying-pca",
+    "title": "Unsupervised Learning",
+    "section": "Applying PCA",
+    "text": "Applying PCA\n\nn_components = 300 \npca = PCA(n_components=n_components, random_state=42)\npca.fit(X_anims);"
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#pca-components",
+    "href": "slides/slides-05-unsupervised-learning.html#pca-components",
+    "title": "Unsupervised Learning",
+    "section": "PCA components",
+    "text": "PCA components"
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#pca-components-1",
+    "href": "slides/slides-05-unsupervised-learning.html#pca-components-1",
+    "title": "Unsupervised Learning",
+    "section": "PCA components",
+    "text": "PCA components\n\n\n\nWe can express a data point (a cat image in this case) as a linear combination of principal components."
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#reconstruction-with-varying-number-of-components",
+    "href": "slides/slides-05-unsupervised-learning.html#reconstruction-with-varying-number-of-components",
+    "title": "Unsupervised Learning",
+    "section": "Reconstruction with varying number of components",
+    "text": "Reconstruction with varying number of components\n\n\n\nWhen we extract components, we lose some information. To what extent can we reconstruct the original data point using a given number of components?\n\n\n\nn_components = [10, 100, 200, 300, 500, 800]\nplot_pca_animals(X_anims, (100,100), n_components=n_components, index=30)"
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#comments",
+    "href": "slides/slides-05-unsupervised-learning.html#comments",
+    "title": "Unsupervised Learning",
+    "section": "Comments",
+    "text": "Comments\n\n\nIt’s possible to capture the essence of the dataset using far fewer features!"
   },
   {
     "objectID": "slides/slides-05-unsupervised-learning.html#word-embeddings",
     "href": "slides/slides-05-unsupervised-learning.html#word-embeddings",
     "title": "Unsupervised Learning",
     "section": "Word embeddings",
-    "text": "Word embeddings"
+    "text": "Word embeddings\n\nThis is not limited to images.\nWe can create useful representations for any type of data.\nFor example, an algorithm called word2vec creates representations for words so that similar words are close together in the vector space.\n\nYou can also create representation of sentences."
   },
   {
-    "objectID": "slides/slides-05-unsupervised-learning.html#recommender-systems",
-    "href": "slides/slides-05-unsupervised-learning.html#recommender-systems",
+    "objectID": "slides/slides-05-unsupervised-learning.html#recommender-systems-optional",
+    "href": "slides/slides-05-unsupervised-learning.html#recommender-systems-optional",
     "title": "Unsupervised Learning",
-    "section": "Recommender systems",
-    "text": "Recommender systems"
+    "section": "Recommender systems (Optional)",
+    "text": "Recommender systems (Optional)\n\nThe collaborative filtering approach to recommendation systems is based on a similar idea of identifying meaningful features of users and items."
+  },
+  {
+    "objectID": "slides/slides-05-unsupervised-learning.html#take-home-message",
+    "href": "slides/slides-05-unsupervised-learning.html#take-home-message",
+    "title": "Unsupervised Learning",
+    "section": "Take-home message",
+    "text": "Take-home message\n\nA lot of data out there is unlabeled but we can still do many interesting things with it."
   },
   {
     "objectID": "slides/slides-02-ml-intro.html#introduction-to-machine-learning",
@@ -354,14 +403,14 @@
     "href": "slides/slides-02-ml-intro.html#a-decision-tree-classifier-1",
     "title": "Introduction to Machine Learning",
     "section": "A Decision Tree Classifier",
-    "text": "A Decision Tree Classifier\n\n\n\n\nThe model classified 100.0% of training examples correctly by \n building a decision tree of depth 38\n\n\n\nThat’s very accurate indeed! Maybe decision trees are a really good way to detect and classify faces.\nRemember, we only trained on 80% of the data. Let’s see how our model performs on the remaining 20%"
+    "text": "A Decision Tree Classifier\n\n\n\n\nThe model classified 100.0% of training examples correctly by \n building a decision tree of depth 42\n\n\n\nThat’s very accurate indeed! Maybe decision trees are a really good way to detect and classify faces.\nRemember, we only trained on 80% of the data. Let’s see how our model performs on the remaining 20%"
   },
   {
     "objectID": "slides/slides-02-ml-intro.html#did-we-build-a-good-model",
     "href": "slides/slides-02-ml-intro.html#did-we-build-a-good-model",
     "title": "Introduction to Machine Learning",
     "section": "Did we build a good model?",
-    "text": "Did we build a good model?\n\n\n\n\nThe model acheived an accuracy of 45.0% on new data\n\n\n\n…oops."
+    "text": "Did we build a good model?\n\n\n\n\nThe model acheived an accuracy of 43.75% on new data\n\n\n\n…oops."
   },
   {
     "objectID": "slides/slides-02-ml-intro.html#whats-going-on",
@@ -924,7 +973,7 @@
     "href": "slides/slides-04-deep-learning.html#object-detection-using-yolo",
     "title": "Deep Learning",
     "section": "Object detection using YOLO",
-    "text": "Object detection using YOLO\n\n\n\nAnother useful task and tool to know is object detection using YOLO model.\nLet’s identify objects in a sample image using a pretrained model called YOLO5\n\n\n\nrequirements: Ultralytics requirements ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0'] not found, attempting AutoUpdate...\nRequirement already satisfied: gitpython&gt;=3.1.30 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (3.1.43)\nRequirement already satisfied: pillow&gt;=10.3.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (10.4.0)\nRequirement already satisfied: requests&gt;=2.32.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (2.32.3)\nRequirement already satisfied: setuptools&gt;=70.0.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (72.2.0)\nRequirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitpython&gt;=3.1.30) (4.0.7)\nRequirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (1.26.6)\nRequirement already satisfied: certifi&gt;=2017.4.17 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2021.5.30)\nRequirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2.0.4)\nRequirement already satisfied: idna&lt;4,&gt;=2.5 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (3.2)\nRequirement already satisfied: smmap&lt;5,&gt;=3.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;gitpython&gt;=3.1.30) (4.0.0)\n\nrequirements: AutoUpdate success ✅ 3.7s, installed 4 packages: ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0']\nrequirements: ⚠️ Restart runtime or rerun command for updates to take effect"
+    "text": "Object detection using YOLO\n\n\n\nAnother useful task and tool to know is object detection using YOLO model.\nLet’s identify objects in a sample image using a pretrained model called YOLO5\n\n\n\nrequirements: Ultralytics requirements ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0'] not found, attempting AutoUpdate...\nRequirement already satisfied: gitpython&gt;=3.1.30 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (3.1.43)\nRequirement already satisfied: pillow&gt;=10.3.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (10.4.0)\nRequirement already satisfied: requests&gt;=2.32.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (2.32.3)\nRequirement already satisfied: setuptools&gt;=70.0.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (72.2.0)\nRequirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitpython&gt;=3.1.30) (4.0.7)\nRequirement already satisfied: certifi&gt;=2017.4.17 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2021.5.30)\nRequirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2.0.4)\nRequirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (1.26.6)\nRequirement already satisfied: idna&lt;4,&gt;=2.5 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (3.2)\nRequirement already satisfied: smmap&lt;5,&gt;=3.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;gitpython&gt;=3.1.30) (4.0.0)\n\nrequirements: AutoUpdate success ✅ 3.0s, installed 4 packages: ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0']\nrequirements: ⚠️ Restart runtime or rerun command for updates to take effect"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#summary",

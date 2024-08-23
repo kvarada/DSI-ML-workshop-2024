@@ -490,7 +490,7 @@
 <h2>K-Means toy dataset</h2>
 <p><br>
 </p>
-<div id="346060fc" class="cell" data-execution_count="2">
+<div id="103e1a73" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>X, y <span class="op">=</span> make_blobs(n_samples<span class="op">=</span><span class="dv">10</span>, centers<span class="op">=</span><span class="dv">3</span>, n_features<span class="op">=</span><span class="dv">2</span>, random_state<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb1-2"><a></a>mglearn.discrete_scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -507,43 +507,14 @@
 <p><br>
 </p>
 
-<img data-src="img/k-means-iterative.png" class="r-stretch"></section>
-<section id="dbscan-density-based-spatial-clustering-of-applications-with-noise" class="slide level2 center">
-<h2>DBSCAN (<strong>D</strong>ensity-<strong>B</strong>ased <strong>S</strong>patial <strong>C</strong>lustering of <strong>A</strong>pplications with <strong>N</strong>oise)</h2>
-<p>&nbsp;</p>
-<ul>
-<li>DBSCAN is a density-based clustering algorithm.</li>
-<li>Intuitively, it’s based on the idea that clusters form dense regions in the data and so it works by identifying “crowded” regions in the feature space.</li>
-<li>It can address some of the limitations of K-Means we saw above.
-<ul>
-<li>It does not require the user to specify the number of clusters in advance.</li>
-<li>It can identify points that are not part of any clusters.</li>
-<li>It can capture clusters of complex shapes.</li>
-</ul></li>
-</ul>
-</section>
-<section id="dbscan-idea" class="slide level2 center">
-<h2>DBSCAN idea</h2>
-<p>&nbsp;</p>
-<ul>
-<li>Iterative algorithm.<br>
-</li>
-<li>Based on the idea that clusters form dense regions in the data.</li>
-</ul>
-
-<img data-src="img/DBSCAN_search.gif" class="r-stretch"><p><a href="https://dashee87.github.io/data%20science/general/Clustering-with-Scikit-with-GIFs/">Source</a></p>
-</section>
-<section id="hierarchical-clustering" class="slide level2 center">
-<h2>Hierarchical clustering</h2>
-<p><br>
-</p>
+<img data-src="img/k-means-iterative.png" class="r-stretch"><p>K-Means is the simplest clustering algorithm. There is a variety of clustering algorithms available out there.</p>
 </section>
 <section id="lets-cluster-images" class="slide level2 center">
 <h2>Let’s cluster images!!</h2>
 <p><br>
 </p>
 <p>For this demo, I’m going to use two image datasets a small subset of <a href="https://www.kaggle.com/datasets/veeralakrishna/200-bird-species-with-11788-images">200 Bird Species with 11,788 Images</a> dataset (available <a href="../data/birds.zip">here</a>)</p>
-<div id="b0a5138a" class="cell" data-execution_count="3">
+<div id="d3f3ba0d" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -562,7 +533,7 @@
 <h2>Flattening images</h2>
 <p><br>
 </p>
-<div id="b42c7848" class="cell" data-execution_count="4">
+<div id="669d6c56" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>flatten_images <span class="op">=</span> get_flattened_representations(data_dir, BATCH_SIZE)</span>
 <span id="cb2-2"><a></a><span class="bu">print</span>(<span class="st">"Shape of the flattened images: "</span>, flatten_images.shape) <span class="co"># 224 by 224 images with 3 color channels</span></span>
 <span id="cb2-3"><a></a>image_shape<span class="op">=</span>[<span class="dv">3</span>,<span class="dv">224</span>,<span class="dv">224</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -575,7 +546,7 @@
 <h2>K-Means on flattened representation</h2>
 <p><br>
 </p>
-<div id="e7a2cc30" class="cell" data-execution_count="5">
+<div id="6c9f3cc9" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
 <span id="cb4-2"><a></a>k <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb4-3"><a></a>km_flatten <span class="op">=</span> KMeans(k, n_init<span class="op">=</span><span class="st">'auto'</span>, random_state<span class="op">=</span><span class="dv">123</span>)</span>
@@ -591,7 +562,7 @@
 <h2>Examining clusters</h2>
 <p>&nbsp;</p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="caf3ce44" class="cell" data-execution_count="6">
+<div id="c648c942" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="cf">for</span> cluster <span class="kw">in</span> <span class="bu">range</span>(k):</span>
 <span id="cb6-2"><a></a>    get_cluster_images(km_flatten, flatten_images, unflatten_inputs, cluster, n_img<span class="op">=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -639,7 +610,7 @@ Image indices:  [156  89 100  25 133]</code></pre>
 <h2>Extract features using transfer learning</h2>
 <p><br>
 </p>
-<div id="78b052a4" class="cell" data-execution_count="7">
+<div id="a37e7eb1" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>densenet <span class="op">=</span> models.densenet121(weights<span class="op">=</span><span class="st">"DenseNet121_Weights.IMAGENET1K_V1"</span>)</span>
 <span id="cb10-2"><a></a>densenet.classifier <span class="op">=</span> torch.nn.Identity()  <span class="co"># remove that last "classification" layer</span></span>
 <span id="cb10-3"><a></a>Z_birds <span class="op">=</span> get_features(densenet, birds_inputs)</span>
@@ -653,7 +624,7 @@ Image indices:  [156  89 100  25 133]</code></pre>
 <h2>K-Means on extracted features</h2>
 <p><br>
 </p>
-<div id="4d638574" class="cell" data-execution_count="8">
+<div id="771843bb" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>k <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb12-2"><a></a>km <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, n_init<span class="op">=</span><span class="st">'auto'</span>, random_state<span class="op">=</span><span class="dv">123</span>)</span>
 <span id="cb12-3"><a></a>km.fit(Z_birds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -666,7 +637,7 @@ Image indices:  [156  89 100  25 133]</code></pre>
 <h2>Examining clusters</h2>
 <p>&nbsp;</p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="31c38386" class="cell" data-execution_count="9">
+<div id="1420a4a5" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="cf">for</span> cluster <span class="kw">in</span> <span class="bu">range</span>(k):</span>
 <span id="cb13-2"><a></a>    get_cluster_images(km, Z_birds, X_birds, cluster, n_img<span class="op">=</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -709,7 +680,7 @@ Image indices:  [120   5  11  14  22  69]</code></pre>
 <h2>Let’s try this on the food dataset</h2>
 <p><br>
 </p>
-<div id="a7656a98" class="cell" data-execution_count="10">
+<div id="ab77a132" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -723,7 +694,7 @@ Image indices:  [120   5  11  14  22  69]</code></pre>
 <h2>K-Means on food dataset</h2>
 <p><br>
 </p>
-<div id="bb3991cc" class="cell" data-execution_count="11">
+<div id="14715cda" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>Z_food <span class="op">=</span> get_features(densenet, food_inputs)</span>
 <span id="cb17-2"><a></a>k <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb17-3"><a></a>km <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, n_init<span class="op">=</span><span class="st">'auto'</span>, random_state<span class="op">=</span><span class="dv">123</span>)</span>
@@ -738,7 +709,7 @@ Image indices:  [120   5  11  14  22  69]</code></pre>
 <p><br>
 </p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="8e6b1eb3" class="cell" data-execution_count="12">
+<div id="c17df557" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="cf">for</span> cluster <span class="kw">in</span> <span class="bu">range</span>(k):</span>
 <span id="cb18-2"><a></a>    get_cluster_images(km, Z_food, X_food, cluster, n_img<span class="op">=</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -810,14 +781,152 @@ Image indices:  [165  31  75  14  58  42]</code></pre>
 </p>
 <ul>
 <li>Representation plays a crucial role when you do machine learning.</li>
-<li>How could we create meaningful representations?</li>
+<li>How could we create meaningful representations?
+<ul>
+<li>Dimensionality reduction is a popular approach!</li>
+</ul></li>
+<li>Suppose you’re shown the picture below and you are told that this is Eva.</li>
+<li>Do you have to remember every pixel in the image to recognize other pictures of Eva?</li>
 </ul>
+
+<img data-src="img/eva-coffee.png" class="r-stretch"></section>
+<section id="motivation-1" class="slide level2 center">
+<h2>Motivation</h2>
+<p><br>
+</p>
+<ul>
+<li>For example, if you are asked which one is Eva in the following pictures, it’ll be fairly easy for you to identify her just based on some high-level features.</li>
+<li>Just remembering important features such as shape of eyes, nose, mouth, shape and colour of hair etc. suffice to tell her apart from other people.</li>
+</ul>
+
+<img data-src="img/hello-bmjs.png" class="r-stretch"></section>
+<section id="dimensionality-reduction-activity" class="slide level2 center">
+<h2>Dimensionality reduction activity</h2>
+<p><br>
+</p>
+<ul>
+<li>Goal Capture the essence of the classroom through photography.</li>
+<li>We need two volunteers with cell phones to take photos of the classroom.</li>
+<li>Volunteers will take pictures from various angles to ensure a comprehensive view of the classroom. Suggested angles include:
+<ul>
+<li>An overhead view (from above)</li>
+<li>Views from each corner of the classroom</li>
+<li>A central perspective (from the center of the room)</li>
+<li>A low angle view (close to the floor)</li>
+</ul></li>
+<li>Among the photos taken, select and post the one that best captures the majority of objects and the overall atmosphere of the classroom in <a href="https://docs.google.com/document/d/1TdmH5LKLC0Y9IWySC4FgsYX0dsNtkX_dBcc7FSSrQg0/edit#heading=h.trc35ybo6zyf">this Google doc</a></li>
+<li>Discuss: Why certain angles might be better than other for capturing more information?</li>
+</ul>
+</section>
+<section id="principal-component-analysis-pca" class="slide level2 center">
+<h2>Principal component analysis (PCA)</h2>
+<p><br>
+</p>
+<ul>
+<li>PCA is a popular technique for dimensionality reduction.</li>
+<li>When going from higher dimensional space to lower dimensional space, it tries to capture the topology of the points in high dimensional space, making sure that we are not losing some of the important properties of the data.</li>
+</ul>
+</section>
+<section id="pca-example" class="slide level2 center">
+<h2>PCA example</h2>
+<p><br>
+</p>
+<ul>
+<li>We’ll work through a simpler dataset with grayscale images.</li>
+<li>Let’s look at some sample images from the dataset.</li>
+</ul>
+<div id="1d4b4e51" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides-05-unsupervised-learning_files/figure-revealjs/cell-14-output-1.png" width="950" height="390"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The shape of the dataset is:  (1500, 10000)</code></pre>
+</div>
+</div>
+</section>
+<section id="applying-pca" class="slide level2 center">
+<h2>Applying PCA</h2>
+<div id="6c5fa86f" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>n_components <span class="op">=</span> <span class="dv">300</span> </span>
+<span id="cb25-2"><a></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span>n_components, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb25-3"><a></a>pca.fit(X_anims)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="pca-components" class="slide level2 center">
+<h2>PCA components</h2>
+<div id="156660b4" class="cell" data-execution_count="15">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides-05-unsupervised-learning_files/figure-revealjs/cell-16-output-1.png" width="795" height="501"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="pca-components-1" class="slide level2 center">
+<h2>PCA components</h2>
+<p><br>
+</p>
+<ul>
+<li>We can express a data point (a cat image in this case) as a linear combination of principal components.<br>
+<img data-src="img/PCA-batcat-rep.png"></li>
+</ul>
+</section>
+<section id="reconstruction-with-varying-number-of-components" class="slide level2 center">
+<h2>Reconstruction with varying number of components</h2>
+<p><br>
+</p>
+<ul>
+<li>When we extract components, we lose some information. To what extent can we reconstruct the original data point using a given number of components?</li>
+</ul>
+<div class="scroll-container" style="overflow-y: scroll; height: 400px;">
+<div id="b9381981" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a>n_components <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>, <span class="dv">500</span>, <span class="dv">800</span>]</span>
+<span id="cb26-2"><a></a>plot_pca_animals(X_anims, (<span class="dv">100</span>,<span class="dv">100</span>), n_components<span class="op">=</span>n_components, index<span class="op">=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides-05-unsupervised-learning_files/figure-revealjs/cell-17-output-1.png" width="1182" height="617"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="comments" class="slide level2 center">
+<h2>Comments</h2>
+<p><br>
+</p>
+<p>It’s possible to capture the essence of the dataset using far fewer features!</p>
 </section>
 <section id="word-embeddings" class="slide level2 center">
 <h2>Word embeddings</h2>
-</section>
-<section id="recommender-systems" class="slide level2 center">
-<h2>Recommender systems</h2>
+<ul>
+<li>This is not limited to images.</li>
+<li>We can create useful representations for any type of data.</li>
+<li>For example, an algorithm called <code>word2vec</code> creates representations for words so that similar words are close together in the vector space.<br>
+</li>
+<li>You can also create <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2">representation of sentences</a>.</li>
+</ul>
+
+<img data-src="img/t-SNE_word_embeddings.png" class="r-stretch"></section>
+<section id="recommender-systems-optional" class="slide level2 center">
+<h2>Recommender systems (Optional)</h2>
+<ul>
+<li>The collaborative filtering approach to recommendation systems is based on a similar idea of identifying meaningful features of users and items.</li>
+</ul>
+
+<img data-src="img/toy-movie-pattern.png" class="r-stretch"></section>
+<section id="take-home-message" class="slide level2 center">
+<h2>Take-home message</h2>
+<ul>
+<li>A lot of data out there is unlabeled but we can still do many interesting things with it.</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
