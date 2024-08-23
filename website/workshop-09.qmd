@@ -1,8 +1,8 @@
 ---
-title: LLMs
+title: Large Language Models 
 description: Introduction to Large Language Models 
 description-short: Introduction to Large Language Models 
-duration: 1 hour
+duration: 30 mins
 time: 13:30 - 14:00
 
 editor: { render-on-save: true }
