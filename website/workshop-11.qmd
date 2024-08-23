@@ -1,0 +1,13 @@
+---
+title: ML Problem Framing
+description: Topics and Data for machine learning problems 
+description-short: Lab session 
+duration: 1.5 hours
+time: 2:00 - 3:30
+
+editor: { render-on-save: true }
+---
+
+## Example Topics for Machine Learning Projects
+
+Below are some topics and datasets of real-world issues that could possibly be solved using Machine Learning
