@@ -20,7 +20,7 @@ listing:
       organizer: true
       role: "Scientific Director, Data Science Institute; Professor, Computer Science" 
       image: raymond.jpg
-    - name: Jie Le
+    - name: Jie Ie Baik
       organizer: true
       role: "Research Administrator, Data Science Institute"
       image: jie_le.jpg
