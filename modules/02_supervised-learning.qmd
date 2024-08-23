@@ -1,0 +1,27 @@
+---
+title: "Supervised Learning"
+format: 
+    revealjs:
+      smaller: true
+      center: true
+jupyter: python3
+---
+
+## Supervised Learning
+\
+
+In the next section, we will briefly introduce a few different types of machine learning models that are often used for supervised learning tasks. We will discuss the relative strengths and shortcomings of these models, and see how they perform on some toy datasets.
+
+## Tree-based models
+
+We have already seen
+
+## Analogy-based models
+
+## Linear models
+
+
+
+
+notes: random forests bad for sparse data, can take time to train and predict, can still overfit.
+
