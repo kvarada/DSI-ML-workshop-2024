@@ -1,3 +1,0 @@
-# Welcome {.unnumbered}
-
-Welcome everyone to the workshop, “Is Machine Learning Suitable for Your Projects?”

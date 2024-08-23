@@ -1,0 +1,10 @@
+---
+title: ML Problem Framing
+description: Frame your problems as machine learning problems 
+description-short: Lab session 
+duration: 1.5 hours
+time: 2:00 - 3:30
+
+editor: { render-on-save: true }
+---
+

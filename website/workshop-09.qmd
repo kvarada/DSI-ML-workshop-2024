@@ -1,0 +1,21 @@
+---
+title: LLMs
+description: Introduction to Large Language Models 
+description-short: Introduction to Large Language Models 
+duration: 1 hour
+time: 13:30 - 14:00
+
+editor: { render-on-save: true }
+---
+
+## Slides
+
+{{< revealjs "slides/slides-06-llms.html" height="600px" class="ratio ratio-16x9" >}}
+
+
+## Outline
+
+- Clustering
+- Dimensionality Reduction 
+- Recommendation systems
+
