@@ -4,7 +4,6 @@ format:
     revealjs:
       smaller: true
       center: true
-jupyter: python3
 ---
 
 ## Introduction to Machine Learning

@@ -4,11 +4,6 @@ format:
     revealjs:
       smaller: true
       center: true
-jupyter: 
-  kernelspec:
-    display_name: '571'
-    language: python
-    name: '571'
 ---
 
 ## Learning outcomes 

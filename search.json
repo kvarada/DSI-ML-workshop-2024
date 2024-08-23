@@ -109,7 +109,7 @@
     "href": "slides/slides-05-unsupervised-learning.html#k-means-on-extracted-features",
     "title": "Unsupervised Learning",
     "section": "K-Means on extracted features",
-    "text": "K-Means on extracted features\n\n\n\nk = 3\nkm = KMeans(n_clusters=k, n_init='auto', random_state=123)\nkm.fit(Z_birds)\n\nKMeans(n_clusters=3, n_init='auto', random_state=123)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.KMeansKMeans(n_clusters=3, n_init='auto', random_state=123)"
+    "text": "K-Means on extracted features\n\n\n\nk = 3\nkm = KMeans(n_clusters=k, n_init='auto', random_state=123)\nkm.fit(Z_birds)\n\nKMeans(n_clusters=3, random_state=123)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.  KMeans?Documentation for KMeansiFittedKMeans(n_clusters=3, random_state=123)"
   },
   {
     "objectID": "slides/slides-05-unsupervised-learning.html#examining-clusters-1",
@@ -130,7 +130,7 @@
     "href": "slides/slides-05-unsupervised-learning.html#k-means-on-food-dataset",
     "title": "Unsupervised Learning",
     "section": "K-Means on food dataset",
-    "text": "K-Means on food dataset\n\n\n\nZ_food = get_features(densenet, food_inputs)\nk = 5\nkm = KMeans(n_clusters=k, n_init='auto', random_state=123)\nkm.fit(Z_food)\n\nKMeans(n_clusters=5, n_init='auto', random_state=123)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.KMeansKMeans(n_clusters=5, n_init='auto', random_state=123)"
+    "text": "K-Means on food dataset\n\n\n\nZ_food = get_features(densenet, food_inputs)\nk = 5\nkm = KMeans(n_clusters=k, n_init='auto', random_state=123)\nkm.fit(Z_food)\n\nKMeans(n_clusters=5, random_state=123)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.  KMeans?Documentation for KMeansiFittedKMeans(n_clusters=5, random_state=123)"
   },
   {
     "objectID": "slides/slides-05-unsupervised-learning.html#examining-food-clusters",
@@ -403,14 +403,14 @@
     "href": "slides/slides-02-ml-intro.html#a-decision-tree-classifier-1",
     "title": "Introduction to Machine Learning",
     "section": "A Decision Tree Classifier",
-    "text": "A Decision Tree Classifier\n\n\n\n\nThe model classified 100.0% of training examples correctly by \n building a decision tree of depth 42\n\n\n\nThat’s very accurate indeed! Maybe decision trees are a really good way to detect and classify faces.\nRemember, we only trained on 80% of the data. Let’s see how our model performs on the remaining 20%"
+    "text": "A Decision Tree Classifier\n\n\n\n\nThe model classified 100.0% of training examples correctly by \n building a decision tree of depth 39\n\n\n\nThat’s very accurate indeed! Maybe decision trees are a really good way to detect and classify faces.\nRemember, we only trained on 80% of the data. Let’s see how our model performs on the remaining 20%"
   },
   {
     "objectID": "slides/slides-02-ml-intro.html#did-we-build-a-good-model",
     "href": "slides/slides-02-ml-intro.html#did-we-build-a-good-model",
     "title": "Introduction to Machine Learning",
     "section": "Did we build a good model?",
-    "text": "Did we build a good model?\n\n\n\n\nThe model acheived an accuracy of 43.75% on new data\n\n\n\n…oops."
+    "text": "Did we build a good model?\n\n\n\n\nThe model acheived an accuracy of 53.75% on new data\n\n\n\n…oops."
   },
   {
     "objectID": "slides/slides-02-ml-intro.html#whats-going-on",
@@ -1169,7 +1169,7 @@
     "href": "slides/slides-04-deep-learning.html#logistic-regression-with-the-extracted-features",
     "title": "Deep Learning",
     "section": "Logistic regression with the extracted features",
-    "text": "Logistic regression with the extracted features\n\n\n\nLet’s try out logistic regression on these extracted features.\n\n\n\nTraining score:  1.0\n\n\n\n\nValidation score:  0.8507462686567164\n\n\n\nThis is great accuracy for so little data and little effort!!!"
+    "text": "Logistic regression with the extracted features\n\n\n\nLet’s try out logistic regression on these extracted features.\n\n\n\nTraining score:  1.0\n\n\n\n\nValidation score:  0.8656716417910447\n\n\n\nThis is great accuracy for so little data and little effort!!!"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#sample-predictions",
@@ -1183,7 +1183,7 @@
     "href": "slides/slides-04-deep-learning.html#object-detection-using-yolo",
     "title": "Deep Learning",
     "section": "Object detection using YOLO",
-    "text": "Object detection using YOLO\n\n\n\nAnother useful task and tool to know is object detection using YOLO model.\nLet’s identify objects in a sample image using a pretrained model called YOLO5\n\n\n\nrequirements: Ultralytics requirements ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0'] not found, attempting AutoUpdate...\nRequirement already satisfied: gitpython&gt;=3.1.30 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (3.1.43)\nRequirement already satisfied: pillow&gt;=10.3.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (10.4.0)\nRequirement already satisfied: requests&gt;=2.32.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (2.32.3)\nRequirement already satisfied: setuptools&gt;=70.0.0 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (72.2.0)\nRequirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitpython&gt;=3.1.30) (4.0.7)\nRequirement already satisfied: certifi&gt;=2017.4.17 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2021.5.30)\nRequirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (2.0.4)\nRequirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (1.26.6)\nRequirement already satisfied: idna&lt;4,&gt;=2.5 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from requests&gt;=2.32.0) (3.2)\nRequirement already satisfied: smmap&lt;5,&gt;=3.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;gitpython&gt;=3.1.30) (4.0.0)\n\nrequirements: AutoUpdate success ✅ 3.0s, installed 4 packages: ['gitpython&gt;=3.1.30', 'pillow&gt;=10.3.0', 'requests&gt;=2.32.0', 'setuptools&gt;=70.0.0']\nrequirements: ⚠️ Restart runtime or rerun command for updates to take effect"
+    "text": "Object detection using YOLO\n\n\n\nAnother useful task and tool to know is object detection using YOLO model.\nLet’s identify objects in a sample image using a pretrained model called YOLO5\n\n\n\nrequirements: Ultralytics requirement ['gitpython&gt;=3.1.30'] not found, attempting AutoUpdate...\nRequirement already satisfied: gitpython&gt;=3.1.30 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (3.1.43)\nRequirement already satisfied: gitdb&lt;5,&gt;=4.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitpython&gt;=3.1.30) (4.0.7)\nRequirement already satisfied: smmap&lt;5,&gt;=3.0.1 in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages (from gitdb&lt;5,&gt;=4.0.1-&gt;gitpython&gt;=3.1.30) (4.0.0)\n\nrequirements: AutoUpdate success ✅ 3.7s, installed 1 package: ['gitpython&gt;=3.1.30']\nrequirements: ⚠️ Restart runtime or rerun command for updates to take effect"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#summary",
