@@ -33,6 +33,8 @@ dependencies:
         - mglearn
         - graphviz        
         - nbformat
-        - nbclient        
+        - nbclient
+        - transformers
+        - datasets
         - ultralytics
         - psutil>=5.7.2
