@@ -3,7 +3,7 @@ title: ML Problem Framing
 description: Example of framing machine learning problems 
 description-short: Lab session 
 
-# editor: { render-on-save: true }
+editor: { render-on-save: true }
 ---
 
 ## Scenario
