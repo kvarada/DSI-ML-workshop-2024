@@ -28,14 +28,12 @@ editor:
 
 # 🤝 Introductions 🤝 {.middle}
 
-## Meet your teaching team
+## Meet the teaching team 
 
-- Prajeet
 - Varada
-- Yulia
+- Prajeet
+- Yulia 
 - Tony
-
-
 
 ## Learning goals of the workshop
 

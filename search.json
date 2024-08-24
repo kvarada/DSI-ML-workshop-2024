@@ -963,11 +963,11 @@
     "text": "Welcome to the workshop!\n\nFind a seat where you can see the screen!\nYou will be discussing concepts with your neighbours. So take 15 seconds to introduce yourself to your neighbour."
   },
   {
-    "objectID": "slides/slides-01-intro.html#meet-your-teaching-team",
-    "href": "slides/slides-01-intro.html#meet-your-teaching-team",
+    "objectID": "slides/slides-01-intro.html#meet-the-teaching-team",
+    "href": "slides/slides-01-intro.html#meet-the-teaching-team",
     "title": "Welcome!",
-    "section": "Meet your teaching team",
-    "text": "Meet your teaching team\n\nPrajeet\nVarada\nYulia\nTony"
+    "section": "Meet the teaching team",
+    "text": "Meet the teaching team\n\nVarada\nPrajeet\nYulia\nTony"
   },
   {
     "objectID": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
@@ -1117,11 +1117,32 @@
     "text": "Learning outcomes\n\nFrom this module, you will be able to\n\nExplain the role of neural networks in machine learning, including their advantages and disadvantages.\nDiscuss why traditional methods are less effective for image data.\nGain a high-level understanding of transfer learning.\nDifferentiate between image classification and object detection."
   },
   {
+    "objectID": "slides/slides-04-deep-learning.html#image-classification",
+    "href": "slides/slides-04-deep-learning.html#image-classification",
+    "title": "Deep Learning",
+    "section": "Image classification",
+    "text": "Image classification\n\n\nHave you used search in Google Photos? You can search for “my photos of cat” and it will retrieve photos from your libraries containing cats. This can be done using image classification, which is treated as a supervised learning problem, where we define a set of target classes (objects to identify in images), and train a model to recognize them using labeled example photos."
+  },
+  {
+    "objectID": "slides/slides-04-deep-learning.html#image-classification-1",
+    "href": "slides/slides-04-deep-learning.html#image-classification-1",
+    "title": "Deep Learning",
+    "section": "Image classification",
+    "text": "Image classification\n\n\nImage classification is not an easy problem because of the variations in the location of the object, lighting, background, camera angle, camera focus etc."
+  },
+  {
+    "objectID": "slides/slides-04-deep-learning.html#convolutional-neural-networks",
+    "href": "slides/slides-04-deep-learning.html#convolutional-neural-networks",
+    "title": "Deep Learning",
+    "section": "Convolutional Neural Networks",
+    "text": "Convolutional Neural Networks\n\n\n\nNeural networks are perfect for these types of problems where local structures are important.\nA significant advancement in image classification was the application of convolutional neural networks (ConvNets or CNNs) to this problem.\nImageNet Classification with Deep Convolutional Neural Networks\nAchieved a winning test error rate of 15.3%, compared to 26.2% achieved by the second-best entry in the ILSVRC-2012 competition."
+  },
+  {
     "objectID": "slides/slides-04-deep-learning.html#introduction-to-neural-networks",
     "href": "slides/slides-04-deep-learning.html#introduction-to-neural-networks",
     "title": "Deep Learning",
     "section": "Introduction to neural networks",
-    "text": "Introduction to neural networks\n\n\n\nNeural networks are very popular these days under the name deep learning.\nNeural networks apply a sequence of transformations on your input data.\nThey can be viewed a generalization of linear models where we apply a series of transformations.\nHere is graphical representation of a logistic regression model.\nWe have 4 features: x[0], x[1], x[2], x[3]"
+    "text": "Introduction to neural networks\n\n\n\nNeural networks can be viewed a generalization of linear models where we apply a series of transformations.\nHere is graphical representation of a logistic regression model.\nWe have 4 features: x[0], x[1], x[2], x[3]"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#adding-a-layer-of-transformations",
@@ -1142,7 +1163,7 @@
     "href": "slides/slides-04-deep-learning.html#neural-networks",
     "title": "Deep Learning",
     "section": "Neural networks",
-    "text": "Neural networks\n\n\n\nA neural network is a model that’s sort of like its own pipeline\n\nIt involves a series of transformations (“layers”) internally.\nThe output is the prediction.\n\nWith a neural net, you specify the number of features after each transformation.\n\nIn the above, it goes from 4 to 3 to 3 to 1.\n\nTo make them really powerful compared to the linear models, we apply a non-linear function to the weighted sum for each hidden node.\nNeural network = neural net\nDeep learning ~ using neural networks"
+    "text": "Neural networks\n\n\n\nWith a neural net, you specify the number of features after each transformation.\n\nIn the above, it goes from 4 to 3 to 3 to 1.\n\nTo make them really powerful compared to the linear models, we apply a non-linear function to the weighted sum for each hidden node.\nNeural network = neural net\nDeep learning ~ using neural networks"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#why-neural-networks",
@@ -1170,28 +1191,14 @@
     "href": "slides/slides-04-deep-learning.html#introduction-to-computer-vision",
     "title": "Deep Learning",
     "section": "Introduction to computer vision",
-    "text": "Introduction to computer vision\n\n\n\nComputer vision refers to understanding images/videos, usually using ML/AI. It has many tasks of interest:\n\nimage classification: is this a cat or a dog?\nobject localization: where is the cat in this image?\nobject detection: What are the various objects in the image?\ninstance segmentation: What are the shapes of these various objects in the image?\nand much more…\n\n\n\n\nIn the last decade this field has been dominated by deep learning. We will explore image classification and object detection."
+    "text": "Introduction to computer vision\n\n\n\nComputer vision refers to understanding images/videos, usually using ML/AI.\nIn the last decade this field has been dominated by deep learning. We will explore image classification and object detection."
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#image-classification",
-    "href": "slides/slides-04-deep-learning.html#image-classification",
+    "objectID": "slides/slides-04-deep-learning.html#introduction-to-computer-vision-1",
+    "href": "slides/slides-04-deep-learning.html#introduction-to-computer-vision-1",
     "title": "Deep Learning",
-    "section": "Image classification",
-    "text": "Image classification\n\n\nHave you used search in Google Photos? You can search for “my photos of cat” and it will retrieve photos from your libraries containing cats. This can be done using image classification, which is treated as a supervised learning problem, where we define a set of target classes (objects to identify in images), and train a model to recognize them using labeled example photos."
-  },
-  {
-    "objectID": "slides/slides-04-deep-learning.html#image-classification-1",
-    "href": "slides/slides-04-deep-learning.html#image-classification-1",
-    "title": "Deep Learning",
-    "section": "Image classification",
-    "text": "Image classification\n\n\nImage classification is not an easy problem because of the variations in the location of the object, lighting, background, camera angle, camera focus etc."
-  },
-  {
-    "objectID": "slides/slides-04-deep-learning.html#convolutional-neural-networks",
-    "href": "slides/slides-04-deep-learning.html#convolutional-neural-networks",
-    "title": "Deep Learning",
-    "section": "Convolutional Neural Networks",
-    "text": "Convolutional Neural Networks\n\n\n\nA significant advancement in image classification was the application of convolutional neural networks (ConvNets or CNNs) to this problem.\nImageNet Classification with Deep Convolutional Neural Networks\nAchieved a winning test error rate of 15.3%, compared to 26.2% achieved by the second-best entry in the ILSVRC-2012 competition."
+    "section": "Introduction to computer vision",
+    "text": "Introduction to computer vision\n\n\nIt has many tasks of interest: - image classification: is this a cat or a dog? - object localization: where is the cat in this image? - object detection: What are the various objects in the image? - instance segmentation: What are the shapes of these various objects in the image? - and much more…"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#pre-trained-models",
@@ -1226,70 +1233,70 @@
     "href": "slides/slides-04-deep-learning.html#transfer-learning",
     "title": "Deep Learning",
     "section": "Transfer learning",
-    "text": "Transfer learning\n\n\n\nThe idea of transfer learning is instead of developing a machine learning model from scratch, you use these available pre-trained models for your tasks either directly or by fine tuning them.\nThere are three common ways to use transfer learning in computer vision\n\nUsing pre-trained models out-of-the-box\nUsing pre-trained models as feature extractor and training your own model with these features\nStarting with weights of pre-trained models and fine-tuning the weights for your task.\n\nWe will explore the first two approaches."
+    "text": "Transfer learning\n\n\n\nThe idea of transfer learning is instead of developing a machine learning model from scratch, you use these available pre-trained models for your tasks either directly or by fine tuning them.\nThere are three common ways to use transfer learning in computer vision\n\nPre-trained models out-of-the-box\nPre-trained models as feature extractor and training your own model with these features\nStarting with weights of pre-trained models and fine-tuning the weights for your task.\n\nWe will explore the first two approaches."
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box",
     "title": "Deep Learning",
-    "section": "Using pre-trained models out-of-the-box",
-    "text": "Using pre-trained models out-of-the-box\n\n\n\n\n\nLet’s first try one of these models and apply it to our own problem right out of the box."
+    "section": "Pre-trained models out-of-the-box",
+    "text": "Pre-trained models out-of-the-box\n\n\n\n\n\nLet’s first try one of these models and apply it to our own problem right out of the box."
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-1",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-1",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-1",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-1",
     "title": "Deep Learning",
-    "section": "Using pre-trained models out-of-the-box",
-    "text": "Using pre-trained models out-of-the-box\n\n\n\nWe can easily download famous models using the torchvision.models module. All models are available with pre-trained weights (based on ImageNet’s 224 x 224 images)\nWe used a pre-trained model vgg16 which is trained on the ImageNet data.\nWe preprocess the given image.\nWe get prediction from this pre-trained model on a given image along with prediction probabilities.\n\nFor a given image, this model will spit out one of the 1000 classes from ImageNet."
+    "section": "Pre-trained models out-of-the-box",
+    "text": "Pre-trained models out-of-the-box\n\n\n\nWe can easily download famous models using the torchvision.models module. All models are available with pre-trained weights (based on ImageNet’s 224 x 224 images)\nWe used a pre-trained model vgg16 which is trained on the ImageNet data.\nWe preprocess the given image.\nWe get prediction from this pre-trained model on a given image along with prediction probabilities.\n\nFor a given image, this model will spit out one of the 1000 classes from ImageNet."
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-2",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-2",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-2",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-2",
     "title": "Deep Learning",
-    "section": "Using pre-trained models out-of-the-box",
-    "text": "Using pre-trained models out-of-the-box\n\nLet’s predict labels with associated probabilities for unseen images\n\n\n\n\n\n\n\n\n\n\n\n                         Class  Probability score\n                     tiger cat              0.353\n              tabby, tabby cat              0.207\n               lynx, catamount              0.050\nPembroke, Pembroke Welsh corgi              0.046\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                                     Class  Probability score\n         cheetah, chetah, Acinonyx jubatus              0.983\n                  leopard, Panthera pardus              0.012\njaguar, panther, Panthera onca, Felis onca              0.004\n       snow leopard, ounce, Panthera uncia              0.001\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                                   Class  Probability score\n                                 macaque              0.714\npatas, hussar monkey, Erythrocebus patas              0.122\n      proboscis monkey, Nasalis larvatus              0.098\n                   guenon, guenon monkey              0.017\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                        Class  Probability score\nWalker hound, Walker foxhound              0.580\n             English foxhound              0.091\n                  EntleBucher              0.080\n                       beagle              0.065\n--------------------------------------------------------------"
+    "section": "Pre-trained models out-of-the-box",
+    "text": "Pre-trained models out-of-the-box\n\nLet’s predict labels with associated probabilities for unseen images\n\n\n\n\n\n\n\n\n\n\n\n                         Class  Probability score\n                     tiger cat              0.353\n              tabby, tabby cat              0.207\n               lynx, catamount              0.050\nPembroke, Pembroke Welsh corgi              0.046\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                                     Class  Probability score\n         cheetah, chetah, Acinonyx jubatus              0.983\n                  leopard, Panthera pardus              0.012\njaguar, panther, Panthera onca, Felis onca              0.004\n       snow leopard, ounce, Panthera uncia              0.001\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                                   Class  Probability score\n                                 macaque              0.714\npatas, hussar monkey, Erythrocebus patas              0.122\n      proboscis monkey, Nasalis larvatus              0.098\n                   guenon, guenon monkey              0.017\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                        Class  Probability score\nWalker hound, Walker foxhound              0.580\n             English foxhound              0.091\n                  EntleBucher              0.080\n                       beagle              0.065\n--------------------------------------------------------------"
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-3",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-3",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-3",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-3",
     "title": "Deep Learning",
-    "section": "Using pre-trained models out-of-the-box",
-    "text": "Using pre-trained models out-of-the-box\n\n\n\nWe got these predictions without “doing the ML ourselves”.\nWe are using pre-trained vgg16 model which is available in torchvision.\n\ntorchvision has many such pre-trained models available that have been very successful across a wide range of tasks: AlexNet, VGG, ResNet, Inception, MobileNet, etc.\n\nMany of these models have been pre-trained on famous datasets like ImageNet.\nSo if we use them out-of-the-box, they will give us one of the ImageNet classes as classification."
+    "section": "Pre-trained models out-of-the-box",
+    "text": "Pre-trained models out-of-the-box\n\n\n\nWe got these predictions without “doing the ML ourselves”.\nWe are using pre-trained vgg16 model which is available in torchvision.\n\ntorchvision has many such pre-trained models available that have been very successful across a wide range of tasks: AlexNet, VGG, ResNet, Inception, MobileNet, etc.\n\nMany of these models have been pre-trained on famous datasets like ImageNet.\nSo if we use them out-of-the-box, they will give us one of the ImageNet classes as classification."
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-4",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-4",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-4",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-4",
     "title": "Deep Learning",
-    "section": "Using pre-trained models out-of-the-box",
-    "text": "Using pre-trained models out-of-the-box\n\n\n\nLet’s try some images which are unlikely to be there in ImageNet.\nIt’s not doing very well here because ImageNet doesn’t have proper classes for these images.\n\n\n\n\n\n\n\n\n\n\n\n         Class  Probability score\ncucumber, cuke              0.146\n         plate              0.117\n     guacamole              0.099\n  Granny Smith              0.091\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                           Class  Probability score\nchocolate sauce, chocolate syrup              0.609\n                        espresso              0.039\n             ice cream, icecream              0.037\n                     face powder              0.030\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                                      Class  Probability score\n                                        fig              0.637\n                                pomegranate              0.193\ngrocery store, grocery, food market, market              0.041\n                                      crate              0.023\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                                               Class  Probability score\n                                         toilet seat              0.171\n                                          safety pin              0.060\nbannister, banister, balustrade, balusters, handrail              0.039\n                                              bubble              0.035\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                                    Class  Probability score\nrobin, American robin, Turdus migratorius              0.203\n                                  jacamar              0.156\n                                   bulbul              0.122\n      brambling, Fringilla montifringilla              0.103\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                         Class  Probability score\ngoldfinch, Carduelis carduelis              0.585\n                     bee eater              0.219\n                        toucan              0.038\n                      hornbill              0.026\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                  Class  Probability score\n                   vase              0.078\n                thimble              0.074\n             plate rack              0.049\nsaltshaker, salt shaker              0.047\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                      Class  Probability score\n           pizza, pizza pie              0.998\nfrying pan, frypan, skillet              0.001\n                     potpie              0.000\n                French loaf              0.000\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n              Class  Probability score\n     patio, terrace              0.213\n           fountain              0.164\nlakeside, lakeshore              0.097\n            sundial              0.088\n--------------------------------------------------------------"
+    "section": "Pre-trained models out-of-the-box",
+    "text": "Pre-trained models out-of-the-box\n\n\n\nLet’s try some images which are unlikely to be there in ImageNet.\nIt’s not doing very well here because ImageNet doesn’t have proper classes for these images.\n\n\n\n\n\n\n\n\n\n\n\n         Class  Probability score\ncucumber, cuke              0.146\n         plate              0.117\n     guacamole              0.099\n  Granny Smith              0.091\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                                      Class  Probability score\n                                        fig              0.637\n                                pomegranate              0.193\ngrocery store, grocery, food market, market              0.041\n                                      crate              0.023\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                                               Class  Probability score\n                                         toilet seat              0.171\n                                          safety pin              0.060\nbannister, banister, balustrade, balusters, handrail              0.039\n                                              bubble              0.035\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                  Class  Probability score\n                   vase              0.078\n                thimble              0.074\n             plate rack              0.049\nsaltshaker, salt shaker              0.047\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n                      Class  Probability score\n           pizza, pizza pie              0.998\nfrying pan, frypan, skillet              0.001\n                     potpie              0.000\n                French loaf              0.000\n--------------------------------------------------------------\n\n\n\n\n\n\n\n\n\n              Class  Probability score\n     patio, terrace              0.213\n           fountain              0.164\nlakeside, lakeshore              0.097\n            sundial              0.088\n--------------------------------------------------------------"
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-5",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-out-of-the-box-5",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-5",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-out-of-the-box-5",
     "title": "Deep Learning",
-    "section": "Using pre-trained models out-of-the-box",
-    "text": "Using pre-trained models out-of-the-box\n\n\n\nHere we are using pre-trained models out-of-the-box.\nCan we use pre-trained models for our own classification problem with our classes?\nYes!! We have two options here:\n\nAdd some extra layers to the pre-trained network to suit our particular task\nPass training data through the network and save the output to use as features for training some other model"
+    "section": "Pre-trained models out-of-the-box",
+    "text": "Pre-trained models out-of-the-box\n\n\n\nHere we are Pre-trained models out-of-the-box.\nCan we use pre-trained models for our own classification problem with our classes?\nYes!! We have two options here:\n\nAdd some extra layers to the pre-trained network to suit our particular task\nPass training data through the network and save the output to use as features for training some other model"
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-to-extract-features",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-to-extract-features",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-to-extract-features",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-to-extract-features",
     "title": "Deep Learning",
-    "section": "Using pre-trained models to extract features",
-    "text": "Using pre-trained models to extract features\n\n\n\nLet’s use pre-trained models to extract features.\nWe will pass our specific data through a pre-trained network to get a feature vector for each example in the data.\nThe feature vector is usually extracted from the last layer, before the classification layer from the pre-trained network.\nYou can think of each layer a transformer applying some transformations on the input received to that later."
+    "section": "Pre-trained models to extract features",
+    "text": "Pre-trained models to extract features\n\n\n\nLet’s use pre-trained models to extract features.\nWe will pass our specific data through a pre-trained network to get a feature vector for each example in the data.\nThe feature vector is usually extracted from the last layer, before the classification layer from the pre-trained network.\nYou can think of each layer a transformer applying some transformations on the input received to that later."
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-to-extract-features-1",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-to-extract-features-1",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-to-extract-features-1",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-to-extract-features-1",
     "title": "Deep Learning",
-    "section": "Using pre-trained models to extract features",
-    "text": "Using pre-trained models to extract features\n\n\n\nOnce we extract these feature vectors for all images in our training data, we can train a machine learning classifier such as logistic regression or random forest.\nThis classifier will be trained on our classes using feature representations extracted from the pre-trained models.\n\nLet’s try this out.\nIt’s better to train such models with GPU. Since our dataset is quite small, we won’t have problems running it on a CPU."
+    "section": "Pre-trained models to extract features",
+    "text": "Pre-trained models to extract features\n\n\n\nOnce we extract these feature vectors for all images in our training data, we can train a machine learning classifier such as logistic regression or random forest.\nThis classifier will be trained on our classes using feature representations extracted from the pre-trained models.\n\nLet’s try this out.\nIt’s better to train such models with GPU. Since our dataset is quite small, we won’t have problems running it on a CPU."
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-to-extract-features-2",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-to-extract-features-2",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-to-extract-features-2",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-to-extract-features-2",
     "title": "Deep Learning",
-    "section": "Using pre-trained models to extract features",
-    "text": "Using pre-trained models to extract features\n\n\nLet’s look at some sample images in the dataset."
+    "section": "Pre-trained models to extract features",
+    "text": "Pre-trained models to extract features\n\n\nLet’s look at some sample images in the dataset."
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#dataset-statistics",
@@ -1299,11 +1306,11 @@
     "text": "Dataset statistics\n\n\nHere is the stat of our toy dataset.\n\n\nClasses: ['beet_salad', 'chocolate_cake', 'edamame', 'french_fries', 'pizza', 'spring_rolls', 'sushi']\nClass count: 40, 38, 40\nSamples: 283\nFirst sample: ('data/food/train/beet_salad/104294.jpg', 0)"
   },
   {
-    "objectID": "slides/slides-04-deep-learning.html#using-pre-trained-models-to-extract-features-3",
-    "href": "slides/slides-04-deep-learning.html#using-pre-trained-models-to-extract-features-3",
+    "objectID": "slides/slides-04-deep-learning.html#pre-trained-models-to-extract-features-3",
+    "href": "slides/slides-04-deep-learning.html#pre-trained-models-to-extract-features-3",
     "title": "Deep Learning",
-    "section": "Using pre-trained models to extract features",
-    "text": "Using pre-trained models to extract features\n\n\n\nNow for each image in our dataset, we’ll extract a feature vector from a pre-trained model called densenet121, which is trained on the ImageNet dataset."
+    "section": "Pre-trained models to extract features",
+    "text": "Pre-trained models to extract features\n\n\n\nNow for each image in our dataset, we’ll extract a feature vector from a pre-trained model called densenet121, which is trained on the ImageNet dataset."
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#shape-of-the-feature-vector",
@@ -1317,14 +1324,14 @@
     "href": "slides/slides-04-deep-learning.html#a-feature-vector-given-by-densenet",
     "title": "Deep Learning",
     "section": "A feature vector given by densenet",
-    "text": "A feature vector given by densenet\n \n\nLet’s examine the feature vectors.\n\n\n\n\n\n\n\n\n\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n...\n1014\n1015\n1016\n1017\n1018\n1019\n1020\n1021\n1022\n1023\n\n\n\n\n0\n0.000397\n0.006987\n0.002080\n0.001633\n0.164544\n1.284627\n0.000326\n0.003747\n0.019033\n0.000411\n...\n2.017400\n0.265346\n4.620863\n0.285282\n0.526915\n0.428759\n2.960554\n1.577721\n2.150136\n0.735927\n\n\n1\n0.000639\n0.004926\n0.000985\n0.001324\n0.145076\n0.558028\n0.000775\n0.002603\n0.181858\n0.000249\n...\n0.158792\n0.380575\n1.309545\n0.009790\n0.007745\n1.773695\n0.298153\n0.697784\n0.462329\n1.448314\n\n\n2\n0.000109\n0.006808\n0.003910\n0.002917\n0.137208\n0.702670\n0.000546\n0.003634\n0.386037\n0.000179\n...\n1.730925\n0.139263\n0.384295\n1.754404\n0.267863\n0.480649\n0.591291\n3.880836\n1.436774\n0.856637\n\n\n3\n0.000350\n0.002965\n0.001391\n0.000091\n0.119358\n0.032185\n0.000413\n0.004407\n0.000000\n0.000120\n...\n0.866084\n0.118614\n0.404703\n0.139143\n0.588674\n0.326834\n0.277743\n2.369125\n0.295955\n0.206888\n\n\n4\n0.000350\n0.003532\n0.002254\n0.002841\n0.102675\n0.382482\n0.000436\n0.004212\n0.816037\n0.000554\n...\n0.010685\n1.147245\n1.892539\n1.929401\n0.694761\n0.744420\n1.705220\n1.241349\n2.351264\n0.054507\n\n\n\n\n5 rows × 1024 columns\n\n\n\n\nThe features are hard to interpret but they have some important information about the images which can be useful for classification."
+    "text": "A feature vector given by densenet\n \n\nLet’s examine the feature vectors.\n\n\n\n\n\n\n\n\n\n\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n...\n1014\n1015\n1016\n1017\n1018\n1019\n1020\n1021\n1022\n1023\n\n\n\n\n0\n0.000290\n0.003821\n0.005015\n0.001307\n0.052690\n0.063403\n0.000626\n0.001850\n0.256254\n0.000223\n...\n0.229934\n1.046363\n2.241251\n0.229644\n0.033676\n0.742794\n1.338700\n2.130871\n0.625471\n0.463095\n\n\n1\n0.000407\n0.005973\n0.003206\n0.001932\n0.090702\n0.438522\n0.001513\n0.003906\n0.166081\n0.000286\n...\n0.910675\n1.580822\n0.087190\n0.606906\n0.436105\n0.306453\n0.940105\n1.159829\n1.712703\n1.624745\n\n\n2\n0.000626\n0.005090\n0.002887\n0.001299\n0.091715\n0.548536\n0.000491\n0.003587\n0.266537\n0.000408\n...\n0.465153\n0.678282\n0.946385\n1.194697\n2.537744\n1.642387\n0.701204\n0.115618\n0.186434\n0.166608\n\n\n3\n0.000169\n0.006087\n0.002489\n0.002167\n0.087537\n0.623212\n0.000427\n0.000226\n0.460680\n0.000388\n...\n0.394086\n0.700153\n0.105200\n0.856321\n0.038457\n0.023949\n0.131834\n1.296365\n0.723328\n1.915224\n\n\n4\n0.000286\n0.005520\n0.001906\n0.001599\n0.186035\n0.850148\n0.000835\n0.003025\n0.036309\n0.000142\n...\n3.313758\n0.565745\n0.473562\n0.139444\n0.029284\n1.165938\n0.442323\n0.227594\n0.884270\n1.592695\n\n\n\n\n5 rows × 1024 columns\n\n\n\n\nThe features are hard to interpret but they have some important information about the images which can be useful for classification."
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#logistic-regression-with-the-extracted-features",
     "href": "slides/slides-04-deep-learning.html#logistic-regression-with-the-extracted-features",
     "title": "Deep Learning",
     "section": "Logistic regression with the extracted features",
-    "text": "Logistic regression with the extracted features\n\n\n\nLet’s try out logistic regression on these extracted features.\n\n\n\nTraining score:  1.0\n\n\n\n\nValidation score:  0.8656716417910447\n\n\n\nThis is great accuracy for so little data and little effort!!!"
+    "text": "Logistic regression with the extracted features\n\n\n\nLet’s try out logistic regression on these extracted features.\n\n\n\nTraining score:  1.0\n\n\n\n\nValidation score:  0.835820895522388\n\n\n\nThis is great accuracy for so little data and little effort!!!"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#sample-predictions",
@@ -1345,7 +1352,7 @@
     "href": "slides/slides-04-deep-learning.html#object-detection-using-yolo",
     "title": "Deep Learning",
     "section": "Object detection using YOLO",
-    "text": "Object detection using YOLO\n\n\nLet’s try this out using a pre-trained model.\n\nfrom ultralytics import YOLO\nmodel = YOLO(\"yolov8n.pt\")  # pretrained YOLOv8n model\n\nyolo_input = \"data/yolo_test/3356700488_183566145b.jpg\"\nyolo_result = \"data/yolo_result.jpg\"\n# Run batched inference on a list of images\nresult = model(yolo_input)  # return a list of Results objects\nresult[0].save(filename=yolo_result)\n\n\nimage 1/1 /Users/kvarada/EL/workshops/DSI-ML-workshop-2024/website/slides/data/yolo_test/3356700488_183566145b.jpg: 512x640 4 persons, 2 cars, 1 stop sign, 117.8ms\nSpeed: 5.4ms preprocess, 117.8ms inference, 1.1ms postprocess per image at shape (1, 3, 512, 640)\n\n\n'data/yolo_result.jpg'"
+    "text": "Object detection using YOLO\n\n\nLet’s try this out using a pre-trained model.\n\nfrom ultralytics import YOLO\nmodel = YOLO(\"yolov8n.pt\")  # pretrained YOLOv8n model\n\nyolo_input = \"data/yolo_test/3356700488_183566145b.jpg\"\nyolo_result = \"data/yolo_result.jpg\"\n# Run batched inference on a list of images\nresult = model(yolo_input)  # return a list of Results objects\nresult[0].save(filename=yolo_result)\n\n\nimage 1/1 /Users/kvarada/EL/workshops/DSI-ML-workshop-2024/website/slides/data/yolo_test/3356700488_183566145b.jpg: 512x640 4 persons, 2 cars, 1 stop sign, 116.6ms\nSpeed: 5.6ms preprocess, 116.6ms inference, 1.2ms postprocess per image at shape (1, 3, 512, 640)\n\n\n'data/yolo_result.jpg'"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#object-detection-output",
