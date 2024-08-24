@@ -15,7 +15,7 @@ editor: { render-on-save: true }
 
 ## Outline
 
-- Clustering
-- Dimensionality Reduction 
-- Recommendation systems
-
+- Activity 
+- Markov model of language
+- Transformers, self-attention (high level)
+- Pipelines before and after LLMs
