@@ -22,8 +22,10 @@ Imagine you work at a bank, and the current workflow to understand the stock mar
 #### E-commerce Strategy
 
 Imagine you are a consultant hired by an E-commerce platform. You are asked to analyze the retail data and explore machine learning approaches to address one of the planned initiatives of the company, which includes but not limited to:
-    - customer segmentation based on their purchase history to derive more customized marketing strategy
-    - personalized suggestions of items to customers so as to increase the conversion.
+
+- customer segmentation based on their purchase history to derive more customized marketing strategy
+- personalized suggestions of items to customers so as to increase the conversion.
+
 While researching online, you find [this dataset on Kaggle](https://www.kaggle.com/datasets/ishanshrivastava28/tata-online-retail-dataset) that could be useful as a starting point.
 :::
 
