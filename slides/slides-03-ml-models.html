@@ -492,11 +492,11 @@
 <h2>Sentiment Analysis: An Example</h2>
 <p><br>
 Let us attempt to use logistic regression to do sentiment analysis on a database of IMDB reviews. The database is available <a href="https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews?resource=download">here</a>.</p>
-<div id="8eeff882" class="cell" data-execution_count="2">
+<div id="51f53570" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>imdb_df <span class="op">=</span> pd.read_csv(<span class="st">"data/imdb_master.csv"</span>, encoding<span class="op">=</span><span class="st">"ISO-8859-1"</span>)</span>
 <span id="cb1-2"><a></a>imdb_df.rename(columns<span class="op">=</span>{<span class="st">"sentiment"</span>: <span class="st">"label"</span>}, inplace <span class="op">=</span> <span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="a43aaa41" class="cell" data-execution_count="3">
+<div id="44105225" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 <style scoped="">
@@ -565,7 +565,7 @@ To create features that logistic regression can use, we will represent these rev
 <h2>Bag of Words</h2>
 <p><br>
 Notice that the result is a sparse matrix. Most reviews contain only a small number of words.</p>
-<div id="925fe76f" class="cell" data-execution_count="5">
+<div id="4aa0065e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>vec <span class="op">=</span> CountVectorizer(stop_words<span class="op">=</span><span class="st">"english"</span>)</span>
 <span id="cb2-2"><a></a>bow <span class="op">=</span> vec.fit_transform(X_train)</span>
 <span id="cb2-3"><a></a>bow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -575,7 +575,7 @@ Notice that the result is a sparse matrix. Most reviews contain only a small num
 </div>
 </div>
 <p>There are a total of 38867 “words” among the reviews. Here are some of them:</p>
-<div id="84b75966" class="cell" data-execution_count="6">
+<div id="7c1a90aa" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>array(['00', 'affection', 'apprehensive', 'barbara', 'blore',
        'businessman', 'chatterjee', 'commanding', 'cramped', 'defining',
@@ -591,7 +591,7 @@ Notice that the result is a sparse matrix. Most reviews contain only a small num
 <section id="checking-the-class-counts" class="slide level2 center">
 <h2>Checking the class counts</h2>
 <p>Let us see how many reviews are positive, and how many are negative. &nbsp;</p>
-<div id="88b69c59" class="cell" data-execution_count="7">
+<div id="d01c2907" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>y_train.value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>label
@@ -615,7 +615,7 @@ Name: count, dtype: int64</code></pre>
 <p><br>
 </p>
 <p>Let’s see how the model performs after training.</p>
-<div id="ff10e00b" class="cell" data-execution_count="8">
+<div id="110afa6b" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 <style scoped="">
@@ -645,36 +645,36 @@ Name: count, dtype: int64</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>0.528306</td>
-<td>0.088077</td>
+<td>0.462781</td>
+<td>0.080295</td>
 <td>0.828</td>
 <td>0.99975</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
-<td>0.508915</td>
-<td>0.087334</td>
+<td>0.463112</td>
+<td>0.082014</td>
 <td>0.830</td>
 <td>0.99975</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
-<td>0.525329</td>
-<td>0.086176</td>
+<td>0.469232</td>
+<td>0.080890</td>
 <td>0.848</td>
 <td>0.99975</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>0.503916</td>
-<td>0.085548</td>
+<td>0.458311</td>
+<td>0.079644</td>
 <td>0.833</td>
 <td>1.00000</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
-<td>0.501733</td>
-<td>0.086934</td>
+<td>0.448522</td>
+<td>0.081295</td>
 <td>0.840</td>
 <td>0.99975</td>
 </tr>
@@ -699,6 +699,28 @@ We’re able to predict with roughly 84% accuracy on validation sets. Looks like
 <p><br>
 </p>
 <p>There are many tools available to automate the search for good hyperparameters. These can make our life easy, but there is always the danger of optimization bias in the results.</p>
+<div id="56bd2934" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-stdout">
+<pre><code>Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.
+Intel MKL WARNING: Support of Intel(R) Streaming SIMD Extensions 4.2 (Intel(R) SSE4.2) enabled only processors has been deprecated. Intel oneAPI Math Kernel Library 2025.0 will require Intel(R) Advanced Vector Extensions (Intel(R) AVX) instructions.</code></pre>
+</div>
+</div>
 </section>
 <section id="investigating-the-model" class="slide level2 center">
 <h2>Investigating the model</h2>
@@ -706,7 +728,7 @@ We’re able to predict with roughly 84% accuracy on validation sets. Looks like
 <p><br>
 </p>
 <p>Let’s see what associations our model learned.</p>
-<div id="5140d6da" class="cell" data-execution_count="10">
+<div id="3f57e94c" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 <style scoped="">
@@ -733,52 +755,52 @@ We’re able to predict with roughly 84% accuracy on validation sets. Looks like
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">excellent</td>
-<td>0.683626</td>
+<td>0.565226</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">amazing</td>
-<td>0.538968</td>
-</tr>
-<tr class="odd">
 <td data-quarto-table-cell-role="th">great</td>
-<td>0.517805</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">perfect</td>
-<td>0.512896</td>
+<td>0.481440</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">wonderful</td>
-<td>0.491460</td>
+<td data-quarto-table-cell-role="th">amazing</td>
+<td>0.442793</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">best</td>
+<td>0.412903</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">perfect</td>
+<td>0.407715</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">...</td>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">waste</td>
-<td>-0.594706</td>
+<td data-quarto-table-cell-role="th">terrible</td>
+<td>-0.497167</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">terrible</td>
-<td>-0.621234</td>
+<td data-quarto-table-cell-role="th">bad</td>
+<td>-0.511142</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">boring</td>
-<td>-0.642500</td>
+<td>-0.526697</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">awful</td>
-<td>-0.748141</td>
+<td>-0.599071</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">worst</td>
-<td>-0.991409</td>
+<td>-0.818630</td>
 </tr>
 </tbody>
 </table>
 
-<p>35138 rows × 1 columns</p>
+<p>33926 rows × 1 columns</p>
 </div>
 </div>
 </div>
@@ -789,11 +811,11 @@ We’re able to predict with roughly 84% accuracy on validation sets. Looks like
 <p><br>
 </p>
 <p>They make sense! Let’s visualize the 20 most important features.</p>
-<div id="ca0af24f" class="cell" data-execution_count="11">
+<div id="f04e3ec1" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-03-ml-models_files/figure-revealjs/cell-12-output-1.png" width="1223" height="442"></p>
+<p><img data-src="slides-03-ml-models_files/figure-revealjs/cell-12-output-1.png" width="1223" height="436"></p>
 </figure>
 </div>
 </div>
@@ -805,14 +827,14 @@ We’re able to predict with roughly 84% accuracy on validation sets. Looks like
 </p>
 <p>Finally, let’s try predicting on some new examples.<br>
 </p>
-<div id="1da119d8" class="cell" data-execution_count="12">
+<div id="d0da7043" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>['It got a bit boring at times but the direction was excellent and the acting was flawless. Overall I enjoyed the movie and I highly recommend it!',
  'The plot was shallower than a kiddie pool in a drought, but hey, at least we now know emojis should stick to texting and avoid the big screen.']</code></pre>
 </div>
 </div>
 <p>Here are the model predictions:</p>
-<div id="71125286" class="cell" data-execution_count="13">
+<div id="18523ce4" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>array(['positive', 'negative'], dtype=object)</code></pre>
 </div>
@@ -824,7 +846,7 @@ We’re able to predict with roughly 84% accuracy on validation sets. Looks like
 <section id="understanding-predictions" class="slide level2 center">
 <h2>Understanding Predictions</h2>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="b9e1cabe" class="cell" data-execution_count="14">
+<div id="b235deeb" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-stdout">
 <pre><code>It got a bit boring at times but the direction was excellent and the acting was flawless. Overall I enjoyed the movie and I highly recommend it!</code></pre>
 </div>

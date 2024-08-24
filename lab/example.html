@@ -40,6 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -148,12 +151,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="is-the-provided-dataset-appropriate-for-the-specified-objective-what-type-of-data-would-ideally-solve-your-problem-or-research-question-are-there-better-suited-datasets-available-on-the-internet-for-this-objective" class="level4">
 <h4 class="anchored" data-anchor-id="is-the-provided-dataset-appropriate-for-the-specified-objective-what-type-of-data-would-ideally-solve-your-problem-or-research-question-are-there-better-suited-datasets-available-on-the-internet-for-this-objective">Is the provided dataset appropriate for the specified objective? What type of data would ideally solve your problem or research question? Are there better-suited datasets available on the internet for this objective?</h4>
 <ul>
-<li>The ideal dataset should contains data about the transactions, e.g.&nbsp;transaction details, customer details, etc., which could be used to classify the fraud transaction. Moreover, it should contain an indicator whether it is a fraud transaction for supervised machine learning methods. If such indicator is not available, we can apply outlier detection to identify transactions which deviate much from normal transactions as frauds.</li>
-<li>The provided dataset contains target column ‘Class’ that indicates whether it is a fraud transaction. It also contains other columns (‘Time’, ‘Amount’, ‘V1-V28’) which can be used as factors to predict the target column ‘Class’.</li>
+<li>The ideal dataset should contain data about the transactions, e.g.&nbsp;transaction details, customer details, etc., which could be used to classify the fraud transaction. Moreover, it should contain an indicator whether it is a fraud transaction for supervised machine learning methods. If such indicator is not available, we can apply outlier detection to identify transactions which deviate much from normal transactions as frauds.</li>
+<li>The provided dataset contains target column ‘Class’ that indicates whether it is a fraud transaction. It also contains other columns (‘Time’, ‘Amount’, ‘V1-V28’) which can be used as features to predict the target column ‘Class’.</li>
 <li>There are some caveats for using the dataset.
 <ul>
 <li>The dataset is a transformed dataset with PCA-transformed columns ‘V1’ - ‘V28’. Without having the original dataset, we are not sure how the PCA transformation is performed. We cannot guarantee if the same transformation can be applied to any new data (e.g.&nbsp;real-world data of new transactions)</li>
-<li>From the interpretation perspective, we might fail to draw any meaningful insights betwen the factors and the target as we do not understand the meaning of the columns ‘V1’ - ‘V28’. Moreover, we might not detect any potential bias or unfairness within the ML model if the original dataset contains sensitive information, e.g.&nbsp;age, gender, etc.</li>
+<li>From the interpretation perspective, we might fail to draw any meaningful insights between the features and the target as we do not understand the meaning of the columns ‘V1’ - ‘V28’. Moreover, we might not detect any potential bias or unfairness within the ML model if the original dataset contains sensitive information, e.g.&nbsp;age, gender, etc.</li>
 </ul></li>
 <li>There could possibly be better-suited datasets, for example <a href="https://www.kaggle.com/datasets/kartik2112/fraud-detection">this dataset</a>.</li>
 </ul>
@@ -194,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-are-the-major-steps-required-to-resolve-this-problem" class="level4">
 <h4 class="anchored" data-anchor-id="what-are-the-major-steps-required-to-resolve-this-problem">What are the major steps required to resolve this problem?</h4>
 <ul>
-<li>For machine-learning based approach, we would go through similar but slightly different stesp to resolve the problem
+<li>For machine-learning based approach, we would go through similar but slightly different steps to resolve the problem
 <ul>
 <li>Data collection &amp; wrangling: Data collection is similar to the above. We will also carry out data wrangling to handle unclean data (e.g.&nbsp;missing values) and transform data into desired format (e.g.&nbsp;scaling).</li>
 <li>Model training: A subset of the data will be used to train the model to learn any pattern for fraud/legit transactions. The model will then output the predictions.</li>
@@ -205,17 +208,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="draw-a-diagram-that-illustrates-the-input-output-and-key-stages-of-the-problem-solving-process." class="level4">
 <h4 class="anchored" data-anchor-id="draw-a-diagram-that-illustrates-the-input-output-and-key-stages-of-the-problem-solving-process.">Draw a diagram that illustrates the input, output, and key stages of the problem-solving process.</h4>
-<ul>
-<li>{TBC}</li>
-</ul>
+<p><a href="datasets_and_goals_files/mediabag/DSI_workshop1.drawio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="datasets_and_goals_files/mediabag/DSI_workshop1.drawio.png" class="img-fluid"></a></p>
 </section>
 <section id="which-type-of-machine-learning-would-be-best-suited-for-your-problem-what-specific-machine-learning-technique-would-be-most-effective-for-this-problem" class="level4">
 <h4 class="anchored" data-anchor-id="which-type-of-machine-learning-would-be-best-suited-for-your-problem-what-specific-machine-learning-technique-would-be-most-effective-for-this-problem">Which type of machine learning would be best suited for your problem? What specific machine learning technique would be most effective for this problem?</h4>
 <ul>
 <li>We have labelled data of legit/fraud transactions and our goal is to classify the transactions. Supervised machine learning is best-suited.</li>
-<li>Linear regression can be applied first to observe any linear relationship between the target and the factors, and we can obtain a baseline performance.</li>
-<li>Given the possible non-linear relationship between the target and the factors, non-linear algorithms (e.g.&nbsp;SVM) can be applied and we can observe if there is any significanr improvement in model performance.</li>
-<li>Given the variety of data types (textual, numerical, etc.), decision tree based algorithm (gradient boosted tree) can be applied and we can observe if there is any significanr improvement in model performance.</li>
+<li>Linear regression can be applied first to observe any linear relationship between the target and the features, and we can obtain a baseline performance.</li>
+<li>Given the possible non-linear relationship between the target and the features, non-linear algorithms (e.g.&nbsp;SVM) can be applied and we can observe if there is any significant improvement in model performance.</li>
+<li>Given the variety of data types (textual, numerical, etc.), decision tree based algorithm (gradient boosted tree) can be applied and we can observe if there is any significant improvement in model performance.</li>
 </ul>
 
 
@@ -644,6 +645,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
