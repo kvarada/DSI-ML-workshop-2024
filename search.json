@@ -806,6 +806,28 @@
     "text": "Varada Kolhatkar\n        Assistant Professor of Teaching, Computer Science, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Prajeet Bajpai\n        Teaching Postdoctoral Fellow, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Raymond Ng\n        Scientific Director, Data Science Institute; Professor, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Jie Ie Baik\n        Research Administrator, Data Science Institute\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Michele Ng\n        Special Projects Coordinator, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Yulia Egorova\n        \n        \n            Assistant\n        \n        \n    \n\n    \n        \n        Tony Shum\n        \n        \n            Assistant\n        \n        \n    \n\n\n\nNo matching items"
   },
   {
+    "objectID": "workshop-10.html",
+    "href": "workshop-10.html",
+    "title": "ML Problem Framing",
+    "section": "",
+    "text": "In this session, you will practice framing a given problem as a machine learning problem:",
+    "crumbs": [
+      "Workshop",
+      "ML Problem Framing"
+    ]
+  },
+  {
+    "objectID": "workshop-10.html#resources",
+    "href": "workshop-10.html#resources",
+    "title": "ML Problem Framing",
+    "section": "Resources",
+    "text": "Resources\n\nSample datasets and goals\nGuiding questions\nExample",
+    "crumbs": [
+      "Workshop",
+      "ML Problem Framing"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome",
@@ -941,11 +963,11 @@
     "text": "Welcome to the workshop!\n\nFind a seat where you can see the screen!\nYou will be discussing concepts with your neighbours. So take 15 seconds to introduce yourself to your neighbour."
   },
   {
-    "objectID": "slides/slides-01-intro.html#meet-the-teaching-team",
-    "href": "slides/slides-01-intro.html#meet-the-teaching-team",
+    "objectID": "slides/slides-01-intro.html#meet-your-teaching-team",
+    "href": "slides/slides-01-intro.html#meet-your-teaching-team",
     "title": "Welcome!",
-    "section": "Meet the teaching team",
-    "text": "Meet the teaching team\n\nVarada\nPrajeet\nYulia\nTony"
+    "section": "Meet your teaching team",
+    "text": "Meet your teaching team\n\nPrajeet\nVarada\nYulia\nTony"
   },
   {
     "objectID": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
