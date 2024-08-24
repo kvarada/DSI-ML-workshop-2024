@@ -15,7 +15,7 @@ Below are some topics and datasets of real-world issues that could possibly be s
 ::: {.callout-tip collapse="true"}
 #### Stock Market Sentiment
 
-Imagine you work at a bank, and the current workflow to understand the stock market sentiment isn't performing well. Your boss asks you to explore machine learning approaches to improve the detection of stock market sentiment, which is cruical to some of the trading strategies, based on comments in social media platform. While researching online, you find [this dataset on Kaggle](https://www.kaggle.com/datasets/utkarshxy/stock-markettweets-lexicon-data) that could be useful for creating a prototype.
+Imagine you work at a bank, and the current workflow to understand the stock market sentiment isn't performing well. Your boss asks you to explore machine learning approaches to improve the detection of stock market sentiment, which is crucial to some of the trading strategies, based on comments in social media platform. While researching online, you find [this dataset on Kaggle](https://www.kaggle.com/datasets/utkarshxy/stock-markettweets-lexicon-data) that could be useful for creating a prototype.
 :::
 
 ::: {.callout-tip collapse="true"}
