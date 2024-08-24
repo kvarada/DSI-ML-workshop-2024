@@ -231,259 +231,6 @@
     "text": "Take-home message\n\nA lot of data out there is unlabeled but we can still do many interesting things with it."
   },
   {
-    "objectID": "slides/slides-06-llms.html#learning-outcomes",
-    "href": "slides/slides-06-llms.html#learning-outcomes",
-    "title": "Large Language Models",
-    "section": "Learning outcomes",
-    "text": "Learning outcomes\n\nFrom this module, you will be able to"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#language-models-activity",
-    "href": "slides/slides-06-llms.html#language-models-activity",
-    "title": "Large Language Models",
-    "section": "Language models activity",
-    "text": "Language models activity\n\n\nEach of you will receive a sticky note with a word on it. Here’s what you’ll do:\n\nCarefully remove the sticky note to see the word. This word is for your eyes only —- no peeking, neighbours!\nThink quickly: what word would logically follow the word on the sticky note? Write this next word on a new sticky note.\nYou have about 20 seconds for this step, so trust your instincts!\nPass your predicted word to the person next to you. Do not pass the word you received from your neighbour forward. Keep the chain going!\nStop after the last person in your row has finished.\nFinally, one person from your row will enter the collective sentence into our Google Doc."
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#markov-model-of-language",
-    "href": "slides/slides-06-llms.html#markov-model-of-language",
-    "title": "Large Language Models",
-    "section": "Markov model of language",
-    "text": "Markov model of language\n\n\n\nYou’ve just created a simple Markov model of language!\nIn predicting the next word from a minimal context, you likely used your linguistic intuition and familiarity with common two-word phrases or collocations.\nYou could create more coherent sentences by taking into account more context e.g., previous two words or four words or 100 words.\nThis idea was first used by Shannon for characters in The Shannon’s game. See this video by Jordan Boyd-Graber for more information on this."
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#applications-of-predicting-next-word",
-    "href": "slides/slides-06-llms.html#applications-of-predicting-next-word",
-    "title": "Large Language Models",
-    "section": "Applications of predicting next word",
-    "text": "Applications of predicting next word\n\n\nOne of the most common applications for predicting the next word is the ‘smart compose’ feature in your emails, text messages, and search engines."
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#language-model",
-    "href": "slides/slides-06-llms.html#language-model",
-    "title": "Large Language Models",
-    "section": "Language model",
-    "text": "Language model\n\n\nA language model computes the probability distribution over sequences (of words or characters). Intuitively, this probability tells us how “good” or plausible a sequence of words is.\n\n\nCheck out this recent BMO ad."
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#a-simple-model-of-language",
-    "href": "slides/slides-06-llms.html#a-simple-model-of-language",
-    "title": "Large Language Models",
-    "section": "A simple model of language",
-    "text": "A simple model of language\n\n\n\nCalculate the co-occurrence frequencies and probabilities based on these frequencies\nPredict the next word based on these probabilities"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#long-distance-dependencies",
-    "href": "slides/slides-06-llms.html#long-distance-dependencies",
-    "title": "Large Language Models",
-    "section": "Long-distance dependencies",
-    "text": "Long-distance dependencies\n\n\nWhat are some reasonable predictions for the next word in the sequence?\n\nI am studying law at the University of British Columbia Point Grey campus in Vancouver because I want to work as a ___\n\nMarkov model is unable to capture such long-distance dependencies in language."
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#transformer-models",
-    "href": "slides/slides-06-llms.html#transformer-models",
-    "title": "Large Language Models",
-    "section": "Transformer models",
-    "text": "Transformer models\n\n\nEnter attention and transformer models! Transformer models are at the core of all state-of-the-art Generative AI models (e.g., BERT, GPT3, GPT4, Gemini, DALL-E, Llama, Github Copilot)?\n\nSource"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#transformer-models-1",
-    "href": "slides/slides-06-llms.html#transformer-models-1",
-    "title": "Large Language Models",
-    "section": "Transformer models",
-    "text": "Transformer models\n\n\n\nSource: GPT-4 Technical Report"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#self-attention",
-    "href": "slides/slides-06-llms.html#self-attention",
-    "title": "Large Language Models",
-    "section": "Self-attention",
-    "text": "Self-attention\n\n\n\nAn important innovation which makes these models work so well is self-attention.\nCount how many times the players wearing the white pass the basketball?"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#self-attention-1",
-    "href": "slides/slides-06-llms.html#self-attention-1",
-    "title": "Large Language Models",
-    "section": "Self-attention",
-    "text": "Self-attention\n\n\nWhen we process information, we often selectively focus on specific parts of the input, giving more attention to relevant information and less attention to irrelevant information. This is the core idea of attention.\nConsider the examples below:\n\nExample 1: She left a brief note on the kitchen table, reminding him to pick up groceries.\nExample 2: The diplomat’s speech struck a positive note in the peace negotiations.\nExample 3: She plucked the guitar strings, ending with a melancholic note.\n\nThe word note in these examples serves quite distinct meanings, each tied to different contexts. To capture varying word meanings across different contexts, we need a mechanism that considers the wider context to compute each word’s contextual representation.\n\nSelf-attention is just that mechanism!"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#using-llms-in-your-applications",
-    "href": "slides/slides-06-llms.html#using-llms-in-your-applications",
-    "title": "Large Language Models",
-    "section": "Using LLMs in your applications",
-    "text": "Using LLMs in your applications\n\n\n\nThere are several Python libraries available which allow us to use pre-trained LLMs in our applications.\n\n🤗 Transformers library\nOpenAI GPT\nHaystack\nLangChain\nspacy-transformers\n…"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#types-of-llms",
-    "href": "slides/slides-06-llms.html#types-of-llms",
-    "title": "Large Language Models",
-    "section": "Types of LLMs",
-    "text": "Types of LLMs\nIf you want to use pre-trained LLMs, it’s useful to know that there are three main types of LLMs.\n\n\n\n\n\n\n\n\n\nFeature\nDecoder-only (e.g., GPT-3)\nEncoder-only (e.g., BERT, RoBERTa)\nEncoder decoder (e.g., T5, BARD)\n\n\n\n\nOutput Computation is based on\nInformation earlier in the context\nEntire context (bidirectional)\nEncoded input context\n\n\nText Generation\nCan naturally generate text completion\nCannot directly generate text\nCan generate outputs naturally\n\n\nExample\nDSI ML workshop audience is ___\nDSI ML workshop audience is the best! → positive\nInput: Translate to Mandarin: Long but productive day! Output: 漫长而富有成效的一天！"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#nlp-pipelines-before-llms",
-    "href": "slides/slides-06-llms.html#nlp-pipelines-before-llms",
-    "title": "Large Language Models",
-    "section": "NLP pipelines before LLMs",
-    "text": "NLP pipelines before LLMs\n\n\n\nText preprocessing: Tokenization, stopword removal, stemming/lemmatization.\nFeature extraction: Techniques Bag of Words or word embeddings (e.g., Word2Vec, GloVe).\nModeling: A relatively simple model such as logistic regression or support vector machines (SVM)\nTraining: Supervised learning on a labeled dataset (e.g., with positive, negative, and neutral sentiment categories for sentiment analysis).\nEvaluation: Performance typically measured using accuracy, F1-score, etc.\nMain challenges:\n\nExtensive feature engineering required for good performance.\nDifficulty in capturing the nuances and context of sentiment, especially in complex sentences."
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#nlp-pipelines-after-llms",
-    "href": "slides/slides-06-llms.html#nlp-pipelines-after-llms",
-    "title": "Large Language Models",
-    "section": "NLP pipelines after LLMs",
-    "text": "NLP pipelines after LLMs\n \n\nfrom transformers import pipeline, AutoModelForTokenClassification, AutoTokenizer\n# Sentiment analysis pipeline\nanalyzer = pipeline(\"sentiment-analysis\", model='distilbert-base-uncased-finetuned-sst-2-english')\nanalyzer([\"I asked my model to predict my future, and it said '404: Life not found.'\",\n          '''Machine learning is just like cooking—sometimes you follow the recipe, \n            and other times you just hope for the best!.'''])\n\n[{'label': 'NEGATIVE', 'score': 0.995707631111145},\n {'label': 'POSITIVE', 'score': 0.9994770884513855}]"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#zero-shot-learning",
-    "href": "slides/slides-06-llms.html#zero-shot-learning",
-    "title": "Large Language Models",
-    "section": "Zero-shot learning",
-    "text": "Zero-shot learning\n\n\n\n\n\n['im feeling rather rotten so im not very ambitious right now',\n 'im updating my blog because i feel shitty',\n 'i never make her separate from me because i don t ever want her to feel like i m ashamed with her',\n 'i left with my bouquet of red and yellow tulips under my arm feeling slightly more optimistic than when i arrived',\n 'i was feeling a little vain when i did this one',\n 'i cant walk into a shop anywhere where i do not feel uncomfortable',\n 'i felt anger when at the end of a telephone call',\n 'i explain why i clung to a relationship with a boy who was in many ways immature and uncommitted despite the excitement i should have been feeling for getting accepted into the masters program at the university of virginia',\n 'i like to have the same breathless feeling as a reader eager to see what will happen next',\n 'i jest i feel grumpy tired and pre menstrual which i probably am but then again its only been a week and im about as fit as a walrus on vacation for the summer']"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection",
-    "href": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection",
-    "title": "Large Language Models",
-    "section": "Zero-shot learning for emotion detection",
-    "text": "Zero-shot learning for emotion detection\n\n\n\nfrom transformers import AutoTokenizer\nfrom transformers import pipeline \nimport torch\n\n#Load the pretrained model\nmodel_name = \"facebook/bart-large-mnli\"\nclassifier = pipeline('zero-shot-classification', model=model_name)\nexs = dataset[\"test\"][\"text\"][:10]\ncandidate_labels = [\"sadness\", \"joy\", \"love\",\"anger\", \"fear\", \"surprise\"]\noutputs = classifier(exs, candidate_labels)"
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection-1",
-    "href": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection-1",
-    "title": "Large Language Models",
-    "section": "Zero-shot learning for emotion detection",
-    "text": "Zero-shot learning for emotion detection\n\n\n\n\n\n\n\n\n\n\n\n\nsequence\nlabels\nscores\n\n\n\n\n0\nim feeling rather rotten so im not very ambiti...\n[sadness, anger, surprise, fear, joy, love]\n[0.7367967367172241, 0.10041747242212296, 0.09...\n\n\n1\nim updating my blog because i feel shitty\n[sadness, surprise, anger, fear, joy, love]\n[0.7429749369621277, 0.13775970041751862, 0.05...\n\n\n2\ni never make her separate from me because i do...\n[love, sadness, surprise, fear, anger, joy]\n[0.31536391377449036, 0.2249031811952591, 0.19...\n\n\n3\ni left with my bouquet of red and yellow tulip...\n[surprise, joy, love, sadness, fear, anger]\n[0.4218207895755768, 0.33366963267326355, 0.21...\n\n\n4\ni was feeling a little vain when i did this one\n[surprise, anger, fear, love, joy, sadness]\n[0.5639424920082092, 0.170002281665802, 0.0864...\n\n\n5\ni cant walk into a shop anywhere where i do no...\n[surprise, fear, sadness, anger, joy, love]\n[0.3703337609767914, 0.36559417843818665, 0.14...\n\n\n6\ni felt anger when at the end of a telephone call\n[anger, surprise, fear, sadness, joy, love]\n[0.9760519862174988, 0.012534384615719318, 0.0...\n\n\n7\ni explain why i clung to a relationship with a...\n[surprise, joy, love, sadness, fear, anger]\n[0.4382023811340332, 0.2322317510843277, 0.129...\n\n\n8\ni like to have the same breathless feeling as ...\n[surprise, joy, love, fear, anger, sadness]\n[0.7675781846046448, 0.13846896588802338, 0.03...\n\n\n9\ni jest i feel grumpy tired and pre menstrual w...\n[surprise, sadness, anger, fear, joy, love]\n[0.7340189814567566, 0.11860307306051254, 0.07..."
-  },
-  {
-    "objectID": "slides/slides-06-llms.html#harms-of-large-language-models",
-    "href": "slides/slides-06-llms.html#harms-of-large-language-models",
-    "title": "Large Language Models",
-    "section": "Harms of large language models",
-    "text": "Harms of large language models\nWhile these models are super powerful and useful, be mindful of the harms caused by these models. Some of the harms as summarized here are:\n\nperformance disparties\nsocial biases and stereotypes\ntoxicity\nmisinformation\nsecurity and privacy risks\ncopyright and legal protections\nenvironmental impact\ncentralization of power"
-  },
-  {
-    "objectID": "slides/slides-01-intro.html#welcome-to-the-workshop",
-    "href": "slides/slides-01-intro.html#welcome-to-the-workshop",
-    "title": "Welcome!",
-    "section": "Welcome to the workshop!",
-    "text": "Welcome to the workshop!\n\nFind a seat where you can see the screen!\nYou will be discussing concepts with your neighbours. So take 15 seconds to introduce yourself to your neighbour."
-  },
-  {
-    "objectID": "slides/slides-01-intro.html#meet-the-teaching-team",
-    "href": "slides/slides-01-intro.html#meet-the-teaching-team",
-    "title": "Welcome!",
-    "section": "Meet the teaching team",
-    "text": "Meet the teaching team\n\nVarada\nPrajeet\nYulia\nTony"
-  },
-  {
-    "objectID": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
-    "href": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
-    "title": "Welcome!",
-    "section": "Learning goals of the workshop",
-    "text": "Learning goals of the workshop\nThe primary learning goal of the workshop is to familiarize yourself with the fundamentals of machine learning and its various types. This knowledge will help you determine which type of machine learning, or whether a non-machine learning approach, would be most appropriate for your problem."
-  },
-  {
-    "objectID": "workshop-07.html",
-    "href": "workshop-07.html",
-    "title": "Unsupervised Learning",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "Unsupervised Learning"
-    ]
-  },
-  {
-    "objectID": "workshop-07.html#slides",
-    "href": "workshop-07.html#slides",
-    "title": "Unsupervised Learning",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "Unsupervised Learning"
-    ]
-  },
-  {
-    "objectID": "workshop-07.html#outline",
-    "href": "workshop-07.html#outline",
-    "title": "Unsupervised Learning",
-    "section": "Outline",
-    "text": "Outline\n\nClustering\nDimensionality Reduction\nRecommendation systems",
-    "crumbs": [
-      "Workshop",
-      "Unsupervised Learning"
-    ]
-  },
-  {
-    "objectID": "workshop-03.html",
-    "href": "workshop-03.html",
-    "title": "ML Models",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "ML Models"
-    ]
-  },
-  {
-    "objectID": "workshop-03.html#slides",
-    "href": "workshop-03.html#slides",
-    "title": "ML Models",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "ML Models"
-    ]
-  },
-  {
-    "objectID": "workshop-03.html#outline",
-    "href": "workshop-03.html#outline",
-    "title": "ML Models",
-    "section": "Outline",
-    "text": "Outline\n\nMachine learning terminology\nMachine learning fundamentals\nDecision trees",
-    "crumbs": [
-      "Workshop",
-      "ML Models"
-    ]
-  },
-  {
-    "objectID": "workshop-01.html",
-    "href": "workshop-01.html",
-    "title": "Welcome and getting started",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "Welcome and getting started"
-    ]
-  },
-  {
-    "objectID": "workshop-01.html#slides",
-    "href": "workshop-01.html#slides",
-    "title": "Welcome and getting started",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "Welcome and getting started"
-    ]
-  },
-  {
-    "objectID": "workshop-01.html#outline",
-    "href": "workshop-01.html#outline",
-    "title": "Welcome and getting started",
-    "section": "Outline",
-    "text": "Outline\n\nWelcome to the workshop!\nIntroductions and meet your neighbors\nAbout the learning objective of the workshop",
-    "crumbs": [
-      "Workshop",
-      "Welcome and getting started"
-    ]
-  },
-  {
     "objectID": "slides/slides-03-ml-models.html#supervised-learning",
     "href": "slides/slides-03-ml-models.html#supervised-learning",
     "title": "Supervised Machine Learning Models",
@@ -526,22 +273,155 @@
     "text": "Tree-Based Models\n \nRandom Forest, XGBoost, etc are all easily available as “out-of-the box solutions”.\nPros:\n\nPerform well on a variety of tasks\nRandom forest in particular are easy to train and robust to outliers.\n\nCons:\n\nNot always interpretable\nNot good at handling sparse data\nCan also still overfit."
   },
   {
-    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-1",
-    "href": "slides/slides-03-ml-models.html#analogy-based-models-1",
+    "objectID": "slides/slides-03-ml-models.html#linear-models-1",
+    "href": "slides/slides-03-ml-models.html#linear-models-1",
     "title": "Supervised Machine Learning Models",
-    "section": "Analogy-based models",
-    "text": "Analogy-based models\n\nCan you guess what this dataset is?"
+    "section": "Linear models",
+    "text": "Linear models\n\n\n\nMany of you might be familiar with least-squares regression. We find the line of best fit by minimizing the ‘squared error’ of the predictions."
   },
   {
-    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-2",
-    "href": "slides/slides-03-ml-models.html#analogy-based-models-2",
+    "objectID": "slides/slides-03-ml-models.html#linear-models-2",
+    "href": "slides/slides-03-ml-models.html#linear-models-2",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Models",
+    "text": "Linear Models\n  \nSquared Error is very sensitive to outliers. Far-away points contribute a very large squared error, and even relatively few points can affect the outcome."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-models-3",
+    "href": "slides/slides-03-ml-models.html#linear-models-3",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Models",
+    "text": "Linear Models\n  \nWe can use other notions of “best fit”. Using absolute error makes the model more resistant to outliers!"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-classifiers",
+    "href": "slides/slides-03-ml-models.html#linear-classifiers",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Classifiers",
+    "text": "Linear Classifiers\n\n\nWe can also build linear models for classification tasks. The idea is to convert the output from an arbitrary number to a number between 0 and 1, and treat it like a “probability”.\nIn logistic regression, we squash the output using the sigmoid function and then adjust parameters (in training) to find the choice that makes the data “most likely”."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-classifiers-1",
+    "href": "slides/slides-03-ml-models.html#linear-classifiers-1",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Classifiers",
+    "text": "Linear Classifiers\n\nCan you guess what this dataset is?"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-classifiers-2",
+    "href": "slides/slides-03-ml-models.html#linear-classifiers-2",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Classifiers",
+    "text": "Linear Classifiers\n\nLogistic Regression predicts a linear decision boundary."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#sentiment-analysis-an-example",
+    "href": "slides/slides-03-ml-models.html#sentiment-analysis-an-example",
+    "title": "Supervised Machine Learning Models",
+    "section": "Sentiment Analysis: An Example",
+    "text": "Sentiment Analysis: An Example\n\nLet us attempt to use logistic regression to do sentiment analysis on a database of IMDB reviews. The database is available here.\n\nimdb_df = pd.read_csv(\"data/imdb_master.csv\", encoding=\"ISO-8859-1\")\nimdb_df.rename(columns={\"sentiment\": \"label\"}, inplace = True)\n\n\n\n\n\n\n\n\n\n\nreview\nlabel\n\n\n\n\n0\nOne of the other reviewers has mentioned that ...\npositive\n\n\n1\nA wonderful little production. &lt;br /&gt;&lt;br /&gt;The...\npositive\n\n\n2\nI thought this was a wonderful way to spend ti...\npositive\n\n\n3\nBasically there's a family where a little boy ...\nnegative\n\n\n4\nPetter Mattei's \"Love in the Time of Money\" is...\npositive\n\n\n\n\n\n\n\nWe will use only about 10% of the dataset for training (to speed things up)"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#bag-of-words",
+    "href": "slides/slides-03-ml-models.html#bag-of-words",
+    "title": "Supervised Machine Learning Models",
+    "section": "Bag of Words",
+    "text": "Bag of Words\n\nTo create features that logistic regression can use, we will represent these reviews via a “bag of words” strategy.\nWe create a new feature for every word that appears in the dataset. Then, if a review contains that word the corresponding feature gets a value of 1 for that review. If the word is not present, it’s marked as 0."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#bag-of-words-1",
+    "href": "slides/slides-03-ml-models.html#bag-of-words-1",
+    "title": "Supervised Machine Learning Models",
+    "section": "Bag of Words",
+    "text": "Bag of Words\n\nNotice that the result is a sparse matrix. Most reviews contain only a small number of words.\n\nvec = CountVectorizer(stop_words=\"english\")\nbow = vec.fit_transform(X_train)\nbow\n\n&lt;Compressed Sparse Row sparse matrix of dtype 'int64'\n    with 439384 stored elements and shape (5000, 38867)&gt;\n\n\nThere are a total of 38867 “words” among the reviews. Here are some of them:\n\n\narray(['00', 'affection', 'apprehensive', 'barbara', 'blore',\n       'businessman', 'chatterjee', 'commanding', 'cramped', 'defining',\n       'displaced', 'edie', 'evolving', 'fingertips', 'gaffers',\n       'gravitas', 'heist', 'iliad', 'investment', 'kidnappee',\n       'licentious', 'malã', 'mice', 'museum', 'obsessiveness',\n       'parapsychologist', 'plasters', 'property', 'reclined',\n       'ridiculous', 'sayid', 'shivers', 'sohail', 'stomaches', 'syrupy',\n       'tolerance', 'unbidden', 'verneuil', 'wilcox'], dtype=object)"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#checking-the-class-counts",
+    "href": "slides/slides-03-ml-models.html#checking-the-class-counts",
+    "title": "Supervised Machine Learning Models",
+    "section": "Checking the class counts",
+    "text": "Checking the class counts\nLet us see how many reviews are positive, and how many are negative.  \n\ny_train.value_counts()\n\nlabel\npositive    2517\nnegative    2483\nName: count, dtype: int64\n\n\n\n\nThe dataset looks pretty balanced, so a classifier predicting at random would at best guess about 50% correctly.\nWe will not train our model."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#testing-performance-1",
+    "href": "slides/slides-03-ml-models.html#testing-performance-1",
+    "title": "Supervised Machine Learning Models",
+    "section": "Testing Performance",
+    "text": "Testing Performance\n\n\nLet’s see how the model performs after training.\n\n\n\n\n\n\n\n\n\nfit_time\nscore_time\ntest_score\ntrain_score\n\n\n\n\n0\n0.528306\n0.088077\n0.828\n0.99975\n\n\n1\n0.508915\n0.087334\n0.830\n0.99975\n\n\n2\n0.525329\n0.086176\n0.848\n0.99975\n\n\n3\n0.503916\n0.085548\n0.833\n1.00000\n\n\n4\n0.501733\n0.086934\n0.840\n0.99975\n\n\n\n\n\n\n\n\nWe’re able to predict with roughly 84% accuracy on validation sets. Looks like our model learned something!"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#tuning-hyperparameters",
+    "href": "slides/slides-03-ml-models.html#tuning-hyperparameters",
+    "title": "Supervised Machine Learning Models",
+    "section": "Tuning hyperparameters",
+    "text": "Tuning hyperparameters\n\n\nHowever, the training scores are perfect (and higher than validation scores) so our model is likely overfitting.\nMaybe it just memorized some rare words, each appearing only in one review, and associated these with the review’s label. We could try reducing the size of our dictionary to prevent this."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#tuning-hyperparameters-1",
+    "href": "slides/slides-03-ml-models.html#tuning-hyperparameters-1",
+    "title": "Supervised Machine Learning Models",
+    "section": "Tuning hyperparameters",
+    "text": "Tuning hyperparameters\n\n\nThere are many tools available to automate the search for good hyperparameters. These can make our life easy, but there is always the danger of optimization bias in the results."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#investigating-the-model",
+    "href": "slides/slides-03-ml-models.html#investigating-the-model",
+    "title": "Supervised Machine Learning Models",
+    "section": "Investigating the model",
+    "text": "Investigating the model\n\n\n\nLet’s see what associations our model learned.\n\n\n\n\n\n\n\n\n\nCoefficient\n\n\n\n\nexcellent\n0.683626\n\n\namazing\n0.538968\n\n\ngreat\n0.517805\n\n\nperfect\n0.512896\n\n\nwonderful\n0.491460\n\n\n...\n...\n\n\nwaste\n-0.594706\n\n\nterrible\n-0.621234\n\n\nboring\n-0.642500\n\n\nawful\n-0.748141\n\n\nworst\n-0.991409\n\n\n\n\n35138 rows × 1 columns"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#investigating-the-model-1",
+    "href": "slides/slides-03-ml-models.html#investigating-the-model-1",
+    "title": "Supervised Machine Learning Models",
+    "section": "Investigating the model",
+    "text": "Investigating the model\n\n\nThey make sense! Let’s visualize the 20 most important features."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#making-predictions",
+    "href": "slides/slides-03-ml-models.html#making-predictions",
+    "title": "Supervised Machine Learning Models",
+    "section": "Making Predictions",
+    "text": "Making Predictions\n\n\nFinally, let’s try predicting on some new examples.\n\n\n\n['It got a bit boring at times but the direction was excellent and the acting was flawless. Overall I enjoyed the movie and I highly recommend it!',\n 'The plot was shallower than a kiddie pool in a drought, but hey, at least we now know emojis should stick to texting and avoid the big screen.']\n\n\nHere are the model predictions:\n\n\narray(['positive', 'negative'], dtype=object)\n\n\n\n\nLet’s see which vocabulary words were present in the first review, and how they contributed to the classification."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#understanding-predictions",
+    "href": "slides/slides-03-ml-models.html#understanding-predictions",
+    "title": "Supervised Machine Learning Models",
+    "section": "Understanding Predictions",
+    "text": "Understanding Predictions\n\n\n\nIt got a bit boring at times but the direction was excellent and the acting was flawless. Overall I enjoyed the movie and I highly recommend it!"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#summary",
+    "href": "slides/slides-03-ml-models.html#summary",
+    "title": "Supervised Machine Learning Models",
+    "section": "Summary",
+    "text": "Summary\n\n\nThe bag-of-words representation was very simple– we only counted which words appeared in which reviews. There was no attempt to maintain syntactical or grammatical structure or to study correlations between words.\nWe also trained on just 5000 examples. Nevertheless, our model performs quite well."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#linear-models-4",
+    "href": "slides/slides-03-ml-models.html#linear-models-4",
+    "title": "Supervised Machine Learning Models",
+    "section": "Linear Models",
+    "text": "Linear Models\n\n\nPros:\n\nEasy to train and to interpret\nWidely applicable despite some strong assumptions\nIf you have a regression task, check whether a linear regression is already good enough! If you have a classification task, logistic regression is a go-to first option.\n\nCons:\n\nStrong assumptions\nLinear decision boundaries for classifiers\nCorrelated features can cause problems"
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#analogy-based-models",
+    "href": "slides/slides-03-ml-models.html#analogy-based-models",
+    "title": "Supervised Machine Learning Models",
+    "section": "Analogy-based models",
+    "text": "Analogy-based models\n\nReturning to our older dataset."
+  },
+  {
+    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-1",
+    "href": "slides/slides-03-ml-models.html#analogy-based-models-1",
     "title": "Supervised Machine Learning Models",
     "section": "Analogy-based models",
     "text": "Analogy-based models\n\nHow would you classify the green dot?"
   },
   {
-    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-3",
-    "href": "slides/slides-03-ml-models.html#analogy-based-models-3",
+    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-2",
+    "href": "slides/slides-03-ml-models.html#analogy-based-models-2",
     "title": "Supervised Machine Learning Models",
     "section": "Analogy-based models",
     "text": "Analogy-based models\n\n\nIdea: predict on new data based on “similar” examples in the training data."
@@ -568,67 +448,18 @@
     "text": "KNNs and SVMs"
   },
   {
-    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-4",
-    "href": "slides/slides-03-ml-models.html#analogy-based-models-4",
+    "objectID": "slides/slides-03-ml-models.html#analogy-based-models-3",
+    "href": "slides/slides-03-ml-models.html#analogy-based-models-3",
     "title": "Supervised Machine Learning Models",
     "section": "Analogy-based Models",
     "text": "Analogy-based Models\n\n\nPros:\n\nDo not need to make assumptions about the underlying data\nGiven enough data, should pretty much always work.\n\nCons:\n\nEnough data can mean … a lot\nComputing distances is time-consuming for large datasets\nCan’t really interpret the model’s decisions."
-  },
-  {
-    "objectID": "slides/slides-03-ml-models.html#linear-models-1",
-    "href": "slides/slides-03-ml-models.html#linear-models-1",
-    "title": "Supervised Machine Learning Models",
-    "section": "Linear models",
-    "text": "Linear models\n\n\n\nMany of you might be familiar with least-squares regression. We find the line of best fit by minimizing the ‘squared error’ of the predictions."
-  },
-  {
-    "objectID": "slides/slides-03-ml-models.html#linear-models-2",
-    "href": "slides/slides-03-ml-models.html#linear-models-2",
-    "title": "Supervised Machine Learning Models",
-    "section": "Linear Models",
-    "text": "Linear Models\n\n\n\nWe can use the same idea (and some neat tricks) to fit higher degree polynomials, or any chosen basis of functions."
-  },
-  {
-    "objectID": "slides/slides-03-ml-models.html#linear-models-3",
-    "href": "slides/slides-03-ml-models.html#linear-models-3",
-    "title": "Supervised Machine Learning Models",
-    "section": "Linear Models",
-    "text": "Linear Models\n  \nSquared Error is very sensitive to outliers. Far-away points contribute a very large squared error, and even relatively few points can affect the outcome."
-  },
-  {
-    "objectID": "slides/slides-03-ml-models.html#linear-models-4",
-    "href": "slides/slides-03-ml-models.html#linear-models-4",
-    "title": "Supervised Machine Learning Models",
-    "section": "Linear Models",
-    "text": "Linear Models\n  \nWe can use other notions of “best fit”. Using absolute error makes the model more resistant to outliers!"
-  },
-  {
-    "objectID": "slides/slides-03-ml-models.html#linear-classifiers",
-    "href": "slides/slides-03-ml-models.html#linear-classifiers",
-    "title": "Supervised Machine Learning Models",
-    "section": "Linear Classifiers",
-    "text": "Linear Classifiers\n\n\nWe can also build linear models for classification tasks. The idea is to convert the output from an arbitrary number to a number between 0 and 1, and treat it like a “probability”.\nIn logistic regression, we squash the output using the sigmoid function and then adjust parameters (in training) to find the choice that makes the data “most likely”."
-  },
-  {
-    "objectID": "slides/slides-03-ml-models.html#linear-classifiers-1",
-    "href": "slides/slides-03-ml-models.html#linear-classifiers-1",
-    "title": "Supervised Machine Learning Models",
-    "section": "Linear Classifiers",
-    "text": "Linear Classifiers\n\nLogistic Regression predicts a linear decision boundary."
-  },
-  {
-    "objectID": "slides/slides-03-ml-models.html#linear-classifiers-2",
-    "href": "slides/slides-03-ml-models.html#linear-classifiers-2",
-    "title": "Supervised Machine Learning Models",
-    "section": "Linear Classifiers",
-    "text": "Linear Classifiers\n\n\nPros:\n\nEasy to train and to interpret\nWidely applicable despite some strong assumptions\nIf you have a regression task, check whether a linear regression is already good enough! If you have a classification task, logistic regression is a go-to first option.\n\nCons:\n\nStrong assumptions\nLinear decision boundaries for classifiers\nCorrelated features can cause problems"
   },
   {
     "objectID": "slides/slides-03-ml-models.html#a-look-ahead",
     "href": "slides/slides-03-ml-models.html#a-look-ahead",
     "title": "Supervised Machine Learning Models",
     "section": "A Look Ahead",
-    "text": "A Look Ahead\n\n\nSupport Vector Machines (SVM) are also linear classifiers.\nThe reason we saw a non-linear decision boundary earlier was the use of the RBF kernel, which applies a certain non-linear transformation to the features.\nEven if our data is not linearly separable, there could be a good choice of feature transform out there that makes it linearly separable."
+    "text": "A Look Ahead\n\n\nSupport Vector Machines (SVM) are also linear classifiers.\nThe reason we see a non-linear decision boundary is the use of the RBF kernel, which applies a certain non-linear transformation to the features.\nEven if our data is not linearly separable, there could be a good choice of feature transform out there that makes it linearly separable."
   },
   {
     "objectID": "slides/slides-03-ml-models.html#section",
@@ -636,141 +467,6 @@
     "title": "Supervised Machine Learning Models",
     "section": "",
     "text": "Wouldn’t it be nice if we could train a machine learning model to find such a transform?"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Welcome\nWelcome everyone to the workshop, “Is Machine Learning Suitable for Your Projects?”\n\nWhen 🕘 9 am to 3:30 pm on August 24th, 2024\nWhere? 📍 P.A. Woodward Instructional Resources Centre (IRC) - 4, 2194 Health Sciences Mall, Vancouver BC, V6T 1Z3\n\n\n\nThis workshop is a collaboration between the Data Science Institute, the Master of Data Science, Vancouver program and the Department of Computer Science at UBC.\nThe Data Science Institute (DSI) is dedicated to fostering and advancing research, innovation, and training in data-intensive sciences. While we collaborate with researchers and external partners to achieve these objectives, we also prioritize providing valuable learning experiences for undergraduate and graduate students from diverse backgrounds. This workshop is part of our broader effort to introduce data science concepts to students and researchers, especially to those from non-STEM fields. We hope that this initiative will inspire participants to further explore the field of data science and its applications.\nThe Computer Science Department is pleased to offer this workshop to their mentors as a token of appreciation and a valuable opportunity for professional development.\nIn this workshop, you will discover how machine learning can improve your research projects. The workshop is tailored for non-STEM students and researchers. We will demystify the fundamentals of machine learning and clarify what it can and cannot do for your research. By the end of the workshop, you will be familiar with the fundamentals of machine learning and different types of machine learning."
-  },
-  {
-    "objectID": "workshop.html",
-    "href": "workshop.html",
-    "title": "Overview",
-    "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Workshop",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "workshop.html#schedule",
-    "href": "workshop.html#schedule",
-    "title": "Overview",
-    "section": "",
-    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 10:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Workshop",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "Our team",
-    "section": "",
-    "text": "Varada Kolhatkar\n        Assistant Professor of Teaching, Computer Science, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Prajeet Bajpai\n        Teaching Postdoctoral Fellow, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Raymond Ng\n        Scientific Director, Data Science Institute; Professor, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Jie Ie Baik\n        Research Administrator, Data Science Institute\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Michele Ng\n        Special Projects Coordinator, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Yulia Egorova\n        \n        \n            Assistant\n        \n        \n    \n\n    \n        \n        Tony Shum\n        \n        \n            Assistant\n        \n        \n    \n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "workshop-02.html",
-    "href": "workshop-02.html",
-    "title": "ML Fundamentals",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "ML Fundamentals"
-    ]
-  },
-  {
-    "objectID": "workshop-02.html#slides",
-    "href": "workshop-02.html#slides",
-    "title": "ML Fundamentals",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "ML Fundamentals"
-    ]
-  },
-  {
-    "objectID": "workshop-02.html#outline",
-    "href": "workshop-02.html#outline",
-    "title": "ML Fundamentals",
-    "section": "Outline",
-    "text": "Outline\n\nMachine learning terminology\nMachine learning fundamentals\nDecision trees",
-    "crumbs": [
-      "Workshop",
-      "ML Fundamentals"
-    ]
-  },
-  {
-    "objectID": "workshop-05.html",
-    "href": "workshop-05.html",
-    "title": "Deep Learning",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "Deep Learning"
-    ]
-  },
-  {
-    "objectID": "workshop-05.html#slides",
-    "href": "workshop-05.html#slides",
-    "title": "Deep Learning",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "Deep Learning"
-    ]
-  },
-  {
-    "objectID": "workshop-05.html#outline",
-    "href": "workshop-05.html#outline",
-    "title": "Deep Learning",
-    "section": "Outline",
-    "text": "Outline\n\nNeural Networks\nTransfer learning\nObject detection",
-    "crumbs": [
-      "Workshop",
-      "Deep Learning"
-    ]
-  },
-  {
-    "objectID": "workshop-09.html",
-    "href": "workshop-09.html",
-    "title": "Large Language Models",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "Large Language Models"
-    ]
-  },
-  {
-    "objectID": "workshop-09.html#slides",
-    "href": "workshop-09.html#slides",
-    "title": "Large Language Models",
-    "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Workshop",
-      "Large Language Models"
-    ]
-  },
-  {
-    "objectID": "workshop-09.html#outline",
-    "href": "workshop-09.html#outline",
-    "title": "Large Language Models",
-    "section": "Outline",
-    "text": "Outline\n\nClustering\nDimensionality Reduction\nRecommendation systems",
-    "crumbs": [
-      "Workshop",
-      "Large Language Models"
-    ]
   },
   {
     "objectID": "slides/slides-02-ml-intro.html#introduction-to-machine-learning",
@@ -1002,6 +698,394 @@
     "title": "Introduction to Machine Learning",
     "section": "Scenario 2",
     "text": "Scenario 2\n\nYour colleague now separates their data into a training set, a validation set and a test set.\nThey again use 10 types of models and try 1000 combinations of hyper-parameters for each. They use the training set to train their model, and then note how the model performs by measure accuracy on the validation set.\nThe best model achieves 99% accuracy on the validation set, after which it is used on the test set. It achieves 99% accuracy again.\nDo you trust the outcome now?"
+  },
+  {
+    "objectID": "workshop-09.html",
+    "href": "workshop-09.html",
+    "title": "Large Language Models",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Large Language Models"
+    ]
+  },
+  {
+    "objectID": "workshop-09.html#slides",
+    "href": "workshop-09.html#slides",
+    "title": "Large Language Models",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Large Language Models"
+    ]
+  },
+  {
+    "objectID": "workshop-09.html#outline",
+    "href": "workshop-09.html#outline",
+    "title": "Large Language Models",
+    "section": "Outline",
+    "text": "Outline\n\nClustering\nDimensionality Reduction\nRecommendation systems",
+    "crumbs": [
+      "Workshop",
+      "Large Language Models"
+    ]
+  },
+  {
+    "objectID": "workshop-05.html",
+    "href": "workshop-05.html",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Deep Learning"
+    ]
+  },
+  {
+    "objectID": "workshop-05.html#slides",
+    "href": "workshop-05.html#slides",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Deep Learning"
+    ]
+  },
+  {
+    "objectID": "workshop-05.html#outline",
+    "href": "workshop-05.html#outline",
+    "title": "Deep Learning",
+    "section": "Outline",
+    "text": "Outline\n\nNeural Networks\nTransfer learning\nObject detection",
+    "crumbs": [
+      "Workshop",
+      "Deep Learning"
+    ]
+  },
+  {
+    "objectID": "workshop-02.html",
+    "href": "workshop-02.html",
+    "title": "ML Fundamentals",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "ML Fundamentals"
+    ]
+  },
+  {
+    "objectID": "workshop-02.html#slides",
+    "href": "workshop-02.html#slides",
+    "title": "ML Fundamentals",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "ML Fundamentals"
+    ]
+  },
+  {
+    "objectID": "workshop-02.html#outline",
+    "href": "workshop-02.html#outline",
+    "title": "ML Fundamentals",
+    "section": "Outline",
+    "text": "Outline\n\nMachine learning terminology\nMachine learning fundamentals\nDecision trees",
+    "crumbs": [
+      "Workshop",
+      "ML Fundamentals"
+    ]
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Our team",
+    "section": "",
+    "text": "Varada Kolhatkar\n        Assistant Professor of Teaching, Computer Science, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Prajeet Bajpai\n        Teaching Postdoctoral Fellow, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Raymond Ng\n        Scientific Director, Data Science Institute; Professor, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Jie Ie Baik\n        Research Administrator, Data Science Institute\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Michele Ng\n        Special Projects Coordinator, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Yulia Egorova\n        \n        \n            Assistant\n        \n        \n    \n\n    \n        \n        Tony Shum\n        \n        \n            Assistant\n        \n        \n    \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome\nWelcome everyone to the workshop, “Is Machine Learning Suitable for Your Projects?”\n\nWhen 🕘 9 am to 3:30 pm on August 24th, 2024\nWhere? 📍 P.A. Woodward Instructional Resources Centre (IRC) - 4, 2194 Health Sciences Mall, Vancouver BC, V6T 1Z3\n\n\n\nThis workshop is a collaboration between the Data Science Institute, the Master of Data Science, Vancouver program and the Department of Computer Science at UBC.\nThe Data Science Institute (DSI) is dedicated to fostering and advancing research, innovation, and training in data-intensive sciences. While we collaborate with researchers and external partners to achieve these objectives, we also prioritize providing valuable learning experiences for undergraduate and graduate students from diverse backgrounds. This workshop is part of our broader effort to introduce data science concepts to students and researchers, especially to those from non-STEM fields. We hope that this initiative will inspire participants to further explore the field of data science and its applications.\nThe Computer Science Department is pleased to offer this workshop to their mentors as a token of appreciation and a valuable opportunity for professional development.\nIn this workshop, you will discover how machine learning can improve your research projects. The workshop is tailored for non-STEM students and researchers. We will demystify the fundamentals of machine learning and clarify what it can and cannot do for your research. By the end of the workshop, you will be familiar with the fundamentals of machine learning and different types of machine learning."
+  },
+  {
+    "objectID": "workshop.html",
+    "href": "workshop.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 11:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Workshop",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "workshop.html#schedule",
+    "href": "workshop.html#schedule",
+    "title": "Overview",
+    "section": "",
+    "text": "Title\n\n\ntime\n\n\nDescription\n\n\n\n\n\n\nWelcome and getting started\n\n\n9:00 - 9:10\n\n\nHello and welcome to the workshop!\n\n\n\n\nML Fundamentals\n\n\n9:10 - 10:00\n\n\nIntroduction to Machine Learning Fundamentals\n\n\n\n\nML Models\n\n\n10:00 - 10:30\n\n\nIntroduction to Different Types of Machine Learning Models\n\n\n\n\n☕ Break\n\n\n10:30 - 10:40\n\n\n \n\n\n\n\nDeep Learning\n\n\n10:40 - 11:25\n\n\nIntroduction to Deep Learning\n\n\n\n\n☕ Break\n\n\n11:25 - 11:30\n\n\n \n\n\n\n\nUnsupervised Learning\n\n\n11:30 - 12:10\n\n\nClustering, Dimensionality Reduction, Recommendation Systems\n\n\n\n\n🥗🍴 Lunch\n\n\n12:10 - 13:20\n\n\n \n\n\n\n\nLarge Language Models\n\n\n13:30 - 14:00\n\n\nIntroduction to Large Language Models\n\n\n\n\nML Problem Framing\n\n\n2:00 - 3:30\n\n\nLab session\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Workshop",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html",
+    "href": "workshop-01.html",
+    "title": "Welcome and getting started",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html#slides",
+    "href": "workshop-01.html#slides",
+    "title": "Welcome and getting started",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-01.html#outline",
+    "href": "workshop-01.html#outline",
+    "title": "Welcome and getting started",
+    "section": "Outline",
+    "text": "Outline\n\nWelcome to the workshop!\nIntroductions and meet your neighbors\nAbout the learning objective of the workshop",
+    "crumbs": [
+      "Workshop",
+      "Welcome and getting started"
+    ]
+  },
+  {
+    "objectID": "workshop-03.html",
+    "href": "workshop-03.html",
+    "title": "ML Models",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "ML Models"
+    ]
+  },
+  {
+    "objectID": "workshop-03.html#slides",
+    "href": "workshop-03.html#slides",
+    "title": "ML Models",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "ML Models"
+    ]
+  },
+  {
+    "objectID": "workshop-03.html#outline",
+    "href": "workshop-03.html#outline",
+    "title": "ML Models",
+    "section": "Outline",
+    "text": "Outline\n\nMachine learning terminology\nMachine learning fundamentals\nDecision trees",
+    "crumbs": [
+      "Workshop",
+      "ML Models"
+    ]
+  },
+  {
+    "objectID": "workshop-07.html",
+    "href": "workshop-07.html",
+    "title": "Unsupervised Learning",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Unsupervised Learning"
+    ]
+  },
+  {
+    "objectID": "workshop-07.html#slides",
+    "href": "workshop-07.html#slides",
+    "title": "Unsupervised Learning",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Workshop",
+      "Unsupervised Learning"
+    ]
+  },
+  {
+    "objectID": "workshop-07.html#outline",
+    "href": "workshop-07.html#outline",
+    "title": "Unsupervised Learning",
+    "section": "Outline",
+    "text": "Outline\n\nClustering\nDimensionality Reduction\nRecommendation systems",
+    "crumbs": [
+      "Workshop",
+      "Unsupervised Learning"
+    ]
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#welcome-to-the-workshop",
+    "href": "slides/slides-01-intro.html#welcome-to-the-workshop",
+    "title": "Welcome!",
+    "section": "Welcome to the workshop!",
+    "text": "Welcome to the workshop!\n\nFind a seat where you can see the screen!\nYou will be discussing concepts with your neighbours. So take 15 seconds to introduce yourself to your neighbour."
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#meet-the-teaching-team",
+    "href": "slides/slides-01-intro.html#meet-the-teaching-team",
+    "title": "Welcome!",
+    "section": "Meet the teaching team",
+    "text": "Meet the teaching team\n\nVarada\nPrajeet\nYulia\nTony"
+  },
+  {
+    "objectID": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
+    "href": "slides/slides-01-intro.html#learning-goals-of-the-workshop",
+    "title": "Welcome!",
+    "section": "Learning goals of the workshop",
+    "text": "Learning goals of the workshop\nThe primary learning goal of the workshop is to familiarize yourself with the fundamentals of machine learning and its various types. This knowledge will help you determine which type of machine learning, or whether a non-machine learning approach, would be most appropriate for your problem."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#learning-outcomes",
+    "href": "slides/slides-06-llms.html#learning-outcomes",
+    "title": "Large Language Models",
+    "section": "Learning outcomes",
+    "text": "Learning outcomes\n\nFrom this module, you will be able to"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#language-models-activity",
+    "href": "slides/slides-06-llms.html#language-models-activity",
+    "title": "Large Language Models",
+    "section": "Language models activity",
+    "text": "Language models activity\n\n\nEach of you will receive a sticky note with a word on it. Here’s what you’ll do:\n\nCarefully remove the sticky note to see the word. This word is for your eyes only —- no peeking, neighbours!\nThink quickly: what word would logically follow the word on the sticky note? Write this next word on a new sticky note.\nYou have about 20 seconds for this step, so trust your instincts!\nPass your predicted word to the person next to you. Do not pass the word you received from your neighbour forward. Keep the chain going!\nStop after the last person in your row has finished.\nFinally, one person from your row will enter the collective sentence into our Google Doc."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#markov-model-of-language",
+    "href": "slides/slides-06-llms.html#markov-model-of-language",
+    "title": "Large Language Models",
+    "section": "Markov model of language",
+    "text": "Markov model of language\n\n\n\nYou’ve just created a simple Markov model of language!\nIn predicting the next word from a minimal context, you likely used your linguistic intuition and familiarity with common two-word phrases or collocations.\nYou could create more coherent sentences by taking into account more context e.g., previous two words or four words or 100 words.\nThis idea was first used by Shannon for characters in The Shannon’s game. See this video by Jordan Boyd-Graber for more information on this."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#applications-of-predicting-next-word",
+    "href": "slides/slides-06-llms.html#applications-of-predicting-next-word",
+    "title": "Large Language Models",
+    "section": "Applications of predicting next word",
+    "text": "Applications of predicting next word\n\n\nOne of the most common applications for predicting the next word is the ‘smart compose’ feature in your emails, text messages, and search engines."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#language-model",
+    "href": "slides/slides-06-llms.html#language-model",
+    "title": "Large Language Models",
+    "section": "Language model",
+    "text": "Language model\n\n\nA language model computes the probability distribution over sequences (of words or characters). Intuitively, this probability tells us how “good” or plausible a sequence of words is.\n\n\nCheck out this recent BMO ad."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#a-simple-model-of-language",
+    "href": "slides/slides-06-llms.html#a-simple-model-of-language",
+    "title": "Large Language Models",
+    "section": "A simple model of language",
+    "text": "A simple model of language\n\n\n\nCalculate the co-occurrence frequencies and probabilities based on these frequencies\nPredict the next word based on these probabilities"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#long-distance-dependencies",
+    "href": "slides/slides-06-llms.html#long-distance-dependencies",
+    "title": "Large Language Models",
+    "section": "Long-distance dependencies",
+    "text": "Long-distance dependencies\n\n\nWhat are some reasonable predictions for the next word in the sequence?\n\nI am studying law at the University of British Columbia Point Grey campus in Vancouver because I want to work as a ___\n\nMarkov model is unable to capture such long-distance dependencies in language."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#transformer-models",
+    "href": "slides/slides-06-llms.html#transformer-models",
+    "title": "Large Language Models",
+    "section": "Transformer models",
+    "text": "Transformer models\n\n\nEnter attention and transformer models! Transformer models are at the core of all state-of-the-art Generative AI models (e.g., BERT, GPT3, GPT4, Gemini, DALL-E, Llama, Github Copilot)?\n\nSource"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#transformer-models-1",
+    "href": "slides/slides-06-llms.html#transformer-models-1",
+    "title": "Large Language Models",
+    "section": "Transformer models",
+    "text": "Transformer models\n\n\n\nSource: GPT-4 Technical Report"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#self-attention",
+    "href": "slides/slides-06-llms.html#self-attention",
+    "title": "Large Language Models",
+    "section": "Self-attention",
+    "text": "Self-attention\n\n\n\nAn important innovation which makes these models work so well is self-attention.\nCount how many times the players wearing the white pass the basketball?"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#self-attention-1",
+    "href": "slides/slides-06-llms.html#self-attention-1",
+    "title": "Large Language Models",
+    "section": "Self-attention",
+    "text": "Self-attention\n\n\nWhen we process information, we often selectively focus on specific parts of the input, giving more attention to relevant information and less attention to irrelevant information. This is the core idea of attention.\nConsider the examples below:\n\nExample 1: She left a brief note on the kitchen table, reminding him to pick up groceries.\nExample 2: The diplomat’s speech struck a positive note in the peace negotiations.\nExample 3: She plucked the guitar strings, ending with a melancholic note.\n\nThe word note in these examples serves quite distinct meanings, each tied to different contexts. To capture varying word meanings across different contexts, we need a mechanism that considers the wider context to compute each word’s contextual representation.\n\nSelf-attention is just that mechanism!"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#using-llms-in-your-applications",
+    "href": "slides/slides-06-llms.html#using-llms-in-your-applications",
+    "title": "Large Language Models",
+    "section": "Using LLMs in your applications",
+    "text": "Using LLMs in your applications\n\n\n\nThere are several Python libraries available which allow us to use pre-trained LLMs in our applications.\n\n🤗 Transformers library\nOpenAI GPT\nHaystack\nLangChain\nspacy-transformers\n…"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#types-of-llms",
+    "href": "slides/slides-06-llms.html#types-of-llms",
+    "title": "Large Language Models",
+    "section": "Types of LLMs",
+    "text": "Types of LLMs\nIf you want to use pre-trained LLMs, it’s useful to know that there are three main types of LLMs.\n\n\n\n\n\n\n\n\n\nFeature\nDecoder-only (e.g., GPT-3)\nEncoder-only (e.g., BERT, RoBERTa)\nEncoder decoder (e.g., T5, BARD)\n\n\n\n\nOutput Computation is based on\nInformation earlier in the context\nEntire context (bidirectional)\nEncoded input context\n\n\nText Generation\nCan naturally generate text completion\nCannot directly generate text\nCan generate outputs naturally\n\n\nExample\nDSI ML workshop audience is ___\nDSI ML workshop audience is the best! → positive\nInput: Translate to Mandarin: Long but productive day! Output: 漫长而富有成效的一天！"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#nlp-pipelines-before-llms",
+    "href": "slides/slides-06-llms.html#nlp-pipelines-before-llms",
+    "title": "Large Language Models",
+    "section": "NLP pipelines before LLMs",
+    "text": "NLP pipelines before LLMs\n\n\n\nText preprocessing: Tokenization, stopword removal, stemming/lemmatization.\nFeature extraction: Techniques Bag of Words or word embeddings (e.g., Word2Vec, GloVe).\nModeling: A relatively simple model such as logistic regression or support vector machines (SVM)\nTraining: Supervised learning on a labeled dataset (e.g., with positive, negative, and neutral sentiment categories for sentiment analysis).\nEvaluation: Performance typically measured using accuracy, F1-score, etc.\nMain challenges:\n\nExtensive feature engineering required for good performance.\nDifficulty in capturing the nuances and context of sentiment, especially in complex sentences."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#nlp-pipelines-after-llms",
+    "href": "slides/slides-06-llms.html#nlp-pipelines-after-llms",
+    "title": "Large Language Models",
+    "section": "NLP pipelines after LLMs",
+    "text": "NLP pipelines after LLMs\n \n\nfrom transformers import pipeline, AutoModelForTokenClassification, AutoTokenizer\n# Sentiment analysis pipeline\nanalyzer = pipeline(\"sentiment-analysis\", model='distilbert-base-uncased-finetuned-sst-2-english')\nanalyzer([\"I asked my model to predict my future, and it said '404: Life not found.'\",\n          '''Machine learning is just like cooking—sometimes you follow the recipe, \n            and other times you just hope for the best!.'''])\n\n[{'label': 'NEGATIVE', 'score': 0.995707631111145},\n {'label': 'POSITIVE', 'score': 0.9994770884513855}]"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#zero-shot-learning",
+    "href": "slides/slides-06-llms.html#zero-shot-learning",
+    "title": "Large Language Models",
+    "section": "Zero-shot learning",
+    "text": "Zero-shot learning\n\n\n\n\n\n['im feeling rather rotten so im not very ambitious right now',\n 'im updating my blog because i feel shitty',\n 'i never make her separate from me because i don t ever want her to feel like i m ashamed with her',\n 'i left with my bouquet of red and yellow tulips under my arm feeling slightly more optimistic than when i arrived',\n 'i was feeling a little vain when i did this one',\n 'i cant walk into a shop anywhere where i do not feel uncomfortable',\n 'i felt anger when at the end of a telephone call',\n 'i explain why i clung to a relationship with a boy who was in many ways immature and uncommitted despite the excitement i should have been feeling for getting accepted into the masters program at the university of virginia',\n 'i like to have the same breathless feeling as a reader eager to see what will happen next',\n 'i jest i feel grumpy tired and pre menstrual which i probably am but then again its only been a week and im about as fit as a walrus on vacation for the summer']"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection",
+    "href": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection",
+    "title": "Large Language Models",
+    "section": "Zero-shot learning for emotion detection",
+    "text": "Zero-shot learning for emotion detection\n\n\n\nfrom transformers import AutoTokenizer\nfrom transformers import pipeline \nimport torch\n\n#Load the pretrained model\nmodel_name = \"facebook/bart-large-mnli\"\nclassifier = pipeline('zero-shot-classification', model=model_name)\nexs = dataset[\"test\"][\"text\"][:10]\ncandidate_labels = [\"sadness\", \"joy\", \"love\",\"anger\", \"fear\", \"surprise\"]\noutputs = classifier(exs, candidate_labels)"
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection-1",
+    "href": "slides/slides-06-llms.html#zero-shot-learning-for-emotion-detection-1",
+    "title": "Large Language Models",
+    "section": "Zero-shot learning for emotion detection",
+    "text": "Zero-shot learning for emotion detection\n\n\n\n\n\n\n\n\n\n\n\n\nsequence\nlabels\nscores\n\n\n\n\n0\nim feeling rather rotten so im not very ambiti...\n[sadness, anger, surprise, fear, joy, love]\n[0.7367967367172241, 0.10041747242212296, 0.09...\n\n\n1\nim updating my blog because i feel shitty\n[sadness, surprise, anger, fear, joy, love]\n[0.7429749369621277, 0.13775970041751862, 0.05...\n\n\n2\ni never make her separate from me because i do...\n[love, sadness, surprise, fear, anger, joy]\n[0.31536391377449036, 0.2249031811952591, 0.19...\n\n\n3\ni left with my bouquet of red and yellow tulip...\n[surprise, joy, love, sadness, fear, anger]\n[0.4218207895755768, 0.33366963267326355, 0.21...\n\n\n4\ni was feeling a little vain when i did this one\n[surprise, anger, fear, love, joy, sadness]\n[0.5639424920082092, 0.170002281665802, 0.0864...\n\n\n5\ni cant walk into a shop anywhere where i do no...\n[surprise, fear, sadness, anger, joy, love]\n[0.3703337609767914, 0.36559417843818665, 0.14...\n\n\n6\ni felt anger when at the end of a telephone call\n[anger, surprise, fear, sadness, joy, love]\n[0.9760519862174988, 0.012534384615719318, 0.0...\n\n\n7\ni explain why i clung to a relationship with a...\n[surprise, joy, love, sadness, fear, anger]\n[0.4382023811340332, 0.2322317510843277, 0.129...\n\n\n8\ni like to have the same breathless feeling as ...\n[surprise, joy, love, fear, anger, sadness]\n[0.7675781846046448, 0.13846896588802338, 0.03...\n\n\n9\ni jest i feel grumpy tired and pre menstrual w...\n[surprise, sadness, anger, fear, joy, love]\n[0.7340189814567566, 0.11860307306051254, 0.07..."
+  },
+  {
+    "objectID": "slides/slides-06-llms.html#harms-of-large-language-models",
+    "href": "slides/slides-06-llms.html#harms-of-large-language-models",
+    "title": "Large Language Models",
+    "section": "Harms of large language models",
+    "text": "Harms of large language models\nWhile these models are super powerful and useful, be mindful of the harms caused by these models. Some of the harms as summarized here are:\n\nperformance disparties\nsocial biases and stereotypes\ntoxicity\nmisinformation\nsecurity and privacy risks\ncopyright and legal protections\nenvironmental impact\ncentralization of power"
   },
   {
     "objectID": "slides/slides-04-deep-learning.html#learning-outcomes",
