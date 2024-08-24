@@ -806,33 +806,25 @@
     "text": "Varada Kolhatkar\n        Assistant Professor of Teaching, Computer Science, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Prajeet Bajpai\n        Teaching Postdoctoral Fellow, Master of Data Science\n        \n            Instructor\n        \n        \n    \n\n    \n        \n        Raymond Ng\n        Scientific Director, Data Science Institute; Professor, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Jie Ie Baik\n        Research Administrator, Data Science Institute\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Michele Ng\n        Special Projects Coordinator, Computer Science\n        \n            Organizer\n        \n        \n    \n\n    \n        \n        Yulia Egorova\n        \n        \n            Assistant\n        \n        \n    \n\n    \n        \n        Tony Shum\n        \n        \n            Assistant\n        \n        \n    \n\n\n\nNo matching items"
   },
   {
-    "objectID": "workshop-10.html",
-    "href": "workshop-10.html",
+    "objectID": "lab/example.html",
+    "href": "lab/example.html",
     "title": "ML Problem Framing",
     "section": "",
-    "text": "In this session, you will practice framing a given problem as a machine learning problem:",
-    "crumbs": [
-      "Workshop",
-      "ML Problem Framing"
-    ]
+    "text": "Imagine you work at a bank, and the current fraud detection workflow isn’t performing well. Your boss asks you to explore machine learning approaches to improve the detection and flagging of fraudulent credit card transactions. While researching online, you find Credit Card Fraud Detection dataset on Kaggle that could be useful for creating a prototype."
   },
   {
-    "objectID": "workshop-10.html#resources",
-    "href": "workshop-10.html#resources",
+    "objectID": "lab/example.html#scenario",
+    "href": "lab/example.html#scenario",
     "title": "ML Problem Framing",
-    "section": "Resources",
-    "text": "Resources\n\nSample datasets and goals\nGuiding questions\nExample",
-    "crumbs": [
-      "Workshop",
-      "ML Problem Framing"
-    ]
+    "section": "",
+    "text": "Imagine you work at a bank, and the current fraud detection workflow isn’t performing well. Your boss asks you to explore machine learning approaches to improve the detection and flagging of fraudulent credit card transactions. While researching online, you find Credit Card Fraud Detection dataset on Kaggle that could be useful for creating a prototype."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "Welcome\nWelcome everyone to the workshop, “Is Machine Learning Suitable for Your Projects?”\n\nWhen 🕘 9 am to 3:30 pm on August 24th, 2024\nWhere? 📍 P.A. Woodward Instructional Resources Centre (IRC) - 4, 2194 Health Sciences Mall, Vancouver BC, V6T 1Z3\n\n\n\nThis workshop is a collaboration between the Data Science Institute, the Master of Data Science, Vancouver program and the Department of Computer Science at UBC.\nThe Data Science Institute (DSI) is dedicated to fostering and advancing research, innovation, and training in data-intensive sciences. While we collaborate with researchers and external partners to achieve these objectives, we also prioritize providing valuable learning experiences for undergraduate and graduate students from diverse backgrounds. This workshop is part of our broader effort to introduce data science concepts to students and researchers, especially to those from non-STEM fields. We hope that this initiative will inspire participants to further explore the field of data science and its applications.\nThe Computer Science Department is pleased to offer this workshop to their mentors as a token of appreciation and a valuable opportunity for professional development.\nIn this workshop, you will discover how machine learning can improve your research projects. The workshop is tailored for non-STEM students and researchers. We will demystify the fundamentals of machine learning and clarify what it can and cannot do for your research. By the end of the workshop, you will be familiar with the fundamentals of machine learning and different types of machine learning."
+    "objectID": "lab/example.html#problem-framing",
+    "href": "lab/example.html#problem-framing",
+    "title": "ML Problem Framing",
+    "section": "Problem Framing",
+    "text": "Problem Framing\n\nIs the provided dataset appropriate for the specified objective? What type of data would ideally solve your problem or research question? Are there better-suited datasets available on the internet for this objective?\n\nThe ideal dataset should contains data about the transactions, e.g. transaction details, customer details, etc., which could be used to classify the fraud transaction. Moreover, it should contain an indicator whether it is a fraud transaction for supervised machine learning methods. If such indicator is not available, we can apply outlier detection to identify transactions which deviate much from normal transactions as frauds.\nThe provided dataset contains target column ‘Class’ that indicates whether it is a fraud transaction. It also contains other columns (‘Time’, ‘Amount’, ‘V1-V28’) which can be used as factors to predict the target column ‘Class’.\nThere are some caveats for using the dataset.\n\nThe dataset is a transformed dataset with PCA-transformed columns ‘V1’ - ‘V28’. Without having the original dataset, we are not sure how the PCA transformation is performed. We cannot guarantee if the same transformation can be applied to any new data (e.g. real-world data of new transactions)\nFrom the interpretation perspective, we might fail to draw any meaningful insights betwen the factors and the target as we do not understand the meaning of the columns ‘V1’ - ‘V28’. Moreover, we might not detect any potential bias or unfairness within the ML model if the original dataset contains sensitive information, e.g. age, gender, etc.\n\nThere could possibly be better-suited datasets, for example this dataset.\n\n\n\nClearly define the expected input and the ‘ideal’ output. Determine if machine learning is the appropriate method for addressing this problem.\n\nData Input: Data about the transactions, for example:\n\nmerchandise details: time, amount, merchant information, etc.\ncustomer details: account balance, credit score, cardholder information, etc.\n\nData Output: A soft prediction (probability) whether a transaction is a fraud\nAs we can clearly define the expected input and output and we can collect the data, machine learning is the appropriate method to address the problem.\n\n\n\nIf machine learning is deemed suitable, what should the model aim to achieve? How would you measure the model’s performance?\n\nOur objective is to detect fraudulent transactions by having a soft prediction (probability) and a threshold to determine whether a transaction is a fraud\nWe can expect there would potentially be false positives (legit transactions predicted as fraud) and false negatives (fraudulent transactions predicted as legit) from the predictions and the model should balance both based on our needs. For example, more false negatives might create more bad debts, while more false positives might affect the revenue.\nMoreover, the dataset is an unbalanced dataset with less than 1% are actual fraudulent records.\nWe can use evaluation metrics, e.g. precision, recall, area under precision-recall curve, etc. to measure the model performance. For example, if we are trying to minimize false negatives, we would focus more on recall (true positive rate).\n\n\n\nHow would a human tackle this issue? Can you propose any heuristic methods to solve this problem?\n\nIt would be a data collection -&gt; analysis by expert -&gt; decision making -&gt; remedy approach to solve this issue by human.\n\nData collection: We collect historical legit and fraud transactions and the related information, e.g. transaction, merchant, cardholder, etc.\nAnalysis by expert: Expert will deep dive into the collected data to identify any pattern/traits of the fraud transactions from the data. Moreover, they will provide a score of the likeliness of fraud for a transaction.\nDecision making: A cutoff of the score will be made to classify if a transaction is a fraud.\nRemedy: If the transaction is legit, no action is required. If it is a fraud, the money transfer will be on-hold. Further investigation will undergo.\n\n\n\n\nWhat are the major steps required to resolve this problem?\n\nFor machine-learning based approach, we would go through similar but slightly different stesp to resolve the problem\n\nData collection & wrangling: Data collection is similar to the above. We will also carry out data wrangling to handle unclean data (e.g. missing values) and transform data into desired format (e.g. scaling).\nModel training: A subset of the data will be used to train the model to learn any pattern for fraud/legit transactions. The model will then output the predictions.\nValidation/Testing: Another subset(s) of the data will be used to test the model performance, which is helpful in model selection, estimation of performance under real-world scenario, etc.\nDeployment: The defined data processing pipeline and trained model will be deployed to the existing system/workflow, which can intake the transaction data and output the prediction results to the relevant stakeholder(s) for further actions.\n\n\n\n\nDraw a diagram that illustrates the input, output, and key stages of the problem-solving process.\n\n{TBC}\n\n\n\nWhich type of machine learning would be best suited for your problem? What specific machine learning technique would be most effective for this problem?\n\nWe have labelled data of legit/fraud transactions and our goal is to classify the transactions. Supervised machine learning is best-suited.\nLinear regression can be applied first to observe any linear relationship between the target and the factors, and we can obtain a baseline performance.\nGiven the possible non-linear relationship between the target and the factors, non-linear algorithms (e.g. SVM) can be applied and we can observe if there is any significanr improvement in model performance.\nGiven the variety of data types (textual, numerical, etc.), decision tree based algorithm (gradient boosted tree) can be applied and we can observe if there is any significanr improvement in model performance."
   },
   {
     "objectID": "workshop.html",
@@ -855,6 +847,63 @@
       "Workshop",
       "Overview"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome\nWelcome everyone to the workshop, “Is Machine Learning Suitable for Your Projects?”\n\nWhen 🕘 9 am to 3:30 pm on August 24th, 2024\nWhere? 📍 P.A. Woodward Instructional Resources Centre (IRC) - 4, 2194 Health Sciences Mall, Vancouver BC, V6T 1Z3\n\n\n\nThis workshop is a collaboration between the Data Science Institute, the Master of Data Science, Vancouver program and the Department of Computer Science at UBC.\nThe Data Science Institute (DSI) is dedicated to fostering and advancing research, innovation, and training in data-intensive sciences. While we collaborate with researchers and external partners to achieve these objectives, we also prioritize providing valuable learning experiences for undergraduate and graduate students from diverse backgrounds. This workshop is part of our broader effort to introduce data science concepts to students and researchers, especially to those from non-STEM fields. We hope that this initiative will inspire participants to further explore the field of data science and its applications.\nThe Computer Science Department is pleased to offer this workshop to their mentors as a token of appreciation and a valuable opportunity for professional development.\nIn this workshop, you will discover how machine learning can improve your research projects. The workshop is tailored for non-STEM students and researchers. We will demystify the fundamentals of machine learning and clarify what it can and cannot do for your research. By the end of the workshop, you will be familiar with the fundamentals of machine learning and different types of machine learning."
+  },
+  {
+    "objectID": "workshop-10.html",
+    "href": "workshop-10.html",
+    "title": "ML Problem Framing",
+    "section": "",
+    "text": "In this session, you will practice framing a given problem as a machine learning problem:",
+    "crumbs": [
+      "Workshop",
+      "ML Problem Framing"
+    ]
+  },
+  {
+    "objectID": "workshop-10.html#resources",
+    "href": "workshop-10.html#resources",
+    "title": "ML Problem Framing",
+    "section": "Resources",
+    "text": "Resources\n\nSample datasets and goals\nGuiding questions\nExample",
+    "crumbs": [
+      "Workshop",
+      "ML Problem Framing"
+    ]
+  },
+  {
+    "objectID": "lab/datasets_and_goals.html",
+    "href": "lab/datasets_and_goals.html",
+    "title": "ML Problem Framing",
+    "section": "",
+    "text": "Below are some topics and datasets of real-world issues that could possibly be solved using Machine Learning\n\n\n\n\n\n\n\n\nStock Market Sentiment\n\n\n\n\n\nImagine you work at a bank, and the current workflow to understand the stock market sentiment isn’t performing well. Your boss asks you to explore machine learning approaches to improve the detection of stock market sentiment, which is cruical to some of the trading strategies, based on comments in social media platform. While researching online, you find this dataset on Kaggle that could be useful for creating a prototype.\n\n\n\n\n\n\n\n\n\nE-commerce Strategy\n\n\n\n\n\nImagine you are a consultant hired by an E-commerce platform. You are asked to analyze the retail data and explore machine learning approaches to address one of the planned initiatives of the company, which includes but not limited to: - customer segmentation based on their purchase history to derive more customized marketing strategy - personalized suggestions of items to customers so as to increase the conversion. While researching online, you find this dataset on Kaggle that could be useful as a starting point.\n\n\n\n\n\n\n\n\n\n\n\n\nCancer Diagnosis\n\n\n\n\n\nImagine you work at a medical research institute which specialized in cancer-related research. You try to explore machine learning approaches to diagnoze patients of the risk of cancer based on images of tissues, hoping to achieve early detection and early treatment to patients. While researching online, you find this dataset on NCI that could be useful.\n\n\n\n\n\n\n\n\n\nPolycystic ovary syndrome\n\n\n\n\n\nImagine you work at a university laboratory which specialized in research on Polycystic ovary syndrome (PCOS), which is a disorder involving infrequent, irregular or prolonged menstrual periods of women. You try to explore machine learning approaches to diagnoze patients of the risk of PCOS based on clinical data. While researching online, you find this dataset on Kaggle that could be useful.\n\n\n\n\n\n\n\n\n\n\n\n\nObesity Levels\n\n\n\n\n\nImagine you work at the Health Bureau of a country. You try to explore machine learning approaches to estimate the obesity levels of your citizens, as well as to understand the key factors relevant to obesity. This helps you defining better public health policy. While researching online, you find this dataset on UCI that could be useful."
+  },
+  {
+    "objectID": "lab/datasets_and_goals.html#example-topics-for-machine-learning-projects",
+    "href": "lab/datasets_and_goals.html#example-topics-for-machine-learning-projects",
+    "title": "ML Problem Framing",
+    "section": "",
+    "text": "Below are some topics and datasets of real-world issues that could possibly be solved using Machine Learning\n\n\n\n\n\n\n\n\nStock Market Sentiment\n\n\n\n\n\nImagine you work at a bank, and the current workflow to understand the stock market sentiment isn’t performing well. Your boss asks you to explore machine learning approaches to improve the detection of stock market sentiment, which is cruical to some of the trading strategies, based on comments in social media platform. While researching online, you find this dataset on Kaggle that could be useful for creating a prototype.\n\n\n\n\n\n\n\n\n\nE-commerce Strategy\n\n\n\n\n\nImagine you are a consultant hired by an E-commerce platform. You are asked to analyze the retail data and explore machine learning approaches to address one of the planned initiatives of the company, which includes but not limited to: - customer segmentation based on their purchase history to derive more customized marketing strategy - personalized suggestions of items to customers so as to increase the conversion. While researching online, you find this dataset on Kaggle that could be useful as a starting point.\n\n\n\n\n\n\n\n\n\n\n\n\nCancer Diagnosis\n\n\n\n\n\nImagine you work at a medical research institute which specialized in cancer-related research. You try to explore machine learning approaches to diagnoze patients of the risk of cancer based on images of tissues, hoping to achieve early detection and early treatment to patients. While researching online, you find this dataset on NCI that could be useful.\n\n\n\n\n\n\n\n\n\nPolycystic ovary syndrome\n\n\n\n\n\nImagine you work at a university laboratory which specialized in research on Polycystic ovary syndrome (PCOS), which is a disorder involving infrequent, irregular or prolonged menstrual periods of women. You try to explore machine learning approaches to diagnoze patients of the risk of PCOS based on clinical data. While researching online, you find this dataset on Kaggle that could be useful.\n\n\n\n\n\n\n\n\n\n\n\n\nObesity Levels\n\n\n\n\n\nImagine you work at the Health Bureau of a country. You try to explore machine learning approaches to estimate the obesity levels of your citizens, as well as to understand the key factors relevant to obesity. This helps you defining better public health policy. While researching online, you find this dataset on UCI that could be useful."
+  },
+  {
+    "objectID": "lab/datasets_and_goals.html#open-data-source-for-machine-learning-projects",
+    "href": "lab/datasets_and_goals.html#open-data-source-for-machine-learning-projects",
+    "title": "ML Problem Framing",
+    "section": "Open Data Source for Machine Learning Projects",
+    "text": "Open Data Source for Machine Learning Projects\nBelow are some websites that can provide open data useful for Machine Learning projects.\n\nUCI Machine Learning Repository\nKaggle\nFederal Reserve Bank of St. Louis\nNational Library of Medicine\nGapminder\nThe Humanitarian Data Exchange (HDX)\nStatistics Canada"
+  },
+  {
+    "objectID": "lab/guiding_questions.html",
+    "href": "lab/guiding_questions.html",
+    "title": "ML Problem Framing",
+    "section": "",
+    "text": "Choose a dataset and its corresponding objective, and then try to address the following questions:\n\nIs the provided dataset appropriate for the specified objective? What type of data would ideally solve your problem or research question? Are there better-suited datasets available on the internet for this objective?\nClearly define the expected input and the ‘ideal’ output. Determine if machine learning is the appropriate method for addressing this problem.\nIf machine learning is deemed suitable, what should the model aim to achieve? How would you measure the model’s performance?\nHow would a human tackle this issue? Can you propose any heuristic methods to solve this problem?\nWhat are the major steps required to resolve this problem?\nDraw a diagram that illustrates the input, output, and key stages of the problem-solving process.\nWhich type of machine learning would be best suited for your problem?\nWhat specific machine learning technique would be most effective for this problem?"
   },
   {
     "objectID": "workshop-01.html",
