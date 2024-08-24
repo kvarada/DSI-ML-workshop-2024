@@ -3,6 +3,7 @@ title: ML Problem Framing
 description: Frame your problems as machine learning problems 
 description-short: Lab session 
 
+editor: { render-on-save: true }
 ---
 
 Choose a dataset and its corresponding objective, and then try to address the following questions:
