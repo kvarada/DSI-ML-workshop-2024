@@ -11,10 +11,10 @@ format:
 
 From this module, you will be able to 
 
-- Explain the unsupervised paradigm. 
-- Explain the motivation and potential applications of clustering. 
-- Define the clustering problem. 
-- Broadly explain the K-Means algorithm and apply `sklearn`'s `KMeans` algorithm.  
+- Explain the unsupervised learning paradigm.
+- Describe the role of representation in machine learning.
+- Provide an overview of clustering.
+- Provide an overview of dimensionality reduction.
 
 ```{python}
 import os
