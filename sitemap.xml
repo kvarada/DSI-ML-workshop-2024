@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kvarada.github.io/DSI-ML-workshop-2024/slides/slides-05-unsupervised-learning.html</loc>
-    <lastmod>2024-08-23T15:00:53.326Z</lastmod>
+    <lastmod>2024-08-24T13:57:32.642Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/slides/slides-03-ml-models.html</loc>
-    <lastmod>2024-08-24T02:40:17.973Z</lastmod>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/slides/slides-04-deep-learning.html</loc>
+    <lastmod>2024-08-24T13:35:19.426Z</lastmod>
   </url>
   <url>
     <loc>https://kvarada.github.io/DSI-ML-workshop-2024/slides/slides-02-ml-intro.html</loc>
     <lastmod>2024-08-24T02:40:22.312Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-09.html</loc>
-    <lastmod>2024-08-24T02:38:59.039Z</lastmod>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-07.html</loc>
+    <lastmod>2024-08-24T13:52:02.464Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-05.html</loc>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-03.html</loc>
+    <lastmod>2024-08-24T02:39:27.668Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-01.html</loc>
     <lastmod>2024-08-23T02:59:22.247Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-02.html</loc>
-    <lastmod>2024-08-23T02:59:22.247Z</lastmod>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/lab/guiding_questions.html</loc>
+    <lastmod>2024-08-24T04:45:28.074Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/about/index.html</loc>
-    <lastmod>2024-08-23T17:39:19.992Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/lab/example.html</loc>
-    <lastmod>2024-08-24T04:45:18.085Z</lastmod>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/lab/datasets_and_goals.html</loc>
+    <lastmod>2024-08-24T04:45:14.589Z</lastmod>
   </url>
   <url>
     <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop.html</loc>
@@ -46,7 +46,7 @@
   </url>
   <url>
     <loc>https://kvarada.github.io/DSI-ML-workshop-2024/index.html</loc>
-    <lastmod>2024-08-23T21:38:02.204Z</lastmod>
+    <lastmod>2024-08-24T14:23:04.573Z</lastmod>
   </url>
   <url>
     <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-06-break.html</loc>
@@ -57,35 +57,35 @@
     <lastmod>2024-08-24T04:46:18.771Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/lab/datasets_and_goals.html</loc>
-    <lastmod>2024-08-24T04:45:14.589Z</lastmod>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/slides/slides-01-intro.html</loc>
+    <lastmod>2024-08-24T14:33:09.279Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/lab/guiding_questions.html</loc>
-    <lastmod>2024-08-24T04:45:28.074Z</lastmod>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/lab/example.html</loc>
+    <lastmod>2024-08-24T04:45:18.085Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-01.html</loc>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/about/index.html</loc>
+    <lastmod>2024-08-23T17:39:19.992Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-02.html</loc>
     <lastmod>2024-08-23T02:59:22.247Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-03.html</loc>
-    <lastmod>2024-08-24T02:39:27.668Z</lastmod>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-05.html</loc>
+    <lastmod>2024-08-23T02:59:22.247Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-07.html</loc>
-    <lastmod>2024-08-23T02:59:22.248Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/slides/slides-01-intro.html</loc>
-    <lastmod>2024-08-24T04:37:58.787Z</lastmod>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/workshop-09.html</loc>
+    <lastmod>2024-08-24T14:18:30.539Z</lastmod>
   </url>
   <url>
     <loc>https://kvarada.github.io/DSI-ML-workshop-2024/slides/slides-06-llms.html</loc>
-    <lastmod>2024-08-23T23:11:39.656Z</lastmod>
+    <lastmod>2024-08-24T14:14:41.914Z</lastmod>
   </url>
   <url>
-    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/slides/slides-04-deep-learning.html</loc>
-    <lastmod>2024-08-24T05:01:02.095Z</lastmod>
+    <loc>https://kvarada.github.io/DSI-ML-workshop-2024/slides/slides-03-ml-models.html</loc>
+    <lastmod>2024-08-24T02:40:17.973Z</lastmod>
   </url>
 </urlset>

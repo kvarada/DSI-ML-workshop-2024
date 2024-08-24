@@ -405,10 +405,10 @@
 </p>
 <p>From this module, you will be able to</p>
 <ul>
-<li>Explain the unsupervised paradigm.</li>
-<li>Explain the motivation and potential applications of clustering.</li>
-<li>Define the clustering problem.</li>
-<li>Broadly explain the K-Means algorithm and apply <code>sklearn</code>’s <code>KMeans</code> algorithm.</li>
+<li>Explain the unsupervised learning paradigm.</li>
+<li>Describe the role of representation in machine learning.</li>
+<li>Provide an overview of clustering.</li>
+<li>Provide an overview of dimensionality reduction.</li>
 </ul>
 </section>
 <section id="supervised-learning" class="slide level2 center">
@@ -450,8 +450,6 @@
 <h2>Labeled vs.&nbsp;Unlabeled data</h2>
 <ul>
 <li>If you have access to labeled training data, you’re in the “supervised” setting.</li>
-<li>You know what to do in that case from 571, 572, 573.<br>
-</li>
 <li>Unfortunately, getting large amount of labeled training data is often time consuming and expensive.</li>
 <li>Annotated data can become “stale” after a while in cases such as fraud detection.</li>
 <li>Can you still make sense of the data even though you do not have the labels?</li>
@@ -473,24 +471,22 @@
 <h2>What is clustering?</h2>
 <p><br>
 </p>
-<p><strong>Clustering</strong> is the task of partitioning the dataset into groups called clusters based on their similarities.</p>
-<p>The goal of clustering is to discover underlying groups in a given dataset such that: - examples in the same group are as similar as possible; - examples in different groups are as different as possible.</p>
-</section>
-<section id="k-means-clustering" class="slide level2 center">
-<h2>K-Means clustering</h2>
-<p><br>
-</p>
 <ul>
-<li>It requires us to specify the number of clusters in advance and each example is assigned to one (and only one) cluster.</li>
-<li>The cluster centroids live in the same space as of the dataset but they are <strong>not</strong> actual data points, but instead are average points.</li>
-<li>It always converges. Convergence is dependent upon the initial centers and it may converge to a sub-optimal solution.</li>
+<li><strong>Clustering</strong> is the task of partitioning the dataset into groups called clusters based on their similarities.</li>
+<li>The goal of clustering is to discover underlying groups in a given dataset such that:
+<ul>
+<li>examples in the same group are as similar as possible;</li>
+<li>examples in different groups are as different as possible.<br>
+</li>
+</ul></li>
+<li>K-Means is one of the simplest and most commonly used clustering algorithms.</li>
 </ul>
 </section>
 <section id="k-means-toy-dataset" class="slide level2 center">
 <h2>K-Means toy dataset</h2>
 <p><br>
 </p>
-<div id="becf7274" class="cell" data-execution_count="2">
+<div id="c1d15fc4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>X, y <span class="op">=</span> make_blobs(n_samples<span class="op">=</span><span class="dv">10</span>, centers<span class="op">=</span><span class="dv">3</span>, n_features<span class="op">=</span><span class="dv">2</span>, random_state<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb1-2"><a></a>mglearn.discrete_scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -509,12 +505,22 @@
 
 <img data-src="img/k-means-iterative.png" class="r-stretch"><p>K-Means is the simplest clustering algorithm. There is a variety of clustering algorithms available out there.</p>
 </section>
+<section id="k-means-clustering" class="slide level2 center">
+<h2>K-Means clustering</h2>
+<p><br>
+</p>
+<ul>
+<li>It requires us to specify the number of clusters in advance and each example is assigned to one (and only one) cluster.</li>
+<li>The cluster centroids live in the same space as of the dataset but they are <strong>not</strong> actual data points, but instead are average points.</li>
+<li>It always converges. Convergence is dependent upon the initial centers and it may converge to a sub-optimal solution.</li>
+</ul>
+</section>
 <section id="lets-cluster-images" class="slide level2 center">
 <h2>Let’s cluster images!!</h2>
 <p><br>
 </p>
-<p>For this demo, I’m going to use two image datasets a small subset of <a href="https://www.kaggle.com/datasets/veeralakrishna/200-bird-species-with-11788-images">200 Bird Species with 11,788 Images</a> dataset (available <a href="../data/birds.zip">here</a>)</p>
-<div id="bab292b1" class="cell" data-execution_count="3">
+<p>For this demo, I’m going to use a small subset of <a href="https://www.kaggle.com/datasets/veeralakrishna/200-bird-species-with-11788-images">200 Bird Species with 11,788 Images</a> dataset (available <a href="../data/birds.zip">here</a>)</p>
+<div id="80b65c1c" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -533,7 +539,7 @@
 <h2>Flattening images</h2>
 <p><br>
 </p>
-<div id="875673d1" class="cell" data-execution_count="4">
+<div id="8d82bd93" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>flatten_images <span class="op">=</span> get_flattened_representations(data_dir, BATCH_SIZE)</span>
 <span id="cb2-2"><a></a><span class="bu">print</span>(<span class="st">"Shape of the flattened images: "</span>, flatten_images.shape) <span class="co"># 224 by 224 images with 3 color channels</span></span>
 <span id="cb2-3"><a></a>image_shape<span class="op">=</span>[<span class="dv">3</span>,<span class="dv">224</span>,<span class="dv">224</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -546,7 +552,7 @@
 <h2>K-Means on flattened representation</h2>
 <p><br>
 </p>
-<div id="93a1a367" class="cell" data-execution_count="5">
+<div id="1d91289e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
 <span id="cb4-2"><a></a>k <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb4-3"><a></a>km_flatten <span class="op">=</span> KMeans(k, n_init<span class="op">=</span><span class="st">'auto'</span>, random_state<span class="op">=</span><span class="dv">123</span>)</span>
@@ -562,7 +568,7 @@
 <h2>Examining clusters</h2>
 <p>&nbsp;</p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="fd43d9f4" class="cell" data-execution_count="6">
+<div id="9b1e0a08" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="cf">for</span> cluster <span class="kw">in</span> <span class="bu">range</span>(k):</span>
 <span id="cb6-2"><a></a>    get_cluster_images(km_flatten, flatten_images, unflatten_inputs, cluster, n_img<span class="op">=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -610,7 +616,7 @@ Image indices:  [156  89 100  25 133]</code></pre>
 <h2>Extract features using transfer learning</h2>
 <p><br>
 </p>
-<div id="c3425a4e" class="cell" data-execution_count="7">
+<div id="f789df33" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>densenet <span class="op">=</span> models.densenet121(weights<span class="op">=</span><span class="st">"DenseNet121_Weights.IMAGENET1K_V1"</span>)</span>
 <span id="cb10-2"><a></a>densenet.classifier <span class="op">=</span> torch.nn.Identity()  <span class="co"># remove that last "classification" layer</span></span>
 <span id="cb10-3"><a></a>Z_birds <span class="op">=</span> get_features(densenet, birds_inputs)</span>
@@ -624,7 +630,7 @@ Image indices:  [156  89 100  25 133]</code></pre>
 <h2>K-Means on extracted features</h2>
 <p><br>
 </p>
-<div id="b528ba90" class="cell" data-execution_count="8">
+<div id="7ca93ea3" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>k <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb12-2"><a></a>km <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, n_init<span class="op">=</span><span class="st">'auto'</span>, random_state<span class="op">=</span><span class="dv">123</span>)</span>
 <span id="cb12-3"><a></a>km.fit(Z_birds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1041,7 +1047,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <h2>Examining clusters</h2>
 <p>&nbsp;</p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="c228731e" class="cell" data-execution_count="9">
+<div id="8b00e2f9" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="cf">for</span> cluster <span class="kw">in</span> <span class="bu">range</span>(k):</span>
 <span id="cb13-2"><a></a>    get_cluster_images(km, Z_birds, X_birds, cluster, n_img<span class="op">=</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1084,7 +1090,7 @@ Image indices:  [120   5  11  14  22  69]</code></pre>
 <h2>Let’s try this on the food dataset</h2>
 <p><br>
 </p>
-<div id="2138084c" class="cell" data-execution_count="10">
+<div id="e0c1be21" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1098,7 +1104,7 @@ Image indices:  [120   5  11  14  22  69]</code></pre>
 <h2>K-Means on food dataset</h2>
 <p><br>
 </p>
-<div id="5f2b1a22" class="cell" data-execution_count="11">
+<div id="6103ac54" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>Z_food <span class="op">=</span> get_features(densenet, food_inputs)</span>
 <span id="cb17-2"><a></a>k <span class="op">=</span> <span class="dv">5</span></span>
 <span id="cb17-3"><a></a>km <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, n_init<span class="op">=</span><span class="st">'auto'</span>, random_state<span class="op">=</span><span class="dv">123</span>)</span>
@@ -1517,7 +1523,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p><br>
 </p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="a23c1af9" class="cell" data-execution_count="12">
+<div id="4323bca8" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="cf">for</span> cluster <span class="kw">in</span> <span class="bu">range</span>(k):</span>
 <span id="cb18-2"><a></a>    get_cluster_images(km, Z_food, X_food, cluster, n_img<span class="op">=</span><span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1597,7 +1603,7 @@ Image indices:  [165  31  75  14  58  42]</code></pre>
 <li>Do you have to remember every pixel in the image to recognize other pictures of Eva?</li>
 </ul>
 
-<img data-src="img/eva-coffee.png" class="r-stretch"></section>
+<img data-src="img/eva-tree.png" class="r-stretch"></section>
 <section id="motivation-1" class="slide level2 center">
 <h2>Motivation</h2>
 <p><br>
@@ -1613,7 +1619,7 @@ Image indices:  [165  31  75  14  58  42]</code></pre>
 <p><br>
 </p>
 <ul>
-<li>Goal Capture the essence of the classroom through photography.</li>
+<li>Goal: Capture the essence of the classroom through photography.</li>
 <li>We need two volunteers with cell phones to take photos of the classroom.</li>
 <li>Volunteers will take pictures from various angles to ensure a comprehensive view of the classroom. Suggested angles include:
 <ul>
@@ -1622,7 +1628,7 @@ Image indices:  [165  31  75  14  58  42]</code></pre>
 <li>A central perspective (from the center of the room)</li>
 <li>A low angle view (close to the floor)</li>
 </ul></li>
-<li>Among the photos taken, select and post the one that best captures the majority of objects and the overall atmosphere of the classroom in <a href="https://docs.google.com/document/d/1TdmH5LKLC0Y9IWySC4FgsYX0dsNtkX_dBcc7FSSrQg0/edit#heading=h.trc35ybo6zyf">this Google doc</a></li>
+<li>Among the photos taken, select and post the one that best captures the majority of objects and the overall atmosphere of the classroom in <a href="https://docs.google.com/document/d/1TdmH5LKLC0Y9IWySC4FgsYX0dsNtkX_dBcc7FSSrQg0/edit#heading=h.trc35ybo6zyf">this Google doc</a>.</li>
 <li>Discuss: Why certain angles might be better than other for capturing more information?</li>
 </ul>
 </section>
@@ -1643,7 +1649,7 @@ Image indices:  [165  31  75  14  58  42]</code></pre>
 <li>We’ll work through a simpler dataset with grayscale images.</li>
 <li>Let’s look at some sample images from the dataset.</li>
 </ul>
-<div id="211dcbb0" class="cell" data-execution_count="13">
+<div id="04b8bd57" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1658,7 +1664,7 @@ Image indices:  [165  31  75  14  58  42]</code></pre>
 </section>
 <section id="applying-pca" class="slide level2 center">
 <h2>Applying PCA</h2>
-<div id="c12a54f0" class="cell" data-execution_count="14">
+<div id="48558f7d" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>n_components <span class="op">=</span> <span class="dv">300</span> </span>
 <span id="cb25-2"><a></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span>n_components, random_state<span class="op">=</span><span class="dv">42</span>)</span>
 <span id="cb25-3"><a></a>pca.fit(X_anims)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1666,7 +1672,7 @@ Image indices:  [165  31  75  14  58  42]</code></pre>
 </section>
 <section id="pca-components" class="slide level2 center">
 <h2>PCA components</h2>
-<div id="ac340eb1" class="cell" data-execution_count="15">
+<div id="1a49b321" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -1693,7 +1699,7 @@ Image indices:  [165  31  75  14  58  42]</code></pre>
 <li>When we extract components, we lose some information. To what extent can we reconstruct the original data point using a given number of components?</li>
 </ul>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="a4479caf" class="cell" data-execution_count="16">
+<div id="be75a8b1" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a>n_components <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>, <span class="dv">500</span>, <span class="dv">800</span>]</span>
 <span id="cb26-2"><a></a>plot_pca_animals(X_anims, (<span class="dv">100</span>,<span class="dv">100</span>), n_components<span class="op">=</span>n_components, index<span class="op">=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">

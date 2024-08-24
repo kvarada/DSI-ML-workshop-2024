@@ -423,8 +423,8 @@ From this module, you will be able to</p>
 <p>Image classification is not an easy problem because of the variations in the location of the object, lighting, background, camera angle, camera focus etc.</p>
 <p><img data-src="img/cat_variation.png"> <!-- [Source](https://developers.google.com/machine-learning/practica/image-classification) --></p>
 </section>
-<section id="convolutional-neural-networks" class="slide level2 center">
-<h2>Convolutional Neural Networks</h2>
+<section id="neural-networks" class="slide level2 center">
+<h2>Neural networks</h2>
 <p><br>
 </p>
 <ul>
@@ -432,6 +432,7 @@ From this module, you will be able to</p>
 <li>A significant advancement in image classification was the application of <strong>convolutional neural networks</strong> (ConvNets or CNNs) to this problem.</li>
 <li><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">ImageNet Classification with Deep Convolutional Neural Networks</a></li>
 <li>Achieved a winning test error rate of 15.3%, compared to 26.2% achieved by the second-best entry in the ILSVRC-2012 competition.</li>
+<li>Let’s go over the basics of a neural network.</li>
 </ul>
 </section>
 <section id="introduction-to-neural-networks" class="slide level2 center">
@@ -466,7 +467,7 @@ From this module, you will be able to</p>
 </ul>
 
 <img data-src="slides-04-deep-learning_files/figure-revealjs/cell-5-output-1.svg" class="r-stretch"></section>
-<section id="neural-networks" class="slide level2 center">
+<section id="neural-networks-1" class="slide level2 center">
 <h2>Neural networks</h2>
 <p><br>
 </p>
@@ -549,7 +550,13 @@ From this module, you will be able to</p>
 <h2>Introduction to computer vision</h2>
 <p><br>
 </p>
-<p>It has many tasks of interest: - image classification: is this a cat or a dog? - object localization: where is the cat in this image? - object detection: What are the various objects in the image? - instance segmentation: What are the shapes of these various objects in the image? - and much more…</p>
+<ul>
+<li>image classification: is this a cat or a dog?</li>
+<li>object localization: where is the cat in this image?</li>
+<li>object detection: What are the various objects in the image?</li>
+<li>instance segmentation: What are the shapes of these various objects in the image?</li>
+<li>and much more…</li>
+</ul>
 <p><img data-src="img/vision-apps.jpeg"> <!-- Source: https://learning.oreilly.com/library/view/python-advanced-guide/9781789957211/--></p>
 </section>
 <section id="pre-trained-models" class="slide level2 center">
@@ -563,70 +570,6 @@ From this module, you will be able to</p>
 <li>It refers to using a model already trained on one task as a starting point for learning to perform another task</li>
 </ul>
 </section>
-<section id="pre-trained-models-1" class="slide level2 center">
-<h2>Pre-trained models</h2>
-<p><br>
-</p>
-<ul>
-<li><p>There are many famous deep learning architectures out there that have been very successful across a wide range of problems, e.g.: <a href="https://arxiv.org/abs/1404.5997">AlexNet</a>, <a href="https://arxiv.org/abs/1409.1556">VGG</a>, <a href="https://arxiv.org/abs/1512.03385">ResNet</a>, <a href="https://arxiv.org/abs/1512.00567">Inception</a>, <a href="https://arxiv.org/abs/1801.04381">MobileNet</a>, etc.</p></li>
-<li><p>Many of these models have been pre-trained on famous datasets like ImageNet [<a href="https://www.image-net.org/index.php">1</a>, <a href="https://en.wikipedia.org/wiki/ImageNet">2</a>]</p></li>
-</ul>
-</section>
-<section id="imagenet" class="slide level2 center">
-<h2>ImageNet</h2>
-<p><br>
-</p>
-<ul>
-<li><a href="http://www.image-net.org/">ImageNet</a> is an image dataset that became a very popular benchmark in the field ~12 years ago.</li>
-<li>Currently contains ~14 million labelled images with ~21,841 categories<br>
-</li>
-<li>There are various versions with different number of images and classes
-<ul>
-<li>ILSVRC, a popular annual competition in computer vision, uses a smaller subset of ImageNet. This subset consists of about 1.2 million training images, 50,000 validation images, and 150,000 testing images across 1,000 categories.</li>
-</ul></li>
-<li><a href="https://en.wikipedia.org/wiki/ImageNet">Wikipedia article</a> on ImageNet</li>
-</ul>
-</section>
-<section id="imagenet-classes" class="slide level2 center">
-<h2>ImageNet classes</h2>
-<p><br>
-</p>
-<ul>
-<li>Here are some example classes.</li>
-</ul>
-<div id="bb3e6f9d" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data/imagenet_classes.txt"</span>) <span class="im">as</span> f:</span>
-<span id="cb1-2"><a></a>    classes <span class="op">=</span> [line.strip() <span class="cf">for</span> line <span class="kw">in</span> f.readlines()]</span>
-<span id="cb1-3"><a></a>classes[<span class="dv">100</span>:<span class="dv">110</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>['black swan, Cygnus atratus',
- 'tusker',
- 'echidna, spiny anteater, anteater',
- 'platypus, duckbill, duckbilled platypus, duck-billed platypus, Ornithorhynchus anatinus',
- 'wallaby, brush kangaroo',
- 'koala, koala bear, kangaroo bear, native bear, Phascolarctos cinereus',
- 'wombat',
- 'jellyfish',
- 'sea anemone, anemone',
- 'brain coral']</code></pre>
-</div>
-</div>
-</section>
-<section id="transfer-learning" class="slide level2 center">
-<h2>Transfer learning</h2>
-<p><br>
-</p>
-<ul>
-<li>The idea of transfer learning is instead of developing a machine learning model from scratch, you use these available pre-trained models for your tasks either directly or by fine tuning them.</li>
-<li>There are three common ways to use transfer learning in computer vision
-<ol type="1">
-<li>Pre-trained models out-of-the-box</li>
-<li>Pre-trained models as feature extractor and training your own model with these features</li>
-<li>Starting with weights of pre-trained models and fine-tuning the weights for your task.</li>
-</ol></li>
-<li>We will explore the first two approaches.</li>
-</ul>
-</section>
 <section id="pre-trained-models-out-of-the-box" class="slide level2 center">
 <h2>Pre-trained models out-of-the-box</h2>
 <p><br>
@@ -634,7 +577,7 @@ From this module, you will be able to</p>
 
 <!-- Source: https://cezannec.github.io/Convolutional_Neural_Networks/ -->
 <img data-src="img/cnn-ex.png" class="r-stretch"><ul>
-<li>Let’s first try one of these models and apply it to our own problem right out of the box.</li>
+<li>Let’s first apply one of these pre-trained models to our own problem right out of the box.</li>
 </ul>
 </section>
 <section id="pre-trained-models-out-of-the-box-1" class="slide level2 center">
@@ -656,11 +599,11 @@ From this module, you will be able to</p>
 <li>Let’s predict labels with associated probabilities for unseen images</li>
 </ul>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="f97806a1" class="cell" data-execution_count="6">
+<div id="9df1191e" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-1.png" width="434" height="325"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-6-output-1.png" width="434" height="325"></p>
 </figure>
 </div>
 </div>
@@ -675,7 +618,7 @@ Pembroke, Pembroke Welsh corgi              0.046
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-3.png" width="324" height="416"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-6-output-3.png" width="324" height="416"></p>
 </figure>
 </div>
 </div>
@@ -690,7 +633,7 @@ jaguar, panther, Panthera onca, Felis onca              0.004
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-5.png" width="309" height="416"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-6-output-5.png" width="309" height="416"></p>
 </figure>
 </div>
 </div>
@@ -705,7 +648,7 @@ patas, hussar monkey, Erythrocebus patas              0.122
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-7.png" width="299" height="416"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-6-output-7.png" width="299" height="416"></p>
 </figure>
 </div>
 </div>
@@ -743,11 +686,11 @@ Walker hound, Walker foxhound              0.580
 <li>It’s not doing very well here because ImageNet doesn’t have proper classes for these images.</li>
 </ul>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="09dc22cb" class="cell" data-execution_count="7">
+<div id="133e5d51" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-8-output-1.png" width="549" height="416"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-1.png" width="549" height="416"></p>
 </figure>
 </div>
 </div>
@@ -762,7 +705,7 @@ cucumber, cuke              0.146
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-8-output-3.png" width="702" height="416"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-3.png" width="702" height="416"></p>
 </figure>
 </div>
 </div>
@@ -777,7 +720,7 @@ grocery store, grocery, food market, market              0.041
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-8-output-5.png" width="611" height="416"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-5.png" width="611" height="416"></p>
 </figure>
 </div>
 </div>
@@ -792,7 +735,7 @@ bannister, banister, balustrade, balusters, handrail              0.039
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-8-output-7.png" width="428" height="416"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-7.png" width="428" height="416"></p>
 </figure>
 </div>
 </div>
@@ -807,7 +750,7 @@ saltshaker, salt shaker              0.047
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-8-output-9.png" width="331" height="416"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-9.png" width="331" height="416"></p>
 </figure>
 </div>
 </div>
@@ -822,7 +765,7 @@ frying pan, frypan, skillet              0.001
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-8-output-11.png" width="607" height="416"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-7-output-11.png" width="607" height="416"></p>
 </figure>
 </div>
 </div>
@@ -881,11 +824,11 @@ lakeside, lakeshore              0.097
 </p>
 <p>Let’s look at some sample images in the dataset.</p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="a5aab8f9" class="cell" data-execution_count="8">
+<div id="b26a8dde" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-9-output-1.png" width="611" height="631"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-8-output-1.png" width="611" height="631"></p>
 </figure>
 </div>
 </div>
@@ -897,7 +840,7 @@ lakeside, lakeshore              0.097
 <p><br>
 </p>
 <p>Here is the stat of our toy dataset.</p>
-<div id="03a596f4" class="cell" data-execution_count="9">
+<div id="3a19882f" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>Classes: ['beet_salad', 'chocolate_cake', 'edamame', 'french_fries', 'pizza', 'spring_rolls', 'sushi']
 Class count: 40, 38, 40
@@ -921,8 +864,8 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <ul>
 <li>Now we have extracted feature vectors for all examples. What’s the shape of these features?</li>
 </ul>
-<div id="f64a12a3" class="cell" data-execution_count="11">
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div id="52963978" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>torch.Size([283, 1024])</code></pre>
 </div>
 </div>
@@ -938,8 +881,8 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <ul>
 <li>Let’s examine the feature vectors.</li>
 </ul>
-<div id="1c2950bb" class="cell" data-execution_count="12">
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div id="43de2711" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1121,12 +1064,12 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <ul>
 <li>Let’s try out logistic regression on these extracted features.</li>
 </ul>
-<div id="199cfe9e" class="cell" data-execution_count="13">
+<div id="b7793340" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>Training score:  1.0</code></pre>
 </div>
 </div>
-<div id="52fdfc45" class="cell" data-execution_count="14">
+<div id="e7d93ef8" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-stdout">
 <pre><code>Validation score:  0.835820895522388</code></pre>
 </div>
@@ -1141,11 +1084,11 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 </p>
 <p>Let’s examine some sample predictions on the validation set.</p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="ec4bb41c" class="cell" data-execution_count="15">
+<div id="630fd468" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-16-output-1.png" width="1151" height="1901"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-15-output-1.png" width="1151" height="1901"></p>
 </figure>
 </div>
 </div>
@@ -1158,7 +1101,7 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 </p>
 <ul>
 <li>Another useful task and tool to know is object detection using YOLO model.</li>
-<li>Let’s identify objects in a sample image using a pretrained model called YOLO5</li>
+<li>Let’s identify objects in a sample image using a pretrained model called YOLO8.</li>
 <li>List the objects present in this image.</li>
 </ul>
 
@@ -1168,21 +1111,23 @@ First sample: ('data/food/train/beet_salad/104294.jpg', 0)</code></pre>
 <p><br>
 </p>
 <p>Let’s try this out using a pre-trained model.</p>
-<div id="af8a3e7e" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="im">from</span> ultralytics <span class="im">import</span> YOLO</span>
-<span id="cb17-2"><a></a>model <span class="op">=</span> YOLO(<span class="st">"yolov8n.pt"</span>)  <span class="co"># pretrained YOLOv8n model</span></span>
-<span id="cb17-3"><a></a></span>
-<span id="cb17-4"><a></a>yolo_input <span class="op">=</span> <span class="st">"data/yolo_test/3356700488_183566145b.jpg"</span></span>
-<span id="cb17-5"><a></a>yolo_result <span class="op">=</span> <span class="st">"data/yolo_result.jpg"</span></span>
-<span id="cb17-6"><a></a><span class="co"># Run batched inference on a list of images</span></span>
-<span id="cb17-7"><a></a>result <span class="op">=</span> model(yolo_input)  <span class="co"># return a list of Results objects</span></span>
-<span id="cb17-8"><a></a>result[<span class="dv">0</span>].save(filename<span class="op">=</span>yolo_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b14d288d" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">from</span> ultralytics <span class="im">import</span> YOLO</span>
+<span id="cb15-2"><a></a>model <span class="op">=</span> YOLO(<span class="st">"yolov8n.pt"</span>)  <span class="co"># pretrained YOLOv8n model</span></span>
+<span id="cb15-3"><a></a></span>
+<span id="cb15-4"><a></a>yolo_input <span class="op">=</span> <span class="st">"data/yolo_test/3356700488_183566145b.jpg"</span></span>
+<span id="cb15-5"><a></a>yolo_result <span class="op">=</span> <span class="st">"data/yolo_result.jpg"</span></span>
+<span id="cb15-6"><a></a><span class="co"># Run batched inference on a list of images</span></span>
+<span id="cb15-7"><a></a>result <span class="op">=</span> model(yolo_input)  <span class="co"># return a list of Results objects</span></span>
+<span id="cb15-8"><a></a>result[<span class="dv">0</span>].save(filename<span class="op">=</span>yolo_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>
-image 1/1 /Users/kvarada/EL/workshops/DSI-ML-workshop-2024/website/slides/data/yolo_test/3356700488_183566145b.jpg: 512x640 4 persons, 2 cars, 1 stop sign, 116.6ms
-Speed: 5.6ms preprocess, 116.6ms inference, 1.2ms postprocess per image at shape (1, 3, 512, 640)</code></pre>
+<pre><code></code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-stdout">
+<pre><code>image 1/1 /Users/kvarada/EL/workshops/DSI-ML-workshop-2024/website/slides/data/yolo_test/3356700488_183566145b.jpg: 512x640 4 persons, 2 cars, 1 stop sign, 138.9ms
+Speed: 5.8ms preprocess, 138.9ms inference, 13.1ms postprocess per image at shape (1, 3, 512, 640)</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>'data/yolo_result.jpg'</code></pre>
 </div>
 </div>
@@ -1192,11 +1137,11 @@ Speed: 5.6ms preprocess, 116.6ms inference, 1.2ms postprocess per image at shape
 <p><br>
 </p>
 <div class="scroll-container" style="overflow-y: scroll; height: 400px;">
-<div id="c5e0c488" class="cell" data-execution_count="17">
+<div id="9e7b8b91" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-18-output-1.png" width="950" height="401"></p>
+<p><img data-src="slides-04-deep-learning_files/figure-revealjs/cell-17-output-1.png" width="950" height="401"></p>
 </figure>
 </div>
 </div>
@@ -1210,8 +1155,8 @@ Speed: 5.6ms preprocess, 116.6ms inference, 1.2ms postprocess per image at shape
 <ul>
 <li>Neural networks are a flexible class of models.
 <ul>
-<li>They are hard to train</li>
 <li>They are particular powerful for structured input like images, videos, audio, etc.</li>
+<li>They can be challenging to train and often require significant computational resources.</li>
 </ul></li>
 <li>The good news is we can use pre-trained neural networks.
 <ul>
