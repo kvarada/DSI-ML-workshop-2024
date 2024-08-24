@@ -2,10 +2,7 @@
 title: ML Problem Framing
 description: Example of framing machine learning problems 
 description-short: Lab session 
-duration: 1.5 hours
-time: 2:00 - 3:30
 
-editor: { render-on-save: true }
 ---
 
 ## Scenario
@@ -16,9 +13,9 @@ Imagine you work at a bank, and the current fraud detection workflow isn't perfo
 
 #### Is the provided dataset appropriate for the specified objective? What type of data would ideally solve your problem or research question? Are there better-suited datasets available on the internet for this objective?
 
--   The ideal dataset should contain an indicator whether it is a fraud transaction, which is necessary for applying supervised machine learning methods. It should also contains data about the transactions, e.g. transaction details, customer details, etc., which could be used to classify the fraud transaction.
--   The data contains target column 'Class' that indicates whether it is a fraud transaction. It also contains other columns ('Time', 'Amount', 'V1-V28') which can be used as factors to predict the target column 'Class'.
--   There are some caveats for using the dataset
+-   The ideal dataset should contains data about the transactions, e.g. transaction details, customer details, etc., which could be used to classify the fraud transaction. Moreover, it should contain an indicator whether it is a fraud transaction for supervised machine learning methods. If such indicator is not available, we can apply outlier detection to identify transactions which deviate much from normal transactions as frauds.
+-   The provided dataset contains target column 'Class' that indicates whether it is a fraud transaction. It also contains other columns ('Time', 'Amount', 'V1-V28') which can be used as factors to predict the target column 'Class'.
+-   There are some caveats for using the dataset.
     -   The dataset is a transformed dataset with PCA-transformed columns 'V1' - 'V28'. Without having the original dataset, we are not sure how the PCA transformation is performed. We cannot guarantee if the same transformation can be applied to any new data (e.g. real-world data of new transactions)
     -   From the interpretation perspective, we might fail to draw any meaningful insights betwen the factors and the target as we do not understand the meaning of the columns 'V1' - 'V28'. Moreover, we might not detect any potential bias or unfairness within the ML model if the original dataset contains sensitive information, e.g. age, gender, etc.
 -   There could possibly be better-suited datasets, for example [this dataset](https://www.kaggle.com/datasets/kartik2112/fraud-detection).
