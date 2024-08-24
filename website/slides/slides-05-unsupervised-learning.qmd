@@ -72,7 +72,6 @@ import random
 ## Labeled vs. Unlabeled data
 
 - If you have access to labeled training data, you're in the "supervised" setting. 
-- You know what to do in that case from 571, 572, 573.  
 - Unfortunately, getting large amount of labeled training data is often time consuming and expensive.
 - Annotated data can become "stale" after a while in cases such as fraud detection. 
 - Can you still make sense of the data even though you do not have the labels? 
@@ -91,19 +90,11 @@ Pick any of the two questions below and answer them in [this Google doc](https:/
 ## What is clustering? 
 \
 
-**Clustering** is the task of partitioning the dataset into groups called clusters based on their similarities.
-
-The goal of clustering is to discover underlying groups in a given dataset such that:
-- examples in the same group are as similar as possible;
-- examples in different groups are as different as possible.          
-
-
-## K-Means clustering 
-\
-
-- It requires us to specify the number of clusters in advance and each example is assigned to one (and only one) cluster.
-- The cluster centroids live in the same space as of the dataset but they are **not** actual data points, but instead are average points.
-- It always converges. Convergence is dependent upon the initial centers and it may converge to a sub-optimal solution. 
+- **Clustering** is the task of partitioning the dataset into groups called clusters based on their similarities.
+- The goal of clustering is to discover underlying groups in a given dataset such that:
+    - examples in the same group are as similar as possible;
+    - examples in different groups are as different as possible.          
+- K-Means is one of the simplest and most commonly used clustering algorithms.
 
 ## K-Means toy dataset 
 \
@@ -121,10 +112,18 @@ mglearn.discrete_scatter(X[:, 0], X[:, 1]);
 
 K-Means is the simplest clustering algorithm. There is a variety of clustering algorithms available out there. 
 
+## K-Means clustering 
+\
+
+- It requires us to specify the number of clusters in advance and each example is assigned to one (and only one) cluster.
+- The cluster centroids live in the same space as of the dataset but they are **not** actual data points, but instead are average points.
+- It always converges. Convergence is dependent upon the initial centers and it may converge to a sub-optimal solution. 
+
+
 ## Let's cluster images!! 
 \
 
-For this demo, I'm going to use two image datasets a small subset of [200 Bird Species with 11,788 Images](https://www.kaggle.com/datasets/veeralakrishna/200-bird-species-with-11788-images) dataset (available [here](../data/birds.zip))
+For this demo, I'm going to use a small subset of [200 Bird Species with 11,788 Images](https://www.kaggle.com/datasets/veeralakrishna/200-bird-species-with-11788-images) dataset (available [here](../data/birds.zip))
 
 ```{python}
 data_dir = "data/birds"
@@ -253,8 +252,7 @@ for cluster in range(k):
 - Suppose you’re shown the picture below and you are told that this is Eva.
 - Do you have to remember every pixel in the image to recognize other pictures of Eva?
 
-![](img/eva-coffee.png)
-
+![](img/eva-tree.png)
 
 
 ## Motivation 
@@ -268,14 +266,14 @@ for cluster in range(k):
 ## Dimensionality reduction activity
 \
 
-- Goal Capture the essence of the classroom through photography.
+- Goal: Capture the essence of the classroom through photography.
 - We need two volunteers with cell phones to take photos of the classroom.
 - Volunteers will take pictures from various angles to ensure a comprehensive view of the classroom. Suggested angles include:
     - An overhead view (from above)
     - Views from each corner of the classroom
     - A central perspective (from the center of the room)
     - A low angle view (close to the floor)
--  Among the photos taken, select and post the one that best captures the majority of objects and the overall atmosphere of the classroom in [this Google doc](https://docs.google.com/document/d/1TdmH5LKLC0Y9IWySC4FgsYX0dsNtkX_dBcc7FSSrQg0/edit#heading=h.trc35ybo6zyf)
+-  Among the photos taken, select and post the one that best captures the majority of objects and the overall atmosphere of the classroom in [this Google doc](https://docs.google.com/document/d/1TdmH5LKLC0Y9IWySC4FgsYX0dsNtkX_dBcc7FSSrQg0/edit#heading=h.trc35ybo6zyf).
 - Discuss: Why certain angles might be better than other for capturing more information?
 
 

@@ -15,7 +15,8 @@ editor: { render-on-save: true }
 
 ## Outline
 
+- Unsupervised paradigm
 - Clustering
 - Dimensionality Reduction 
-- Recommendation systems
+- (Optional) Recommendation systems
 
