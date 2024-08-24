@@ -8,3 +8,15 @@ time: 2:00 - 3:30
 editor: { render-on-save: true }
 ---
 
+In this session, you will practice framing a given problem as a machine learning problem:
+
+- Team up with your neighbor(s).
+- Choose a problem that interests you most. You can refer to [the sample datasets and goals](lab/datasets_and_goals.qmd).for inspiration.
+- Frame your machine learning problem by addressing [the guiding questions](lab/guiding_questions.qmd).
+- We have provided [an example](lab/example.qmd) for your reference.
+- The teaching team is available and happy to brainstorm with you.
+
+## Resources 
+- [Sample datasets and goals](lab/datasets_and_goals.qmd)
+- [Guiding questions](lab/guiding_questions.qmd)
+- [Example](lab/example.qmd)
