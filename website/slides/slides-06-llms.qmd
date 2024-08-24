@@ -233,5 +233,5 @@ While these models are super powerful and useful, be mindful of the harms caused
 - That's it for the modules! Now, let's begin the lab session.
 
 - Thank you for your engagement! We would love your feedback. Here is the survey link: 
-    - https://forms.gle/e5YWKPZtC3N7UNEW9
+    - [https://forms.gle/e5YWKPZtC3N7UNEW9](https://forms.gle/e5YWKPZtC3N7UNEW9)
     
