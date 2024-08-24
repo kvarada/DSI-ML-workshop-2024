@@ -5,6 +5,7 @@ project:
   render:
     - "./*.qmd"
     - "slides/*.qmd"
+    - "lab/*.qmd"
     - "about/index.qmd"
   resources:
     - slides
