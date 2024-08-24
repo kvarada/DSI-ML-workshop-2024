@@ -17,6 +17,8 @@ editor:
 ## Welcome to the workshop! 
 * Find a seat where you can see the screen!
 * You will be discussing concepts with your neighbours. So take 15 seconds to introduce yourself to your neighbour.  
+* Here is the QR code for this website. 
+![](slides/img/DSI-ML-workshop-QR-code.png)
 
 ```{=html}
 <style>
