@@ -3,7 +3,7 @@ title: ML Models
 description: Introduction to Different Types of Machine Learning Models 
 description-short: Introduction to Different Types of Machine Learning Models 
 duration: 30 min
-time: '10:00 - 10:30'
+time: 10:00 - 10:30
 
 editor: { render-on-save: true }
 ---
